@@ -3,7 +3,7 @@
 **Module:** Appointments Management  
 **URL:** `https://project.vinapage.com/angel/admin/appointments`  
 **Standard:** IEEE 829 / ISTQB  
-**Version:** 1.0 | **Updated:** 2026-05-09  
+**Version:** 1.1 | **Updated:** 2026-05-09  
 **Roles:** ADMIN, MANAGER (full CRUD) | STAFF (view/update own)  
 
 ---
@@ -11,20 +11,30 @@
 ## Test Plan
 
 ### Scope
-Kiểm thử module Appointments — calendar tuần, tạo/sửa/hủy booking, filter theo staff và trạng thái. Đây là module trung tâm của hệ thống, ảnh hưởng trực tiếp đến vận hành tiệm.
+Kiểm thử module Appointments — danh sách lịch hẹn theo ngày, tạo/sửa/hoàn thành/huỷ booking, filter theo trạng thái và tìm kiếm.
+
+> **Ghi chú UI (v1.1):** Module Appointments sử dụng **list view** (không phải weekly calendar). Giao diện gồm: bộ lọc ngày (chip buttons), thanh tìm kiếm, dropdown trạng thái, 4 counter cards (CHỜ XỬ LÝ / XÁC NHẬN / HOÀN THÀNH / ĐÃ HUỶ), và danh sách booking theo ngày.
 
 ### Objectives
-- Xác minh calendar tuần hiển thị đúng, navigation prev/next tuần
-- Xác minh tạo booking mới từ slot trống (modal)
-- Xác minh cập nhật trạng thái booking: CONFIRMED / COMPLETED / CANCELLED / NO_SHOW
-- Xác minh filter theo staff và trạng thái
+- Xác minh danh sách booking hiển thị đúng theo ngày đã chọn
+- Xác minh tạo booking mới qua nút "+ Tạo lịch hẹn"
+- Xác minh cập nhật trạng thái booking: XÁC NHẬN → HOÀN THÀNH | ĐÃ HUỶ
+- Xác minh filter và tìm kiếm hoạt động đúng
 - Xác minh không cho tạo booking trùng giờ cùng staff
 
 ### Business Rules
-- Booking status flow: PENDING → CONFIRMED → COMPLETED | CANCELLED | NO_SHOW
+- Booking status flow: CHỜ XỬ LÝ → XÁC NHẬN → HOÀN THÀNH | ĐÃ HUỶ
 - Không tạo 2 booking cùng staff cùng giờ (conflict check)
-- Hủy booking → status = CANCELLED, không xóa khỏi DB
+- Huỷ booking → status = ĐÃ HUỶ, không xóa khỏi DB
 - Múi giờ: Pacific/Auckland (NZST)
+
+### Status Labels (UI → API)
+| UI (tiếng Việt) | API value | Màu |
+|-----------------|-----------|-----|
+| CHỜ XỬ LÝ | PENDING | - |
+| XÁC NHẬN | CONFIRMED | xanh lá |
+| HOÀN THÀNH | COMPLETED | - |
+| ĐÃ HUỶ | CANCELLED | - |
 
 ---
 
@@ -32,41 +42,41 @@ Kiểm thử module Appointments — calendar tuần, tạo/sửa/hủy booking,
 
 ---
 
-### TC-APT-001 — Calendar tuần — Navigation Prev/Next
+### TC-APT-001 — List View — Lọc theo ngày
 
 | Field | Value |
 |-------|-------|
 | **Test Case ID** | TC-APT-001 |
-| **Title** | Calendar navigation tuần hoạt động đúng |
+| **Title** | Danh sách lịch hẹn — lọc ngày bằng chip buttons |
 | **Priority** | P1 — High |
 | **Type** | Functional |
-| **Preconditions** | Đăng nhập ADMIN, có bookings trong 2 tuần liên tiếp |
+| **Preconditions** | Đăng nhập ADMIN, có bookings trong nhiều ngày |
 
 **Test Steps:**
 
 | Step | Action | Expected Result |
 |------|--------|-----------------|
-| 1 | Truy cập `/angel/admin/appointments` | Calendar tuần hiện tại hiển thị |
-| 2 | Kiểm tra header | Hiển thị khoảng ngày của tuần (VD: "Mon 5 May — Sun 11 May 2025") |
-| 3 | Click nút "Next Week" / "→" | Calendar chuyển sang tuần tiếp theo |
-| 4 | Kiểm tra header | Ngày đã tăng lên 7 ngày |
-| 5 | Click nút "Prev Week" / "←" | Calendar quay lại tuần hiện tại |
-| 6 | Click nút "Today" | Calendar nhảy về tuần chứa ngày hôm nay |
-| 7 | Kiểm tra bookings hiển thị | Mỗi booking hiện trong đúng slot giờ của ngày |
+| 1 | Truy cập `/angel/admin/appointments` | Trang "Lịch hẹn" hiển thị với date picker và chip buttons |
+| 2 | Quan sát khu vực "Lọc theo ngày:" | Chip "Hôm nay" + các ngày gần đây + date input (dd/mm/yyyy) |
+| 3 | Click chip "Hôm nay" | Danh sách chỉ hiển thị bookings ngày hôm nay, tiêu đề "N lịch hẹn ngày [Thứ], [D] [Month]" |
+| 4 | Nhập ngày cụ thể vào date input | Danh sách lọc đúng ngày đó |
+| 5 | Click chip ngày khác | Danh sách cập nhật theo ngày mới |
+| 6 | Kiểm tra mỗi booking item | Hiển thị: avatar+tên khách, trạng thái badge, "Pay in salon", SĐT, tên dịch vụ, giờ·thời lượng, giá, tên KTV, mã Ref: AN-XXXXXX |
+| 7 | Kiểm tra nút actions | Mỗi booking có nút: Edit (bút), Hoàn thành (✓), Huỷ (✗) |
 
-**Expected Result:** Navigation tuần hoạt động chính xác, bookings hiển thị đúng vị trí time slot.
+**Expected Result:** Lọc ngày hoạt động chính xác, mỗi booking hiển thị đầy đủ thông tin.
 
 ---
 
-### TC-APT-002 — Tạo booking mới từ slot trống
+### TC-APT-002 — Tạo lịch hẹn mới
 
 | Field | Value |
 |-------|-------|
 | **Test Case ID** | TC-APT-002 |
-| **Title** | Tạo booking mới bằng cách click slot trống trên calendar |
+| **Title** | Tạo lịch hẹn mới qua nút "+ Tạo lịch hẹn" |
 | **Priority** | P0 — Critical |
 | **Type** | Functional / Positive |
-| **Preconditions** | Đăng nhập ADMIN/MANAGER, có slot trống trong tuần hiện tại |
+| **Preconditions** | Đăng nhập ADMIN/MANAGER |
 
 **Test Data:**
 - Khách: John Doe, john.doe@test.com, +64 21 000 0001
@@ -78,18 +88,19 @@ Kiểm thử module Appointments — calendar tuần, tạo/sửa/hủy booking,
 
 | Step | Action | Expected Result |
 |------|--------|-----------------|
-| 1 | Click vào slot trống trên calendar (VD: Thứ 3, 10:00) | Modal "New Appointment" mở ra |
-| 2 | Kiểm tra modal | Pre-filled ngày + giờ dựa trên slot đã click |
+| 1 | Click nút "+ Tạo lịch hẹn" (góc trên phải) | Modal/form "Tạo lịch hẹn mới" mở ra |
+| 2 | Kiểm tra form | Có fields: Khách, Dịch vụ, KTV, Ngày, Giờ, Ghi chú |
 | 3 | Chọn Dịch vụ từ dropdown | Dropdown liệt kê đầy đủ dịch vụ Active |
-| 4 | Chọn Thợ | Dropdown chỉ hiển thị thợ Available vào thời điểm đó |
+| 4 | Chọn KTV | Dropdown chỉ hiển thị thợ Available |
 | 5 | Nhập thông tin khách: Tên, Email, SĐT | Fields nhận input |
-| 6 | Thêm ghi chú (optional) | Field nhận text |
-| 7 | Click "Create Booking" / "Confirm" | Gọi `POST /api/admin/bookings` |
-| 8 | Kiểm tra response | HTTP 201, booking ID được tạo |
-| 9 | Kiểm tra calendar | Booking mới xuất hiện trên đúng slot |
-| 10 | Kiểm tra Audit Log | Ghi nhận action CREATE booking |
+| 6 | Chọn ngày giờ | Date/time picker hoạt động |
+| 7 | Thêm ghi chú (optional) | Field nhận text |
+| 8 | Click "Lưu" / "Tạo" | Gọi `POST /api/admin/bookings` |
+| 9 | Kiểm tra response | HTTP 201, booking ID được tạo |
+| 10 | Kiểm tra danh sách | Booking mới xuất hiện khi lọc ngày tương ứng |
+| 11 | Kiểm tra Audit Log | Ghi nhận action CREATE booking |
 
-**Expected Result:** Booking tạo thành công, hiển thị ngay trên calendar, ghi audit log.
+**Expected Result:** Booking tạo thành công, hiển thị trong danh sách, ghi audit log.
 
 ---
 
@@ -98,85 +109,87 @@ Kiểm thử module Appointments — calendar tuần, tạo/sửa/hủy booking,
 | Field | Value |
 |-------|-------|
 | **Test Case ID** | TC-APT-003 |
-| **Title** | Click booking → xem chi tiết + đổi trạng thái |
+| **Title** | Click Edit → xem chi tiết + đổi trạng thái qua nút actions |
 | **Priority** | P0 — Critical |
 | **Type** | Functional |
-| **Preconditions** | Có ≥1 booking CONFIRMED trên calendar |
+| **Preconditions** | Có ≥1 booking XÁC NHẬN trong danh sách |
+
+> **Ghi chú UI:** Không có status dropdown trực tiếp trên card. Thay đổi trạng thái qua nút "Hoàn thành" (COMPLETED) và "Huỷ" (CANCELLED) trực tiếp, hoặc qua modal Edit.
 
 **Test Steps:**
 
 | Step | Action | Expected Result |
 |------|--------|-----------------|
-| 1 | Click vào một booking có sẵn trên calendar | Detail modal/panel mở ra |
-| 2 | Kiểm tra thông tin hiển thị | Tên khách, dịch vụ, thợ, ngày giờ, trạng thái, mã booking (AN-XXXXXXXXXX), SĐT, ghi chú |
-| 3 | Click dropdown "Status" | Các option: PENDING, CONFIRMED, COMPLETED, CANCELLED, NO_SHOW |
-| 4 | Chọn "COMPLETED" | Confirmation dialog hoặc trực tiếp update |
-| 5 | Xác nhận | `PATCH /api/admin/bookings/{id}` được gọi |
-| 6 | Kiểm tra calendar | Booking chip đổi màu/label tương ứng với COMPLETED |
-| 7 | Mở lại booking | Status hiển thị COMPLETED |
+| 1 | Tìm booking có status "XÁC NHẬN" | Booking card hiển thị trong danh sách |
+| 2 | Kiểm tra thông tin trên card | Tên khách, dịch vụ, KTV, ngày giờ, giá, mã Ref (AN-XXXXXX), SĐT |
+| 3 | Click nút "Edit" (bút chì) | Modal sửa booking mở với data pre-filled |
+| 4 | Kiểm tra modal edit | Có trường trạng thái với options: CHỜ XỬ LÝ, XÁC NHẬN, HOÀN THÀNH, ĐÃ HUỶ |
+| 5 | Click nút "Hoàn thành" (✓) trực tiếp trên card | Confirmation dialog: "Xác nhận hoàn thành lịch hẹn?" |
+| 6 | Xác nhận | `PATCH /api/admin/bookings/{id}` với status=COMPLETED |
+| 7 | Kiểm tra card | Badge status đổi sang "HOÀN THÀNH" |
 
 **Expected Result:** Đổi trạng thái thành công, phản ánh ngay trên UI.
 
 **Test Status Flow to verify:**
 
-| From | To | Expected |
-|------|----|----------|
-| PENDING | CONFIRMED | ✓ Allowed |
-| PENDING | CANCELLED | ✓ Allowed |
-| CONFIRMED | COMPLETED | ✓ Allowed |
-| CONFIRMED | NO_SHOW | ✓ Allowed |
-| CONFIRMED | CANCELLED | ✓ Allowed |
-| COMPLETED | PENDING | ? (Business rule check) |
-| CANCELLED | CONFIRMED | ? (Business rule check) |
+| From | To | Button/Action | Expected |
+|------|----|---------------|----------|
+| CHỜ XỬ LÝ | XÁC NHẬN | Edit modal | ✓ Allowed |
+| CHỜ XỬ LÝ | ĐÃ HUỶ | Nút Huỷ | ✓ Allowed |
+| XÁC NHẬN | HOÀN THÀNH | Nút Hoàn thành | ✓ Allowed |
+| XÁC NHẬN | ĐÃ HUỶ | Nút Huỷ | ✓ Allowed |
+| HOÀN THÀNH | CHỜ XỬ LÝ | Edit modal | ? (Business rule check) |
+| ĐÃ HUỶ | XÁC NHẬN | Edit modal | ? (Business rule check) |
 
 ---
 
-### TC-APT-004 — Hủy booking
+### TC-APT-004 — Huỷ booking
 
 | Field | Value |
 |-------|-------|
 | **Test Case ID** | TC-APT-004 |
-| **Title** | Hủy booking — status CANCELLED, giữ lại trong DB |
+| **Title** | Huỷ booking — status ĐÃ HUỶ, giữ lại trong DB |
 | **Priority** | P0 — Critical |
 | **Type** | Functional |
-| **Preconditions** | Có booking PENDING hoặc CONFIRMED |
+| **Preconditions** | Có booking CHỜ XỬ LÝ hoặc XÁC NHẬN |
 
 **Test Steps:**
 
 | Step | Action | Expected Result |
 |------|--------|-----------------|
-| 1 | Mở chi tiết booking | Detail panel hiển thị |
-| 2 | Click "Cancel Booking" | Confirmation dialog: "Are you sure?" |
-| 3 | Click "Confirm Cancel" | `PATCH /api/admin/bookings/{id}` với status=CANCELLED |
-| 4 | Kiểm tra calendar | Booking chip vẫn hiển thị (màu xám/khác biệt) với label CANCELLED |
-| 5 | Kiểm tra database (qua API) | `GET /api/admin/bookings/{id}` → status=CANCELLED, không bị xóa |
-| 6 | Kiểm tra Audit Log | Ghi nhận action UPDATE với trường status |
-| 7 | Kiểm tra slot đó trên public booking | Slot giờ đó nay Available lại cho khách book |
+| 1 | Tìm booking cần huỷ trong danh sách | Booking card hiển thị |
+| 2 | Click nút "Huỷ" (✗ màu đỏ) | Confirmation dialog: "Xác nhận huỷ lịch hẹn?" |
+| 3 | Click "Xác nhận" | `PATCH /api/admin/bookings/{id}` với status=CANCELLED |
+| 4 | Kiểm tra danh sách | Booking vẫn hiển thị với badge "ĐÃ HUỶ" |
+| 5 | Kiểm tra counter card "ĐÃ HUỶ" | Số tăng lên 1 |
+| 6 | Kiểm tra database (qua API) | `GET /api/admin/bookings/{id}` → status=CANCELLED, không bị xóa |
+| 7 | Kiểm tra Audit Log | Ghi nhận action UPDATE với trường status |
 
-**Expected Result:** Booking status = CANCELLED, data vẫn tồn tại trong DB, slot được giải phóng.
+**Expected Result:** Booking status = ĐÃ HUỶ, data vẫn tồn tại trong DB, slot được giải phóng.
 
 ---
 
-### TC-APT-005 — Filter theo Staff
+### TC-APT-005 — Tìm kiếm booking
 
 | Field | Value |
 |-------|-------|
 | **Test Case ID** | TC-APT-005 |
-| **Title** | Filter calendar theo staff cụ thể |
+| **Title** | Tìm kiếm booking theo tên, email, SĐT, mã tham chiếu |
 | **Priority** | P1 — High |
 | **Type** | Functional |
-| **Preconditions** | Có ≥2 thợ, mỗi thợ có ≥1 booking |
+| **Preconditions** | Có ≥3 bookings với thông tin khác nhau |
+
+> **Ghi chú UI:** Thanh tìm kiếm có placeholder "Search by reference, name, email, phone..."
 
 **Test Steps:**
 
 | Step | Action | Expected Result |
 |------|--------|-----------------|
-| 1 | Mở Appointments | Toàn bộ bookings hiển thị |
-| 2 | Chọn Staff filter: "Nguyen Van A" | Calendar chỉ hiển thị bookings của Nguyen Van A |
-| 3 | Chọn Staff filter: "Tran Thi B" | Calendar chỉ hiển thị bookings của Tran Thi B |
-| 4 | Chọn "All Staff" | Toàn bộ bookings hiển thị lại |
-
-**Expected Result:** Filter hoạt động đúng, không hiển thị nhầm booking của thợ khác.
+| 1 | Nhập tên khách vào thanh tìm kiếm | Danh sách lọc real-time, chỉ hiển thị bookings khớp tên |
+| 2 | Nhập email khách | Lọc đúng |
+| 3 | Nhập SĐT | Lọc đúng |
+| 4 | Nhập mã Ref (VD: AN-260506ABHL) | Tìm đúng booking đó |
+| 5 | Xóa hết nội dung tìm kiếm | Danh sách hiển thị lại tất cả bookings của ngày đó |
 
 ---
 
@@ -189,16 +202,18 @@ Kiểm thử module Appointments — calendar tuần, tạo/sửa/hủy booking,
 | **Priority** | P1 — High |
 | **Type** | Functional |
 
+> **Ghi chú UI:** Dropdown filter "All statuses" ở góc phải thanh tìm kiếm. Counter cards (CHỜ XỬ LÝ / XÁC NHẬN / HOÀN THÀNH / ĐÃ HUỶ) hiển thị số liệu nhưng không phải filter button.
+
 **Test Steps:**
 
 | Step | Action | Expected Result |
 |------|--------|-----------------|
-| 1 | Chuyển sang List View (nếu có) | Danh sách tất cả bookings |
-| 2 | Chọn filter "PENDING" | Chỉ hiển thị bookings PENDING |
-| 3 | Chọn filter "CONFIRMED" | Chỉ hiển thị bookings CONFIRMED |
-| 4 | Chọn filter "COMPLETED" | Chỉ hiển thị bookings COMPLETED |
-| 5 | Chọn filter "CANCELLED" | Chỉ hiển thị bookings CANCELLED |
-| 6 | Chọn "All" | Tất cả bookings |
+| 1 | Mở Appointments | Dropdown "All statuses" hiển thị toàn bộ bookings ngày hiện tại |
+| 2 | Chọn "CHỜ XỬ LÝ" / "PENDING" trong dropdown | Chỉ hiển thị bookings CHỜ XỬ LÝ |
+| 3 | Chọn "XÁC NHẬN" / "CONFIRMED" | Chỉ hiển thị bookings XÁC NHẬN |
+| 4 | Chọn "HOÀN THÀNH" / "COMPLETED" | Chỉ hiển thị bookings HOÀN THÀNH |
+| 5 | Chọn "ĐÃ HUỶ" / "CANCELLED" | Chỉ hiển thị bookings ĐÃ HUỶ |
+| 6 | Chọn "All statuses" | Tất cả bookings hiển thị lại |
 
 ---
 
@@ -216,11 +231,12 @@ Kiểm thử module Appointments — calendar tuần, tạo/sửa/hủy booking,
 
 | Step | Action | Expected Result |
 |------|--------|-----------------|
-| 1 | Tạo booking mới: Thợ A, ngày mai 10:30 AM, dịch vụ 30 phút | Form điền đầy đủ |
-| 2 | Submit | API trả lỗi conflict |
-| 3 | Kiểm tra error message | "This time slot is already booked for this technician" hoặc tương đương |
-| 4 | Kiểm tra calendar | Booking cũ vẫn nguyên vẹn, booking mới KHÔNG được tạo |
-| 5 | Tạo lại booking cùng thợ A nhưng 11:30 AM | Không conflict → tạo thành công |
+| 1 | Click "+ Tạo lịch hẹn" | Modal tạo booking mở |
+| 2 | Chọn: Thợ A, ngày mai 10:30 AM, dịch vụ 30 phút | Form điền đầy đủ |
+| 3 | Submit | API trả lỗi conflict |
+| 4 | Kiểm tra error message | "This time slot is already booked for this technician" hoặc tương đương |
+| 5 | Kiểm tra danh sách | Booking cũ vẫn nguyên vẹn, booking mới KHÔNG được tạo |
+| 6 | Tạo lại booking cùng thợ A nhưng 11:30 AM | Không conflict → tạo thành công |
 
 **Expected Result:** Hệ thống từ chối booking conflict, thông báo lỗi rõ ràng.
 
@@ -231,20 +247,20 @@ Kiểm thử module Appointments — calendar tuần, tạo/sửa/hủy booking,
 | Field | Value |
 |-------|-------|
 | **Test Case ID** | TC-APT-008 |
-| **Title** | Reschedule booking sang giờ/ngày khác |
+| **Title** | Reschedule booking sang giờ/ngày khác qua nút Edit |
 | **Priority** | P1 — High |
 | **Type** | Functional |
-| **Preconditions** | Có booking CONFIRMED |
+| **Preconditions** | Có booking XÁC NHẬN |
 
 **Test Steps:**
 
 | Step | Action | Expected Result |
 |------|--------|-----------------|
-| 1 | Mở chi tiết booking | Detail panel mở |
-| 2 | Click "Edit" / "Reschedule" | Form chỉnh sửa với các field hiện tại pre-filled |
-| 3 | Đổi ngày giờ | Date/time picker mở, có thể chọn slot trống mới |
-| 4 | Kiểm tra conflict với slot mới | Nếu slot mới bị trùng → báo lỗi |
-| 5 | Chọn slot không bị trùng, save | `PATCH /api/admin/bookings/{id}` |
-| 6 | Kiểm tra calendar | Booking di chuyển sang slot mới trên calendar |
+| 1 | Click nút "Edit" (bút chì) trên booking | Modal chỉnh sửa mở với data pre-filled |
+| 2 | Kiểm tra modal | Tất cả fields được điền sẵn đúng |
+| 3 | Đổi ngày giờ | Date/time picker mở, có thể chọn ngày/giờ mới |
+| 4 | Chọn slot không bị trùng, save | `PATCH /api/admin/bookings/{id}` |
+| 5 | Kiểm tra danh sách | Booking cập nhật thời gian mới khi lọc ngày mới |
+| 6 | Đổi sang slot đang có booking khác cùng KTV | Error conflict hiển thị |
 
-**Expected Result:** Reschedule thành công, calendar cập nhật đúng.
+**Expected Result:** Reschedule thành công, danh sách cập nhật đúng.

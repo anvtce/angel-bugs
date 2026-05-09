@@ -48,15 +48,17 @@ Bước 6: Thành công      → /angel/booking/success
 
 | Step | Action | Expected Result |
 |------|--------|-----------------|
-| 1 | Truy cập `/angel/booking` | Trang chọn dịch vụ với các tab nhóm |
-| 2 | Click tab "Manicure" | Hiển thị các dịch vụ trong nhóm Manicure |
+| 1 | Truy cập `/angel/booking` | Trang "Select Service" với category tabs và progress "STEP 1 OF 6" |
+| 2 | Click tab "Manicure" | Hiển thị các dịch vụ trong nhóm Manicure (mặc định active) |
 | 3 | Click tab "Pedicure" | Chuyển sang nhóm Pedicure |
 | 4 | Click tab "Nail Art" | Chuyển sang Nail Art |
-| 5 | Kiểm tra từng service card | Hiển thị đúng: Tên, Mô tả, Giá ($), Thời gian (min) |
-| 6 | Click "Next Step" khi chưa chọn dịch vụ | Nút bị disabled hoặc báo "Please select a service" |
-| 7 | Click chọn "Gel Manicure" | Card highlighted, nút "Next Step" sáng lên |
-| 8 | Click "Next Step" | Navigate đến Bước 2 `/angel/booking/artist` |
-| 9 | Kiểm tra progress bar | Bước 1 completed, Bước 2 active |
+| 5 | Kiểm tra từng service card | Hiển thị đúng: Tên, Mô tả, Thời gian (X mins), Giá ($X) |
+| 6 | Kiểm tra footer sticky | "TOTAL ESTIMATE $0.00" + nút "NEXT STEP" disabled khi chưa chọn |
+| 7 | Click chọn "Signature Gel Manicure 1" | Card highlighted, "TOTAL ESTIMATE" cập nhật ($62), nút "NEXT STEP" enabled |
+| 8 | Kiểm tra card Enhancement "Add a Paraffin Wax Treatment?" | Card upsell hiển thị ở cuối trang với giá $15, nút "Add to Booking" |
+| 9 | Click "Add to Booking" trên Enhancement | Giá trong footer tăng thêm $15 |
+| 10 | Click "NEXT STEP" | Navigate đến Bước 2 `/angel/booking/artist` |
+| 11 | Kiểm tra progress bar | Bước 1 completed, Bước 2 active |
 
 ---
 
@@ -160,7 +162,7 @@ Bước 6: Thành công      → /angel/booking/success
 | Step | Action | Expected Result |
 |------|--------|-----------------|
 | 1 | Sau khi Confirm Booking thành công | Redirect đến `/angel/booking/success` |
-| 2 | Kiểm tra mã booking | Format AN-YYMMDDXXXX (VD: AN-2605091234) |
+| 2 | Kiểm tra mã booking | Format AN-YYMMDDXXXX (VD: AN-260506ABHL) — chữ + số |
 | 3 | Kiểm tra thông tin tóm tắt | Dịch vụ, Thợ, Ngày giờ, Giá |
 | 4 | Click "Return to Home" | Redirect về `/angel` |
 | 5 | Nhấn Back browser | Không cho quay lại form đã submit |

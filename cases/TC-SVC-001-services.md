@@ -13,6 +13,8 @@
 ### Scope
 Kiểm thử module quản lý danh mục dịch vụ: thêm/sửa/xóa dịch vụ, quản lý nhóm (categories), bật/tắt hiển thị. Thay đổi ở đây ảnh hưởng trực tiếp đến trang public `/angel/services` và luồng booking.
 
+> **Ghi chú UI:** Trang Services admin hiển thị danh sách grouped theo category. Header có nút "Thêm danh mục" (Add category). Nút **Add Service** nằm trong **từng category section** (không phải nút toàn cục). Services hiển thị badge "NỔI BẬT" (featured) nếu được đánh dấu nổi bật.
+
 ### Objectives
 - CRUD dịch vụ hoạt động đúng (Create, Read, Update, Delete)
 - Quản lý categories (nhóm dịch vụ) đúng
@@ -55,8 +57,8 @@ Kiểm thử module quản lý danh mục dịch vụ: thêm/sửa/xóa dịch v
 
 | Step | Action | Expected Result |
 |------|--------|-----------------|
-| 1 | Truy cập `/angel/admin/services` | Danh sách dịch vụ hiển thị |
-| 2 | Click "Add Service" / "+ New Service" | Modal/form tạo dịch vụ mở |
+| 1 | Truy cập `/angel/admin/services` | Danh sách dịch vụ grouped theo category hiển thị |
+| 2 | Tìm section category "Manicure", click nút thêm dịch vụ trong section đó | Modal/form tạo dịch vụ mở với category pre-selected là "Manicure" |
 | 3 | Nhập Name: "Luxury Gel Manicure" | Field nhận input |
 | 4 | Chọn Category: "Manicure" | Dropdown category hiển thị đúng danh sách |
 | 5 | Nhập Description | Textarea nhận text |
@@ -181,12 +183,14 @@ Kiểm thử module quản lý danh mục dịch vụ: thêm/sửa/xóa dịch v
 | **Priority** | P1 — High |
 | **Type** | Functional |
 
+> **Ghi chú UI:** Nút "Thêm danh mục" (với icon create_new_folder) nằm ở header của trang Services, phía trên danh sách. Không có tab riêng cho categories.
+
 **Test Steps:**
 
 | Step | Action | Expected Result |
 |------|--------|-----------------|
-| 1 | Tìm section "Categories" trong Services admin | Tab hoặc section quản lý categories |
-| 2 | Tạo category mới: "Extensions" | Category được tạo |
+| 1 | Tại `/angel/admin/services`, click nút "Thêm danh mục" | Form tạo category mới hiển thị |
+| 2 | Tạo category mới: "Extensions" | Category được tạo và hiển thị trong danh sách |
 | 3 | Tạo service thuộc "Extensions" | Service gán đúng category |
 | 4 | Kiểm tra public site | Section "Extensions" xuất hiện |
 | 5 | Đổi tên category "Extensions" → "Nail Extensions" | Category name update |

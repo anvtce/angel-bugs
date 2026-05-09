@@ -69,9 +69,9 @@ Kiểm thử toàn bộ luồng xác thực (đăng nhập, đăng xuất, phân
 | 1 | Truy cập `https://project.vinapage.com/angel/admin/login` | Trang đăng nhập hiển thị với form Email + Password |
 | 2 | Nhập Email: `elena@angelnail.co.nz` | Field nhận input |
 | 3 | Nhập Password: `admin123` | Password được ẩn bằng ký tự ● |
-| 4 | Click nút "Sign In" / "Đăng nhập" | Loading spinner hiển thị |
+| 4 | Click nút "ĐĂNG NHẬP" | Loading spinner hiển thị |
 | 5 | Chờ response từ `/api/auth/signin` | Response 200 OK, redirect tới `/angel/admin` |
-| 6 | Quan sát trang sau login | Dashboard hiển thị, sidebar có đủ 19 module, user info hiển thị role ADMIN |
+| 6 | Quan sát trang sau login | Dashboard hiển thị, sidebar có đủ **20 mục** (Tổng quan, Hôm nay, Lịch hẹn, Dịch vụ, Thư viện ảnh, Khách hàng, Nhân viên, Kho hàng, Thanh toán, Thẻ quà tặng, Lương & hoa hồng, Kết ca, Chi phí, Đơn đặt hàng, Đánh giá, Báo cáo, Nhật ký hệ thống, Tổng đài AI, **Tài liệu QA**, Cài đặt) |
 
 **Expected Result:** Đăng nhập thành công, redirect về `/angel/admin` Dashboard, session cookie được set.
 
@@ -190,11 +190,12 @@ Kiểm thử toàn bộ luồng xác thực (đăng nhập, đăng xuất, phân
 
 | Step | Action | Expected Result |
 |------|--------|-----------------|
-| 1 | Bỏ trống Email, bỏ trống Password, click Sign In | Validation error "Email is required" |
-| 2 | Nhập Email nhưng bỏ trống Password, click Sign In | Validation error "Password is required" |
-| 3 | Nhập Email sai định dạng (không có @), click Sign In | Validation error "Invalid email format" |
+| 1 | Bỏ trống Email, bỏ trống Password, click "ĐĂNG NHẬP" | Validation error hiển thị (VI: "Vui lòng nhập địa chỉ email" / EN: "Email is required") |
+| 2 | Nhập Email nhưng bỏ trống Password, click "ĐĂNG NHẬP" | Validation error (VI: "Vui lòng nhập mật khẩu" / EN: "Password is required") |
+| 3 | Nhập Email sai định dạng (không có @), click "ĐĂNG NHẬP" | Validation error (VI: "Địa chỉ email không hợp lệ" / EN: "Invalid email format") |
+| 4 | Chuyển sang ngôn ngữ EN (click nút "EN" góc phải) rồi lặp bước 1–3 | Error messages hiển thị bằng tiếng Anh tương ứng |
 
-**Expected Result:** Client-side validation hoạt động trước khi gọi API.
+**Expected Result:** Client-side validation hoạt động trước khi gọi API. Thông báo lỗi ngôn ngữ tương ứng với cài đặt VI/EN đang active.
 
 ---
 

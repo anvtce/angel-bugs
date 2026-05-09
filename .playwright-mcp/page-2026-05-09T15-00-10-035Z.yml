@@ -1,0 +1,89 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e297]:
+    - generic [ref=e298]:
+      - link "Angel Nail" [ref=e299] [cursor=pointer]:
+        - /url: /angel
+        - img "Angel Nail" [ref=e300]
+      - generic [ref=e301]:
+        - link "Services" [ref=e302] [cursor=pointer]:
+          - /url: /angel/services
+        - link "Gallery" [ref=e303] [cursor=pointer]:
+          - /url: /angel/gallery
+        - link "About" [ref=e304] [cursor=pointer]:
+          - /url: /angel/about
+        - link "Contact" [ref=e305] [cursor=pointer]:
+          - /url: /angel/contact
+      - link "Book Now" [ref=e306] [cursor=pointer]:
+        - /url: /angel/booking
+  - main [ref=e307]:
+    - generic [ref=e316]: Step 4 & 5 of 6
+    - generic [ref=e317]:
+      - heading "Review & Confirm" [level=1] [ref=e318]
+      - paragraph [ref=e319]: Review your selections, choose payment method, and confirm.
+    - generic [ref=e320]:
+      - generic [ref=e321]:
+        - generic [ref=e322]:
+          - heading "Contact Details" [level=3] [ref=e323]
+          - generic [ref=e324]:
+            - generic [ref=e325]:
+              - generic [ref=e326]: First Name *
+              - textbox "First name" [ref=e327]
+            - generic [ref=e328]:
+              - generic [ref=e329]: Last Name *
+              - textbox "Last name" [ref=e330]
+            - generic [ref=e331]:
+              - generic [ref=e332]: Email Address *
+              - textbox "your@email.com" [ref=e333]
+            - generic [ref=e334]:
+              - generic [ref=e335]: Phone
+              - textbox "(555) 000-0000" [ref=e336]
+            - generic [ref=e337]:
+              - generic [ref=e338]: Special Requests
+              - textbox "Any preferences..." [ref=e339]
+        - generic [ref=e340]:
+          - heading "Payment Method" [level=3] [ref=e341]
+          - generic [ref=e342]: Online payment is temporarily unavailable. You may complete your booking by paying at the salon.
+          - generic [ref=e344] [cursor=pointer]:
+            - radio "Pay in salon Pay after your service" [checked] [ref=e345]
+            - generic [ref=e346]:
+              - paragraph [ref=e347]: Pay in salon
+              - paragraph [ref=e348]: Pay after your service
+      - generic [ref=e350]:
+        - heading "Booking Summary" [level=3] [ref=e351]
+        - generic [ref=e352]:
+          - generic [ref=e354]:
+            - img "Signature Gel Manicure 1" [ref=e356]
+            - generic [ref=e357]:
+              - paragraph [ref=e358]: Signature Gel Manicure 1
+              - paragraph [ref=e359]: 45 mins · $62
+          - generic [ref=e360]:
+            - generic [ref=e361]:
+              - generic [ref=e362]: Total duration
+              - generic [ref=e363]: 45 mins
+            - generic [ref=e364]:
+              - generic [ref=e365]: Artist
+              - generic [ref=e366]: No preference
+            - generic [ref=e367]:
+              - generic [ref=e368]: Date
+              - generic [ref=e369]: Thu, 14 May
+            - generic [ref=e370]:
+              - generic [ref=e371]: Time
+              - generic [ref=e372]: 10:00 am
+          - generic [ref=e373]:
+            - generic [ref=e374]:
+              - generic [ref=e375]: Service total
+              - generic [ref=e376]: $62.00
+            - generic [ref=e377]:
+              - generic [ref=e378]: Total
+              - generic [ref=e379]: $62.00
+    - generic [ref=e380]:
+      - link "arrow_back Go Back" [ref=e381] [cursor=pointer]:
+        - /url: /angel/booking/schedule
+        - generic [ref=e382]: arrow_back
+        - text: Go Back
+      - button "Confirm Booking check" [ref=e383]:
+        - text: Confirm Booking
+        - generic [ref=e384]: check
+  - button "Angel" [ref=e88]:
+    - img "Angel" [ref=e90]
+  - alert [ref=e91]

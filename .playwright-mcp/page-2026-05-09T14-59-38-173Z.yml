@@ -1,0 +1,100 @@
+- generic [ref=e1]:
+  - navigation [ref=e197]:
+    - generic [ref=e198]:
+      - link "Angel Nail" [ref=e199] [cursor=pointer]:
+        - /url: /angel
+        - img "Angel Nail" [ref=e200]
+      - generic [ref=e201]:
+        - link "Services" [ref=e202] [cursor=pointer]:
+          - /url: /angel/services
+        - link "Gallery" [ref=e203] [cursor=pointer]:
+          - /url: /angel/gallery
+        - link "About" [ref=e204] [cursor=pointer]:
+          - /url: /angel/about
+        - link "Contact" [ref=e205] [cursor=pointer]:
+          - /url: /angel/contact
+      - link "Book Now" [ref=e206] [cursor=pointer]:
+        - /url: /angel/booking
+  - main [ref=e207]:
+    - generic [ref=e208]:
+      - heading "Pick Date & Time" [level=1] [ref=e209]
+      - generic [ref=e218]: Step 3 of 6
+    - generic [ref=e219]:
+      - generic [ref=e220]:
+        - heading "May 2026" [level=3] [ref=e221]
+        - generic [ref=e222]:
+          - button "chevron_left" [ref=e223]:
+            - generic [ref=e224]: chevron_left
+          - button "chevron_right" [ref=e225]:
+            - generic [ref=e226]: chevron_right
+      - generic [ref=e227]:
+        - generic [ref=e228]: Mon
+        - generic [ref=e229]: Tue
+        - generic [ref=e230]: Wed
+        - generic [ref=e231]: Thu
+        - generic [ref=e232]: Fri
+        - generic [ref=e233]: Sat
+        - generic [ref=e234]: Sun
+      - generic [ref=e235]:
+        - button "1" [disabled] [ref=e240]
+        - button "2" [disabled] [ref=e241]
+        - button "3" [disabled] [ref=e242]
+        - button "4" [disabled] [ref=e243]
+        - button "5" [disabled] [ref=e244]
+        - button "6" [disabled] [ref=e245]
+        - button "7" [disabled] [ref=e246]
+        - button "8" [disabled] [ref=e247]
+        - button "9" [ref=e248]
+        - button "10" [disabled] [ref=e249]
+        - button "11" [ref=e250]
+        - button "12" [ref=e251]
+        - button "13" [ref=e252]
+        - button "14" [ref=e253]
+        - button "15" [ref=e254]
+        - button "16" [ref=e255]
+        - button "17" [disabled] [ref=e256]
+        - button "18" [ref=e257]
+        - button "19" [ref=e258]
+        - button "20" [ref=e259]
+        - button "21" [ref=e260]
+        - button "22" [ref=e261]
+        - button "23" [ref=e262]
+        - button "24" [disabled] [ref=e263]
+        - button "25" [ref=e264]
+        - button "26" [ref=e265]
+        - button "27" [ref=e266]
+        - button "28" [ref=e267]
+        - button "29" [ref=e268]
+        - button "30" [ref=e269]
+        - button "31" [disabled] [ref=e270]
+    - generic [ref=e276]:
+      - heading "Available Times — May 14" [level=3] [ref=e277]
+      - generic [ref=e278]:
+        - button "9:00 AM" [ref=e279]
+        - button "9:30 AM" [ref=e280]
+        - button "10:00 AM" [active] [ref=e281]
+        - button "10:30 AM" [ref=e282]
+        - button "11:00 AM" [ref=e283]
+        - button "11:30 AM" [ref=e284]
+        - button "12:00 PM" [ref=e285]
+        - button "12:30 PM" [ref=e286]
+        - button "1:00 PM" [ref=e287]
+        - button "1:30 PM" [ref=e288]
+        - button "2:00 PM" [ref=e289]
+        - button "2:30 PM" [ref=e290]
+        - button "3:00 PM" [ref=e291]
+        - button "3:30 PM" [ref=e292]
+        - button "4:00 PM" [ref=e293]
+        - button "4:30 PM" [ref=e294]
+    - generic [ref=e271]:
+      - link "arrow_back Go Back" [ref=e272] [cursor=pointer]:
+        - /url: /angel/booking/artist
+        - generic [ref=e273]: arrow_back
+        - text: Go Back
+      - link "Continue to Details arrow_forward" [ref=e295] [cursor=pointer]:
+        - /url: /angel/booking/review
+        - text: Continue to Details
+        - generic [ref=e296]: arrow_forward
+  - button "Angel" [ref=e88]:
+    - img "Angel" [ref=e90]
+  - alert [ref=e91]

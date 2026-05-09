@@ -1,0 +1,220 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e4]:
+        - heading "Angel Nail Admin" [level=1] [ref=e5]
+        - paragraph [ref=e6]: Quản lý tiệm
+      - navigation [ref=e7]:
+        - link "dashboard Tổng quan" [ref=e8] [cursor=pointer]:
+          - /url: /angel/admin
+          - generic [ref=e9]: dashboard
+          - generic [ref=e10]: Tổng quan
+        - link "today Hôm nay" [ref=e11] [cursor=pointer]:
+          - /url: /angel/admin/my-day
+          - generic [ref=e12]: today
+          - generic [ref=e13]: Hôm nay
+        - link "event_note Lịch hẹn" [ref=e14] [cursor=pointer]:
+          - /url: /angel/admin/appointments
+          - generic [ref=e15]: event_note
+          - generic [ref=e16]: Lịch hẹn
+        - link "spa Dịch vụ" [ref=e17] [cursor=pointer]:
+          - /url: /angel/admin/services
+          - generic [ref=e18]: spa
+          - generic [ref=e19]: Dịch vụ
+        - link "photo_library Thư viện ảnh" [ref=e20] [cursor=pointer]:
+          - /url: /angel/admin/gallery
+          - generic [ref=e21]: photo_library
+          - generic [ref=e22]: Thư viện ảnh
+        - link "group Khách hàng" [ref=e23] [cursor=pointer]:
+          - /url: /angel/admin/clients
+          - generic [ref=e24]: group
+          - generic [ref=e25]: Khách hàng
+        - link "badge Nhân viên" [ref=e26] [cursor=pointer]:
+          - /url: /angel/admin/staff
+          - generic [ref=e27]: badge
+          - generic [ref=e28]: Nhân viên
+        - link "inventory_2 Kho hàng" [ref=e29] [cursor=pointer]:
+          - /url: /angel/admin/inventory
+          - generic [ref=e30]: inventory_2
+          - generic [ref=e31]: Kho hàng
+        - link "credit_card Thanh toán" [ref=e32] [cursor=pointer]:
+          - /url: /angel/admin/payments
+          - generic [ref=e33]: credit_card
+          - generic [ref=e34]: Thanh toán
+        - link "redeem Thẻ quà tặng" [ref=e35] [cursor=pointer]:
+          - /url: /angel/admin/gift-cards
+          - generic [ref=e36]: redeem
+          - generic [ref=e37]: Thẻ quà tặng
+        - link "payments Lương & hoa hồng" [ref=e38] [cursor=pointer]:
+          - /url: /angel/admin/payroll
+          - generic [ref=e39]: payments
+          - generic [ref=e40]: Lương & hoa hồng
+        - link "point_of_sale Kết ca" [ref=e41] [cursor=pointer]:
+          - /url: /angel/admin/closing
+          - generic [ref=e42]: point_of_sale
+          - generic [ref=e43]: Kết ca
+        - link "receipt_long Chi phí" [ref=e44] [cursor=pointer]:
+          - /url: /angel/admin/expenses
+          - generic [ref=e45]: receipt_long
+          - generic [ref=e46]: Chi phí
+        - link "shopping_cart Đơn đặt hàng" [ref=e47] [cursor=pointer]:
+          - /url: /angel/admin/purchase-orders
+          - generic [ref=e48]: shopping_cart
+          - generic [ref=e49]: Đơn đặt hàng
+        - link "star Đánh giá" [ref=e50] [cursor=pointer]:
+          - /url: /angel/admin/reviews
+          - generic [ref=e51]: star
+          - generic [ref=e52]: Đánh giá
+        - link "insights Báo cáo" [ref=e53] [cursor=pointer]:
+          - /url: /angel/admin/reports
+          - generic [ref=e54]: insights
+          - generic [ref=e55]: Báo cáo
+        - link "history Nhật ký hệ thống" [ref=e56] [cursor=pointer]:
+          - /url: /angel/admin/audit-log
+          - generic [ref=e57]: history
+          - generic [ref=e58]: Nhật ký hệ thống
+        - link "phone_in_talk Tổng đài AI" [ref=e59] [cursor=pointer]:
+          - /url: /angel/admin/voice
+          - generic [ref=e60]: phone_in_talk
+          - generic [ref=e61]: Tổng đài AI
+        - link "menu_book Tài liệu QA" [ref=e62] [cursor=pointer]:
+          - /url: /angel/admin/docs
+          - generic [ref=e63]: menu_book
+          - generic [ref=e64]: Tài liệu QA
+        - link "settings Cài đặt" [ref=e65] [cursor=pointer]:
+          - /url: /angel/admin/settings
+          - generic [ref=e66]: settings
+          - generic [ref=e67]: Cài đặt
+      - generic [ref=e69]:
+        - button "VI" [ref=e70]
+        - button "EN" [ref=e71]
+    - main [ref=e72]:
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - button "Open menu" [ref=e75]: menu
+          - generic [ref=e76]: Angel Nail Admin
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - generic [ref=e79]: search
+            - textbox "Search appointments..." [ref=e80]
+          - generic [ref=e81]:
+            - button "notifications 9+" [ref=e125]:
+              - text: notifications
+              - generic [ref=e126]: 9+
+            - button "Account menu" [ref=e85]: account_circle
+      - generic [ref=e86]:
+        - generic [ref=e87]:
+          - generic [ref=e88]:
+            - heading "Lịch hẹn" [level=2] [ref=e89]
+            - paragraph [ref=e90]: Quản lý và lên lịch cho tiệm.
+          - button "add Tạo lịch hẹn" [ref=e91]:
+            - generic [ref=e92]: add
+            - text: Tạo lịch hẹn
+        - generic [ref=e93]:
+          - generic [ref=e94]:
+            - generic [ref=e95]:
+              - generic [ref=e96]: calendar_today
+              - generic [ref=e97]: "Lọc theo ngày:"
+            - textbox [ref=e98]: 2026-05-09
+            - generic [ref=e99]:
+              - button "Hôm nay" [ref=e100]
+              - button "20 Mar" [ref=e127]
+              - button "27 Mar" [ref=e128]
+              - button "28 Mar" [ref=e129]
+              - button "30 Mar" [ref=e130]
+              - button "31 Mar" [ref=e131]
+          - generic [ref=e101]:
+            - generic [ref=e102]:
+              - generic [ref=e103]: search
+              - textbox "Search by reference, name, email, phone..." [ref=e104]
+            - combobox [ref=e105]:
+              - option "All statuses" [selected]
+              - option "Pending"
+              - option "Confirmed"
+              - option "Completed"
+              - option "Cancelled"
+              - option "No show"
+        - generic [ref=e106]:
+          - generic [ref=e107]:
+            - paragraph [ref=e108]: CHỜ XỬ LÝ
+            - paragraph [ref=e109]: "0"
+          - generic [ref=e110]:
+            - paragraph [ref=e111]: XÁC NHẬN
+            - paragraph [ref=e112]: "0"
+          - generic [ref=e113]:
+            - paragraph [ref=e114]: HOÀN THÀNH
+            - paragraph [ref=e115]: "1"
+          - generic [ref=e116]:
+            - paragraph [ref=e117]: ĐÃ HUỶ
+            - paragraph [ref=e118]: "0"
+        - generic [ref=e119]:
+          - paragraph [ref=e132]:
+            - text: 1 lịch hẹn ngày
+            - strong [ref=e133]: Saturday, 9 May
+          - generic [ref=e135]:
+            - generic [ref=e136]:
+              - generic [ref=e137]: TA
+              - generic [ref=e138]:
+                - generic [ref=e139]:
+                  - heading "Thành An" [level=3] [ref=e140]
+                  - generic [ref=e141]: HOÀN THÀNH
+                  - generic [ref=e142]: Pay in salon
+                - paragraph [ref=e143]: "0379589453"
+                - generic [ref=e144]:
+                  - generic [ref=e145]:
+                    - generic [ref=e146]: spa
+                    - text: Signature Gel Manicure 1
+                  - generic [ref=e147]:
+                    - generic [ref=e148]: schedule
+                    - text: 10:00 pm · 45 min
+                  - generic [ref=e149]:
+                    - generic [ref=e150]: payments
+                    - text: $62.00
+                  - generic [ref=e151]:
+                    - generic [ref=e152]: person_pin
+                    - text: Sofia Blanco
+                - paragraph [ref=e153]: "Ref: AN-260506ABHL"
+            - generic [ref=e155]: Không có thao tác
+      - generic [ref=e157]:
+        - generic [ref=e158]:
+          - heading "Tạo lịch hẹn" [level=3] [ref=e159]
+          - button "close" [ref=e160]
+        - generic [ref=e161]:
+          - generic [ref=e162]:
+            - paragraph [ref=e163]: Thông tin khách hàng
+            - generic [ref=e164]:
+              - textbox "Họ và tên *" [ref=e165]
+              - textbox "Địa chỉ email *" [ref=e166]
+              - textbox "Điện thoại" [ref=e167]
+          - generic [ref=e168]:
+            - paragraph [ref=e169]: Chi tiết đặt lịch
+            - generic [ref=e170]:
+              - combobox [active] [ref=e171]:
+                - option "Chọn dịch vụ *" [selected]
+                - option "— ( min)"
+                - option "— ( min)"
+                - option "— ( min)"
+                - option "— ( min)"
+                - option "— ( min)"
+                - option "— ( min)"
+              - combobox [ref=e172]:
+                - option "Không chọn / Bất kỳ nhân viên" [selected]
+                - option "Elena Rossi — Senior Nail Artist"
+                - option "Maya Chen — Lash Specialist"
+                - option "Jordan Smith — Senior Nail Artist"
+                - option "David Park — Nail Technician"
+                - option "Sofia Blanco — Artistic Director"
+                - option "Lila Vance — Nail Specialist"
+              - generic [ref=e173]:
+                - generic [ref=e174]:
+                  - generic [ref=e175]: Ngày
+                  - textbox [ref=e176]: 2026-05-09
+                - generic [ref=e177]:
+                  - generic [ref=e178]: Giờ
+                  - textbox [ref=e179]: 10:00
+              - textbox "Ghi chú (tuỳ chọn)" [ref=e180]
+          - generic [ref=e181]:
+            - button "Huỷ" [ref=e182]
+            - button "Tạo lịch hẹn" [ref=e183]
+      - paragraph [ref=e123]: © 2024 Angel Nail Digital Atelier. Bảo lưu mọi quyền.
+  - alert [ref=e124]

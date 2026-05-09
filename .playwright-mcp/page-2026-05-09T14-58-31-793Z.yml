@@ -1,0 +1,79 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e109]:
+    - generic [ref=e110]:
+      - link "Angel Nail" [ref=e111] [cursor=pointer]:
+        - /url: /angel
+        - img "Angel Nail" [ref=e112]
+      - generic [ref=e113]:
+        - link "Services" [ref=e114] [cursor=pointer]:
+          - /url: /angel/services
+        - link "Gallery" [ref=e115] [cursor=pointer]:
+          - /url: /angel/gallery
+        - link "About" [ref=e116] [cursor=pointer]:
+          - /url: /angel/about
+        - link "Contact" [ref=e117] [cursor=pointer]:
+          - /url: /angel/contact
+      - link "Book Now" [ref=e118] [cursor=pointer]:
+        - /url: /angel/booking
+  - main [ref=e119]:
+    - generic [ref=e120]:
+      - heading "Choose Your Artist" [level=1] [ref=e121]
+      - generic [ref=e130]: Step 2 of 6
+    - generic [ref=e131]:
+      - generic [ref=e132]:
+        - paragraph [ref=e133]: 1 service
+        - paragraph [ref=e134]: 45 mins · $62.00
+      - generic [ref=e136]:
+        - img "Signature Gel Manicure 1" [ref=e138]
+        - generic [ref=e139]:
+          - paragraph [ref=e140]: Signature Gel Manicure 1
+          - paragraph [ref=e141]: 45 mins · $62
+    - generic [ref=e143] [cursor=pointer]:
+      - generic [ref=e145]: shuffle
+      - generic [ref=e146]:
+        - heading "No Preference" [level=3] [ref=e147]
+        - paragraph [ref=e148]: We’ll assign the best available artist for you.
+      - generic [ref=e150]: check
+    - generic [ref=e151]:
+      - generic [ref=e153] [cursor=pointer]:
+        - img "Elena Rossi" [ref=e155]
+        - generic [ref=e156]:
+          - heading "Elena Rossi" [level=3] [ref=e157]
+          - paragraph [ref=e158]: Senior Nail Artist
+          - generic [ref=e159]: Available today
+      - generic [ref=e161] [cursor=pointer]:
+        - img "Maya Chen" [ref=e163]
+        - generic [ref=e164]:
+          - heading "Maya Chen" [level=3] [ref=e165]
+          - paragraph [ref=e166]: Lash Specialist
+          - generic [ref=e167]: Best for Gel Nails
+      - generic [ref=e169] [cursor=pointer]:
+        - img "Jordan Smith" [ref=e171]
+        - generic [ref=e172]:
+          - heading "Jordan Smith" [level=3] [ref=e173]
+          - paragraph [ref=e174]: Senior Nail Artist
+          - generic [ref=e175]: Available today
+      - generic [ref=e177] [cursor=pointer]:
+        - img "Sofia Blanco" [ref=e179]
+        - generic [ref=e180]:
+          - heading "Sofia Blanco" [level=3] [ref=e181]
+          - paragraph [ref=e182]: Artistic Director
+          - generic [ref=e183]: Master Artisan
+      - generic [ref=e185] [cursor=pointer]:
+        - img "Lila Vance" [ref=e187]
+        - generic [ref=e188]:
+          - heading "Lila Vance" [level=3] [ref=e189]
+          - paragraph [ref=e190]: Nail Specialist
+          - generic [ref=e191]: Available today
+    - generic [ref=e192]:
+      - link "arrow_back Go Back" [ref=e193] [cursor=pointer]:
+        - /url: /angel/booking
+        - generic [ref=e194]: arrow_back
+        - text: Go Back
+      - link "Continue to Schedule arrow_forward" [ref=e195] [cursor=pointer]:
+        - /url: /angel/booking/schedule
+        - text: Continue to Schedule
+        - generic [ref=e196]: arrow_forward
+  - button "Angel" [ref=e88]:
+    - img "Angel" [ref=e90]
+  - alert [ref=e91]

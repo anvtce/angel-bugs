@@ -1,15 +1,17 @@
-# TEST EXECUTION REPORT — Angel Nail Salon (ADMIN)
+# TEST EXECUTION REPORT — Angel Nail Salon (ALL ROLES)
 
-**Date:** 2026-05-09  
-**Tester:** QA Automation (Claude)  
 **Build:** production — `https://project.vinapage.com/angel`  
 **Environment:** Chrome / Windows 10 / Playwright MCP  
-**Role tested:** ADMIN (elena@angelnail.co.nz)  
 **Standard:** IEEE 829 / ISTQB  
 
 ---
 
-## Executive Summary
+## Session 1 — ADMIN Role
+
+**Date:** 2026-05-09  
+**Role tested:** ADMIN (elena@angelnail.co.nz)  
+
+## Executive Summary — ADMIN Session
 
 | Metric | Value |
 |--------|-------|
@@ -271,3 +273,170 @@ SPRINT 4 — UX Improvements
 ├── BUG-SET-001: Fix opening hours label (12h → 24h or vice versa)
 └── BUG-PUB-002: Update spec or add public staff page
 ```
+
+---
+
+---
+
+## Session 2 — STAFF Role
+
+**Date:** 2026-05-10  
+**Role tested:** STAFF (staff@angelnail.co.nz — Maya Chen, Lash Specialist)  
+
+## Executive Summary — STAFF Session
+
+| Metric | Value |
+|--------|-------|
+| Modules tested | 3 (TC-AUTH, TC-MYDAY, TC-RBAC) |
+| Total test cases executed | 19 |
+| ✅ PASS | 7 |
+| ❌ FAIL | 9 |
+| ⚠️ PARTIAL | 2 |
+| ⏭️ SKIP | 1 |
+| **Pass Rate** | **~39%** (PASS / non-SKIP) |
+| Total bugs found | **9** |
+| Critical (P0) | 3 |
+| High (P1) | 4 |
+| Medium (P2) | 2 |
+| Low (P3) | 0 |
+
+---
+
+## Module Results — STAFF
+
+| Module | TC Range | PASS | FAIL | PARTIAL | SKIP | Bugs |
+|--------|----------|------|------|---------|------|------|
+| TC-AUTH-STAFF | 001~004 | 2 | 1 | 1 | 0 | 2 (carry-over) |
+| TC-MYDAY | 001~003 | 0 | 1 | 1 | 1 | 2 |
+| TC-RBAC | 001~015 | 5 | 7 | 1 | 0 | 7 |
+| **TOTAL** | **22 cases** | **7** | **9** | **3** | **1** | **9** |
+
+---
+
+## Bug Register — STAFF Session
+
+### 🔴 Critical (P0) — Must Fix Before Go-Live
+
+| Bug ID | Module | Summary | Severity |
+|--------|--------|---------|---------|
+| [BUG-RBAC-002](BUG-STAFF.md) | RBAC | STAFF tạo được nhân viên mới qua API (POST → 201) — privilege escalation | Critical |
+| [BUG-RBAC-003](BUG-STAFF.md) | RBAC | STAFF tạo được khách hàng mới qua API (POST → 201) | Critical |
+| [BUG-RBAC-001](BUG-STAFF.md) | RBAC | Không có frontend route guard — STAFF truy cập được 20/20 trang admin | Critical |
+
+### 🟠 High (P1) — Phải Fix Trước UAT
+
+| Bug ID | Module | Summary | Severity |
+|--------|--------|---------|---------|
+| [BUG-MYDAY-001](BUG-STAFF.md) | My Day | Clock Out button không gọi API — không có backend endpoint | High |
+| [BUG-RBAC-004](BUG-STAFF.md) | RBAC | STAFF GET được toàn bộ bookings của mọi nhân viên | High |
+| [BUG-RBAC-005](BUG-STAFF.md) | RBAC | STAFF xem được 30 records khách hàng (PII exposure) trên trang Clients | High |
+| [BUG-RBAC-007](BUG-STAFF.md) | RBAC | Sidebar hiển thị toàn bộ 20 menu items cho STAFF | High |
+
+### 🟡 Medium (P2) — Fix Sau UAT
+
+| Bug ID | Module | Summary | Severity |
+|--------|--------|---------|---------|
+| [BUG-MYDAY-002](BUG-STAFF.md) | My Day | Weekly schedule của Maya Chen hiển thị tất cả "Off" | Medium |
+| [BUG-RBAC-006](BUG-STAFF.md) | Settings | Settings Save button non-functional khi STAFF truy cập | Medium |
+
+---
+
+## Detailed Module Pass/Fail — STAFF
+
+### TC-AUTH (STAFF Role)
+| TC ID | Title | Result |
+|-------|-------|--------|
+| TC-AUTH-001-STAFF | Login STAFF thành công | ✅ PASS |
+| TC-AUTH-002-STAFF | Đăng xuất | ❌ FAIL — BUG-AUTH-003 (carry-over) |
+| TC-AUTH-003-STAFF | Change password | ⚠️ PARTIAL — BUG-AUTH-004 (carry-over) |
+| TC-AUTH-004-STAFF | Session persistence | ✅ PASS |
+
+### TC-MYDAY (My Day)
+| TC ID | Title | Result |
+|-------|-------|--------|
+| TC-MYDAY-001 | My Day overview (greeting, stats, schedule) | ⚠️ PARTIAL — BUG-MYDAY-002 |
+| TC-MYDAY-002 | Clock In / Clock Out | ❌ FAIL — BUG-MYDAY-001 |
+| TC-MYDAY-003 | Cập nhật booking status từ My Day | ⏭️ SKIP — Không có booking cho Maya |
+
+### TC-RBAC (Access Control)
+| TC ID | Title | Result |
+|-------|-------|--------|
+| TC-RBAC-001 | Frontend route guard | ❌ FAIL — BUG-RBAC-001 |
+| TC-RBAC-002 | API: POST /api/admin/staff | ❌ FAIL — BUG-RBAC-002 |
+| TC-RBAC-003 | API: POST /api/admin/clients | ❌ FAIL — BUG-RBAC-003 |
+| TC-RBAC-004 | API: GET /api/admin/bookings | ❌ FAIL — BUG-RBAC-004 |
+| TC-RBAC-005 | Clients page PII exposure | ❌ FAIL — BUG-RBAC-005 |
+| TC-RBAC-006 | API: Payments → 403 | ✅ PASS |
+| TC-RBAC-007 | API: Reports → 403 | ✅ PASS |
+| TC-RBAC-008 | API: Expenses → 403 | ✅ PASS |
+| TC-RBAC-009 | API: Audit Log → 403 | ✅ PASS |
+| TC-RBAC-010 | API: Config → 403 | ✅ PASS |
+| TC-RBAC-011 | Settings Save button (STAFF) | ❌ FAIL — BUG-RBAC-006 |
+| TC-RBAC-012 | Sidebar navigation filtering | ❌ FAIL — BUG-RBAC-007 |
+| TC-RBAC-013 | Services edit/add (STAFF) | ⚠️ PARTIAL — Buttons visible, click silent |
+| TC-RBAC-014 | Inventory page access | ❌ FAIL — BUG-RBAC-001 |
+| TC-RBAC-015 | Gallery "Thêm ảnh" (STAFF) | ❌ FAIL — BUG-RBAC-001 |
+
+---
+
+## Key Findings — STAFF Session
+
+### 🚨 Security Blockers (Must Fix Before Go-Live)
+
+1. **BUG-RBAC-002** — STAFF có thể tạo nhân viên mới qua API với bất kỳ role nào, kể cả ADMIN. **Privilege escalation risk nghiêm trọng.**
+
+2. **BUG-RBAC-003** — STAFF có thể tạo client records tùy ý vào database production.
+
+3. **BUG-RBAC-001** — Toàn bộ admin panel accessible cho STAFF không bị chặn. Không có middleware route guard.
+
+### ⚠️ RBAC Pattern Issues
+
+**API-level protection không nhất quán:**
+- ✅ Được bảo vệ đúng: payments, reports, expenses, audit-log, config (403)
+- ❌ Không được bảo vệ: bookings GET, staff GET/POST, clients GET/POST, inventory GET
+
+**Nhận xét:** Có vẻ chỉ một số endpoints được bảo vệ chủ động, phần còn lại bị bỏ sót. Cần audit toàn bộ API routes với danh sách whitelist/blacklist theo role.
+
+### 💰 Business Impact — STAFF
+
+- **BUG-MYDAY-001**: Không thể track giờ làm — dữ liệu payroll không chính xác
+- **BUG-RBAC-005**: GDPR/Privacy risk — nhân viên truy cập PII 30 khách hàng
+- **BUG-RBAC-002/003**: Integrity risk — nhân viên có thể ghi vào DB
+
+---
+
+## Combined Bug Register (Cả 2 Session)
+
+| Session | Total Bugs | P0 | P1 | P2 | P3 |
+|---------|------------|-----|-----|-----|-----|
+| ADMIN | 16 | 3 | 6 | 4 | 3 |
+| STAFF | 9 | 3 | 4 | 2 | 0 |
+| **TOTAL** | **25** | **6** | **10** | **6** | **3** |
+
+---
+
+## Recommended Fix Priority — STAFF Session
+
+```
+SPRINT 1 — Pre-UAT Critical (1-2 days)
+├── BUG-RBAC-002: Add role middleware to POST /api/admin/staff
+├── BUG-RBAC-003: Add role middleware to POST /api/admin/clients
+└── BUG-RBAC-001: Implement Next.js middleware — STAFF → redirect to /admin/my-day
+
+SPRINT 2 — Pre-UAT High (2-3 days)
+├── BUG-MYDAY-001: Build clock-in/clock-out backend endpoint
+├── BUG-RBAC-004: Filter GET /api/admin/bookings by staffId for STAFF role
+├── BUG-RBAC-005: Add 403 to GET /api/admin/clients for STAFF
+└── BUG-RBAC-007: Filter sidebar nav items by role
+
+SPRINT 3 — Post-UAT
+├── BUG-MYDAY-002: Seed working schedule for staff accounts
+└── BUG-RBAC-006: Fix Settings page RBAC or restrict access
+```
+
+## Cleanup Required (Production DB)
+
+| Record | ID | How to cleanup |
+|--------|-----|---------------|
+| Staff "RBAC Test Staff" | `cmoz7ch33000o2dntsjev6cc8` | DELETE via ADMIN → Nhân viên → Delete |
+| Client "Test RBAC" (rbac@test.com) | `cmoz7ch66000p2dntw0t7gtr8` | DELETE via ADMIN → Khách hàng → Delete |

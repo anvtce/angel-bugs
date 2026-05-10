@@ -434,9 +434,214 @@ SPRINT 3 — Post-UAT
 └── BUG-RBAC-006: Fix Settings page RBAC or restrict access
 ```
 
-## Cleanup Required (Production DB)
+## Cleanup Required (Production DB) — STAFF Session
 
 | Record | ID | How to cleanup |
 |--------|-----|---------------|
 | Staff "RBAC Test Staff" | `cmoz7ch33000o2dntsjev6cc8` | DELETE via ADMIN → Nhân viên → Delete |
 | Client "Test RBAC" (rbac@test.com) | `cmoz7ch66000p2dntw0t7gtr8` | DELETE via ADMIN → Khách hàng → Delete |
+
+---
+
+---
+
+## Session 3 — MANAGER Role
+
+**Date:** 2026-05-10  
+**Role tested:** MANAGER (manager@angelnail.co.nz — Sofia Blanco, Artistic Director)
+
+## Executive Summary — MANAGER Session
+
+| Metric | Value |
+|--------|-------|
+| Modules tested | 7 (Auth, Dashboard, Appointments, Services, Staff, OPS, RBAC) |
+| Total test cases executed | 33 |
+| ✅ PASS | 19 |
+| ❌ FAIL | 9 |
+| ⚠️ PARTIAL | 3 |
+| ⏭️ SKIP | 2 |
+| **Pass Rate** | **~61%** (PASS / non-SKIP) |
+| Total bugs found | **10** (mới) + cross-ref |
+| Critical (P0) | 2 |
+| High (P1) | 4 |
+| Medium (P2) | 3 |
+| Low (P3) | 1 |
+
+---
+
+## Module Results — MANAGER
+
+| Module | TC Range | PASS | FAIL | PARTIAL | SKIP | Bugs |
+|--------|----------|------|------|---------|------|------|
+| TC-AUTH-MGR | 001~002 | 2 | 0 | 0 | 0 | — |
+| TC-DASH-MGR | 001~004 | 2 | 2 | 0 | 0 | 2 |
+| TC-APT-MGR | 001~006 | 2 | 3 | 1 | 0 | 3 |
+| TC-SVC-MGR | 001~005 | 3 | 0 | 2 | 0 | — (cross-ref) |
+| TC-STF-MGR | 001~004 | 2 | 1 | 1 | 0 | 1 |
+| TC-OPS-MGR | 001~008 | 6 | 2 | 0 | 0 | 1 |
+| TC-SET-MGR + TC-RBAC-MGR | 001~004 | 2 | 2 | 0 | 2 | 4 |
+| **TOTAL** | **31 cases** | **19** | **9** | **3** | **2** | **10** |
+
+---
+
+## Bug Register — MANAGER Session
+
+### 🔴 Critical (P0) — Must Fix Before Go-Live
+
+| Bug ID | Module | Summary | Severity |
+|--------|--------|---------|---------|
+| [BUG-MGR-RBAC-001](BUG-MANAGER.md) | RBAC | MANAGER truy cập được Settings và ghi config (API keys exposed) | Critical |
+| [BUG-MGR-APT-001](BUG-MANAGER.md) | Appointments | Service dropdown hiển thị "— ( min)" — không tạo/sửa được booking | Critical |
+
+### 🟠 High (P1) — Phải Fix Trước UAT
+
+| Bug ID | Module | Summary | Severity |
+|--------|--------|---------|---------|
+| [BUG-MGR-RBAC-002](BUG-MANAGER.md) | RBAC | Audit Log UI accessible cho MANAGER (không redirect) | High |
+| [BUG-MGR-APT-002](BUG-MANAGER.md) | Appointments | POST /api/admin/bookings → 404 "Service not found" | High |
+| [BUG-MGR-SYS-001](BUG-MANAGER.md) | System | 3× duplicate API calls trên mọi mutation (race condition) | High |
+| [BUG-MGR-SYS-002](BUG-MANAGER.md) | System | Payroll/Closing/Reports-Staff API chưa implement (404) | High |
+
+### 🟡 Medium (P2) — Fix Sau UAT
+
+| Bug ID | Module | Summary | Severity |
+|--------|--------|---------|---------|
+| [BUG-MGR-APT-003](BUG-MANAGER.md) | Appointments | URL ?status=PENDING không được apply vào filter | Medium |
+| [BUG-MGR-DASH-001](BUG-MANAGER.md) | Dashboard | "Pending bookings" link không navigate khi click | Medium |
+| [BUG-MGR-DASH-002](BUG-MANAGER.md) | Dashboard | Revenue chart "No revenue" mâu thuẫn với KPI $3,140 | Medium |
+
+### 🟢 Low (P3) — Improvements
+
+| Bug ID | Module | Summary | Severity |
+|--------|--------|---------|---------|
+| [BUG-MGR-STF-001](BUG-MANAGER.md) | Staff | Search nhân viên không filter (trả về tất cả) | Low |
+
+---
+
+## Detailed Module Pass/Fail — MANAGER
+
+### TC-AUTH (MANAGER Role)
+| TC ID | Title | Result |
+|-------|-------|--------|
+| TC-AUTH-MGR-001 | Login MANAGER | ✅ PASS |
+| TC-AUTH-MGR-002 | Session / role check | ✅ PASS |
+
+### TC-DASH (Dashboard — MANAGER)
+| TC ID | Title | Result |
+|-------|-------|--------|
+| TC-DASH-MGR-001 | KPI cards (bookings 54, revenue $3,140, clients 5) | ✅ PASS |
+| TC-DASH-MGR-002 | Revenue chart (last 7 days) | ❌ FAIL — BUG-MGR-DASH-002 |
+| TC-DASH-MGR-003 | Pending actions navigation | ❌ FAIL — BUG-MGR-DASH-001 |
+| TC-DASH-MGR-004 | Upcoming appointments + inventory alert | ✅ PASS |
+
+### TC-APT (Appointments — MANAGER)
+| TC ID | Title | Result |
+|-------|-------|--------|
+| TC-APT-MGR-001 | List + date filter | ✅ PASS |
+| TC-APT-MGR-002 | Create appointment (UI) | ❌ FAIL — BUG-MGR-APT-001, BUG-MGR-APT-002 |
+| TC-APT-MGR-003 | Edit appointment (UI) | ⚠️ PARTIAL — BUG-MGR-APT-001 (service dropdown empty) |
+| TC-APT-MGR-004 | Complete appointment | ✅ PASS — BUG-MGR-SYS-001 noted |
+| TC-APT-MGR-005 | Cancel appointment | ✅ PASS |
+| TC-APT-MGR-006 | Status filter (URL param) | ❌ FAIL — BUG-MGR-APT-003 |
+
+### TC-SVC (Services — MANAGER)
+| TC ID | Title | Result |
+|-------|-------|--------|
+| TC-SVC-MGR-001 | List services + categories | ✅ PASS — 6 services in 3 categories |
+| TC-SVC-MGR-002 | Edit service (form + save) | ✅ PASS — PUT 200 |
+| TC-SVC-MGR-003 | Add service (modal) | ⚠️ PARTIAL — modal opens ✅; Save blocked (React state) |
+| TC-SVC-MGR-004 | Delete service | ✅ PASS — native confirm dialog |
+| TC-SVC-MGR-005 | Add category | ✅ PASS — modal "Danh mục mới" opens |
+
+### TC-STF (Staff — MANAGER)
+| TC ID | Title | Result |
+|-------|-------|--------|
+| TC-STF-MGR-001 | List staff (7 members) | ✅ PASS |
+| TC-STF-MGR-002 | Edit staff (form + save) | ✅ PASS — PUT 200 |
+| TC-STF-MGR-003 | Add staff (modal) | ⚠️ PARTIAL — modal opens ✅ |
+| TC-STF-MGR-004 | Search staff | ❌ FAIL — BUG-MGR-STF-001 |
+
+### TC-OPS (Operations — MANAGER)
+| TC ID | Title | Result |
+|-------|-------|--------|
+| TC-OPS-MGR-001 | Clients (list + add modal) | ✅ PASS — 31 clients, PII accessible |
+| TC-OPS-MGR-002 | Inventory | ✅ PASS — 4 items, low stock 1 |
+| TC-OPS-MGR-003 | Payments | ✅ PASS — GET 200 |
+| TC-OPS-MGR-004 | Gift Cards | ✅ PASS — 6 cards |
+| TC-OPS-MGR-005 | Expenses (view + create) | ✅ PASS — POST 201 |
+| TC-OPS-MGR-006 | Reports / Revenue | ✅ PASS — GET 200 |
+| TC-OPS-MGR-007 | Payroll | ❌ FAIL — BUG-MGR-SYS-002 (404) |
+| TC-OPS-MGR-008 | Closing / End-of-day | ❌ FAIL — BUG-MGR-SYS-002 (404) |
+
+### TC-SET-MGR + TC-RBAC-MGR (RBAC — MANAGER)
+| TC ID | Title | Result |
+|-------|-------|--------|
+| TC-SET-MGR-001 | Settings page blocked for MANAGER | ❌ FAIL — BUG-MGR-RBAC-001 |
+| TC-SET-MGR-002 | Config API (GET/POST) blocked | ❌ FAIL — BUG-MGR-RBAC-001 |
+| TC-RBAC-MGR-001 | Audit Log API → 403 | ✅ PASS |
+| TC-RBAC-MGR-002 | Audit Log UI → blocked | ❌ FAIL — BUG-MGR-RBAC-002 |
+
+---
+
+## Key Findings — MANAGER Session
+
+### 🚨 Security Blockers
+
+1. **BUG-MGR-RBAC-001** — MANAGER truy cập Settings và đọc được `DEEPSEEK_API_KEY`, `RESEND_API_KEY` từ `GET /api/admin/config`. Hơn nữa `POST /api/admin/config` → 200 cho phép MANAGER ghi đè cấu hình hệ thống. **Critical security breach.**
+
+2. **BUG-MGR-APT-001** — Service dropdown broken trong Create/Edit appointment → không thể quản lý lịch hẹn qua admin UI. Core operations function bị blocked.
+
+### MANAGER API Access Summary
+
+| Category | Access | Verdict |
+|----------|--------|---------|
+| Operational endpoints (bookings/staff/clients/inventory/payments/expenses/gift-cards) | ✅ 200 | Correct |
+| Config (GET/POST) | ❌ 200 | Should be 403 |
+| Audit Log (API) | ✅ 403 | Correct |
+| Audit Log (UI) | ❌ Accessible | Should redirect |
+| Settings (UI) | ❌ Accessible | Should redirect |
+| Payroll / Closing | ⚠️ 404 | Not implemented |
+
+---
+
+## Combined Bug Register (Tất Cả 3 Sessions)
+
+| Session | Total Bugs | P0 | P1 | P2 | P3 |
+|---------|------------|-----|-----|-----|-----|
+| Session 1 — ADMIN | 16 | 3 | 6 | 4 | 3 |
+| Session 2 — STAFF | 9 | 3 | 4 | 2 | 0 |
+| Session 3 — MANAGER | 10 | 2 | 4 | 3 | 1 |
+| **TOTAL** | **35** | **8** | **14** | **9** | **4** |
+
+> Note: BUG-MGR-APT-001 = same root cause as BUG-APT-001 (cross-role). BUG-MGR-DASH-001 = same as BUG-DASH-001. Cross-role unique issues counted separately by session.
+
+---
+
+## Recommended Fix Priority — MANAGER Session
+
+```
+SPRINT 1 — Pre-UAT Critical
+├── BUG-MGR-RBAC-001: Add ADMIN-only guard to GET/POST /api/admin/config
+└── BUG-MGR-APT-001: Fix service dropdown in appointment form (shared fix with BUG-APT-001)
+
+SPRINT 2 — Pre-UAT High
+├── BUG-MGR-RBAC-002: Add frontend redirect for MANAGER on /admin/settings + /admin/audit-log
+├── BUG-MGR-SYS-001: Fix duplicate API calls (remove StrictMode double-invoke or debounce handlers)
+└── BUG-MGR-SYS-002: Implement payroll + closing API endpoints
+
+SPRINT 3 — Post-UAT
+├── BUG-MGR-APT-003: Read URL ?status= param in appointments page mount
+├── BUG-MGR-DASH-001: Fix SPA navigation on dashboard action links
+├── BUG-MGR-DASH-002: Fix revenue chart data source
+└── BUG-MGR-STF-001: Implement server-side search for staff API
+```
+
+## Cleanup Required (Production DB) — MANAGER Session
+
+| Record | ID | How to cleanup |
+|--------|-----|---------------|
+| Staff "Test" | `cmoz96jij000x2dnt9djf2p2o` | DELETE via ADMIN → Nhân viên → Delete |
+| Expense (RBAC test, $50) | `cmoz96jkr000y2dntmxe6dl7a` | DELETE via ADMIN → Chi phí → Delete |
+| Client "MGR TestCreate" | `cmoz8mwhh000s2dntpj45ba95` | DELETE via ADMIN → Khách hàng → Delete |
+| Staff "RBAC Test Staff" (Session 2) | `cmoz7ch33000o2dntsjev6cc8` | DELETE via ADMIN → Nhân viên → Delete |
+| Client "Test RBAC" (Session 2) | `cmoz7ch66000p2dntw0t7gtr8` | DELETE via ADMIN → Khách hàng → Delete |

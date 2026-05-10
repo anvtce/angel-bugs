@@ -1,0 +1,15 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - img "Angel Nail" [ref=e5]
+      - heading "Angel Nail" [level=1] [ref=e6]
+      - paragraph [ref=e7]: Staff Schedule
+    - generic [ref=e8]:
+      - paragraph [ref=e9]: Enter your staff PIN
+      - generic [ref=e10]:
+        - textbox "••••" [active] [ref=e11]
+        - button "Access Schedule" [disabled] [ref=e12]
+    - paragraph [ref=e13]: Angel Nail & Spa · Blenheim, NZ
+  - button "Angel" [ref=e14]:
+    - img "Angel" [ref=e16]
+  - alert [ref=e17]

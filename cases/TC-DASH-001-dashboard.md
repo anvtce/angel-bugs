@@ -34,25 +34,28 @@ Kiểm thử trang Dashboard — trang landing sau khi đăng nhập Admin Panel
 | Field | Value |
 |-------|-------|
 | **Test Case ID** | TC-DASH-001 |
-| **Title** | Dashboard Stats Cards hiển thị đúng |
+| **Title** | Dashboard Stats Cards và Pending Actions hiển thị đúng |
 | **Priority** | P0 — Critical |
 | **Type** | Functional / Positive |
 | **Preconditions** | Đang đăng nhập role ADMIN |
+
+> **Ghi chú UI:** Dashboard hiển thị **3 KPI cards** (không phải 4). Low Stock không phải KPI card riêng — nó nằm trong section "Pending actions" bên cạnh chart.
 
 **Test Steps:**
 
 | Step | Action | Expected Result |
 |------|--------|-----------------|
-| 1 | Truy cập `/angel/admin` | Dashboard load |
-| 2 | Quan sát 4 stats cards trong khi API đang fetch | Loading skeleton hoặc spinner hiển thị |
+| 1 | Truy cập `/angel/admin` | Dashboard load, tiêu đề "Bảng điều khiển" |
+| 2 | Quan sát 3 stats cards trong khi API đang fetch | Loading skeleton hoặc spinner hiển thị |
 | 3 | Chờ API `GET /api/admin/stats` hoàn thành | Cards hiển thị dữ liệu thực |
-| 4 | Kiểm tra card "Total Bookings" | Hiển thị số nguyên dương, có label rõ ràng |
-| 5 | Kiểm tra card "Revenue" | Hiển thị số tiền định dạng $X,XXX.XX (NZD) |
-| 6 | Kiểm tra card "New Clients" | Hiển thị số khách mới trong kỳ |
-| 7 | Kiểm tra card "Low Stock" | Hiển thị số lượng item dưới mức tồn kho tối thiểu |
-| 8 | Mở Network tab DevTools, kiểm tra `/api/admin/stats` | HTTP 200, response JSON có đầy đủ 4 fields |
+| 4 | Kiểm tra card "Tổng lịch hẹn" | Hiển thị số nguyên dương, icon calendar_today |
+| 5 | Kiểm tra card "Doanh thu" | Hiển thị số tiền định dạng $X,XXX.XX (NZD), icon payments |
+| 6 | Kiểm tra card "Khách mới tháng này" | Hiển thị số khách mới trong tháng, icon person_add |
+| 7 | Kiểm tra section "Pending actions" (bên phải chart) | Hiển thị: "Pending bookings N", "Low stock items N", "Review payments →" |
+| 8 | Kiểm tra "Low stock items" trong Pending actions | Hiển thị số item dưới ngưỡng tồn kho |
+| 9 | Mở Network tab DevTools, kiểm tra `/api/admin/stats` | HTTP 200, response JSON có đầy đủ fields |
 
-**Expected Result:** 4 KPI cards hiển thị đúng giá trị, đúng format, không có NaN hoặc undefined.
+**Expected Result:** 3 KPI cards hiển thị đúng giá trị, đúng format, không có NaN hoặc undefined. Section Pending actions hiển thị đầy đủ 3 action items.
 
 ---
 
@@ -81,26 +84,28 @@ Kiểm thử trang Dashboard — trang landing sau khi đăng nhập Admin Panel
 
 ---
 
-### TC-DASH-003 — Card Pending Bookings — Drill-down filter
+### TC-DASH-003 — Pending Bookings link — Drill-down filter
 
 | Field | Value |
 |-------|-------|
 | **Test Case ID** | TC-DASH-003 |
-| **Title** | Click Pending Bookings card → filter đúng danh sách |
+| **Title** | Click "Pending bookings" link → filter đúng danh sách |
 | **Priority** | P1 — High |
 | **Type** | Functional / Navigation |
-| **Preconditions** | Có ≥1 booking status PENDING trong hệ thống |
+| **Preconditions** | Có ≥1 booking status CHỜ XỬ LÝ (PENDING) trong hệ thống |
+
+> **Ghi chú UI:** "Pending bookings" là link item trong section "Pending actions" (bên phải chart), không phải KPI card riêng.
 
 **Test Steps:**
 
 | Step | Action | Expected Result |
 |------|--------|-----------------|
-| 1 | Quan sát số trên card "Pending Bookings" | Hiển thị số N (N ≥ 1) |
-| 2 | Click vào card "Pending Bookings" | Navigate đến `/angel/admin/appointments` |
-| 3 | Kiểm tra filter đã được áp dụng | Danh sách chỉ hiển thị bookings có status = PENDING |
-| 4 | Đếm số dòng trong danh sách | Khớp với số N trên card Dashboard |
+| 1 | Quan sát section "Pending actions" | Link "Pending bookings N" hiển thị với badge số |
+| 2 | Click vào link "Pending bookings N" | Navigate đến `/angel/admin/appointments?status=PENDING` |
+| 3 | Kiểm tra filter đã được áp dụng | Danh sách chỉ hiển thị bookings có status = CHỜ XỬ LÝ |
+| 4 | Đếm số dòng trong danh sách | Khớp với số N trên Dashboard |
 
-**Expected Result:** Navigation + auto-filter hoạt động đúng.
+**Expected Result:** Navigation + auto-filter hoạt động đúng, URL chứa `?status=PENDING`.
 
 ---
 
@@ -177,38 +182,45 @@ Kiểm thử trang Dashboard — trang landing sau khi đăng nhập Admin Panel
 | Field | Value |
 |-------|-------|
 | **Test Case ID** | TC-DASH-007 |
-| **Title** | Low Stock alerts hiển thị đúng |
+| **Title** | Low Stock alerts hiển thị đúng ở 2 vị trí |
 | **Priority** | P1 — High |
 | **Type** | Functional |
 | **Preconditions** | Có ≥1 inventory item dưới ngưỡng tồn kho tối thiểu |
 
+> **Ghi chú UI:** Low Stock hiển thị ở **2 vị trí** trên Dashboard: (1) Link "Low stock items N" trong section "Pending actions"; (2) Card "Cảnh báo kho hàng" ở phần dưới. Cả hai đều dẫn đến `/angel/admin/inventory` **không có filter** trong URL.
+
 **Test Steps:**
 
 | Step | Action | Expected Result |
 |------|--------|-----------------|
-| 1 | Quan sát khu vực Low Stock | Alert/badge hiển thị màu đỏ / cảnh báo |
-| 2 | Kiểm tra danh sách item | Tên item, số lượng hiện tại, số lượng tối thiểu |
-| 3 | Click vào alert | Navigate đến `/angel/admin/inventory` với filter low-stock |
+| 1 | Quan sát section "Pending actions" | Link "Low stock items N" hiển thị icon warning màu vàng/cam |
+| 2 | Quan sát card "Cảnh báo kho hàng" | Hiển thị message "N sản phẩm cần chú ý", nút "XEM KHO HÀNG" |
+| 3 | Click link "Low stock items N" trong Pending actions | Navigate đến `/angel/admin/inventory` |
+| 4 | Click nút "XEM KHO HÀNG" trên card | Navigate đến `/angel/admin/inventory` |
+| 5 | Tại trang Inventory | Kiểm tra thấy đúng N item cần bổ sung hàng |
 
-**Expected Result:** Cảnh báo kho hiển thị đúng, có thể drill-down vào Inventory.
+**Expected Result:** Cảnh báo kho hiển thị đúng ở 2 vị trí, cả 2 link đều dẫn đến `/angel/admin/inventory`.
 
 ---
 
-### TC-DASH-008 — Kỹ thuật viên đang trực hôm nay
+### TC-DASH-008 — Danh sách Nhân viên trên Dashboard
 
 | Field | Value |
 |-------|-------|
 | **Test Case ID** | TC-DASH-008 |
-| **Title** | Danh sách kỹ thuật viên đang trực hiển thị đúng |
+| **Title** | Section "Nhân viên" hiển thị đúng thông tin staff |
 | **Priority** | P2 — Medium |
 | **Type** | Functional |
+
+> **Ghi chú UI:** Section tên là "Nhân viên" (không phải "Staff On Today" / "Technicians Today"). Hiển thị **toàn bộ staff** với avatar + tên + chức danh (role), **không** hiển thị số booking hôm nay per staff. Có link "Quản lý" dẫn đến `/angel/admin/staff`.
 
 **Test Steps:**
 
 | Step | Action | Expected Result |
 |------|--------|-----------------|
-| 1 | Quan sát section "Staff On Today" / "Technicians Today" | Danh sách thợ có lịch hôm nay |
-| 2 | Kiểm tra thông tin mỗi thợ | Avatar, tên, số booking hôm nay |
-| 3 | So sánh với My Day hoặc Appointments | Dữ liệu nhất quán |
+| 1 | Quan sát section "Nhân viên" ở góc dưới phải Dashboard | Danh sách staff hiển thị |
+| 2 | Kiểm tra thông tin mỗi staff | Avatar ảnh tròn, tên đầy đủ, chức danh (VD: Senior Nail Artist, Lash Specialist) |
+| 3 | Kiểm tra số staff hiển thị | Tất cả staff Active đều có mặt |
+| 4 | Click link "Quản lý" | Navigate đến `/angel/admin/staff` |
 
-**Expected Result:** Hiển thị chính xác thợ có mặt hôm nay.
+**Expected Result:** Section "Nhân viên" hiển thị avatar + tên + chức danh của toàn bộ staff, click "Quản lý" điều hướng đúng.

@@ -29,20 +29,22 @@ Kiểm thử 9 trang public: trang chủ, dịch vụ, gallery, giới thiệu, 
 | **Type** | Functional / UI |
 | **URL** | `/angel/` |
 
+> **Ghi chú UI:** Navbar thực tế hiển thị: **Logo "Angel Nail"**, links: **Services, Gallery, About, Contact**, nút **"Book Now"** (không có Staff và Reviews trong navbar). Trang homepage có các sections: Hero, Our Blenheim Story (About), Signature Services, The Atelier Gallery, Testimonials, Contact + Google Maps.
+
 **Test Steps:**
 
 | Step | Action | Expected Result |
 |------|--------|-----------------|
 | 1 | Truy cập `/angel` | Trang chủ load |
-| 2 | Kiểm tra Navbar | Logo, links: Services, Gallery, About, Staff, Reviews, Contact |
-| 3 | Section Hero | Headline, CTA "Book Now" button |
-| 4 | Click "Book Now" | Navigate đến `/angel/booking` |
-| 5 | Section About | Giới thiệu tiệm |
-| 6 | Section Services | Preview các dịch vụ nổi bật |
-| 7 | Section Gallery | Preview ảnh gallery |
-| 8 | Section Testimonials | Reviews từ database |
-| 9 | Section Contact | Địa chỉ, SĐT, email, giờ mở cửa, Google Maps |
-| 10 | Footer | Links, copyright, contact info |
+| 2 | Kiểm tra Navbar | Logo "Angel Nail", links: **Services, Gallery, About, Contact**, nút "Book Now" (màu primary) |
+| 3 | Section Hero | Headline "The Art of Modern Care", subtext, nút CTA |
+| 4 | Click nút "Book Now" trong navbar | Navigate đến `/angel/booking` |
+| 5 | Section "Our Blenheim Story" | Giới thiệu tiệm, hình ảnh |
+| 6 | Section "Signature Services" | Preview 4 dịch vụ nổi bật |
+| 7 | Section "The Atelier Gallery" | Preview 6 ảnh gallery |
+| 8 | Section Testimonials | Reviews từ database (ít nhất 1 review) |
+| 9 | Section Contact | Địa chỉ, Google Maps (Get Directions link) |
+| 10 | Footer | Links, copyright "© 2026 Angel Nails & Spa. All Rights Reserved." |
 | 11 | Load time | < 3 giây (LCP) |
 
 ---
@@ -129,10 +131,10 @@ Kiểm thử 9 trang public: trang chủ, dịch vụ, gallery, giới thiệu, 
 
 | Step | Action | Expected Result |
 |------|--------|-----------------|
-| 1 | Desktop (>768px) | Navbar ngang với tất cả links |
-| 2 | Mobile (≤768px) | Navbar thu gọn, hamburger menu hoặc bottom nav |
-| 3 | Click hamburger | Menu slide out với đầy đủ links |
-| 4 | Mobile bottom nav | Home, Services, Book, Gallery, Contact |
+| 1 | Desktop (>768px) | Navbar ngang: Logo + Services, Gallery, About, Contact + nút "Book Now" |
+| 2 | Mobile (≤768px) | Navbar thu gọn, logo + nút "Book Now", hamburger menu hoặc bottom nav |
+| 3 | Click hamburger (mobile) | Menu slide out với đầy đủ links: Services, Gallery, About, Contact |
+| 4 | Mobile bottom nav (nếu có) | Home, Services, Book, Gallery, Contact |
 | 5 | Active state | Link của trang đang xem được highlight |
 | 6 | Scroll xuống | Navbar sticky, không mất |
 

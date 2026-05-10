@@ -1,0 +1,216 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "Angel Nail" [ref=e4] [cursor=pointer]:
+        - /url: /angel
+        - img "Angel Nail" [ref=e5]
+      - generic [ref=e6]:
+        - link "Services" [ref=e7] [cursor=pointer]:
+          - /url: /angel/services
+        - link "Gallery" [ref=e8] [cursor=pointer]:
+          - /url: /angel/gallery
+        - link "About" [ref=e9] [cursor=pointer]:
+          - /url: /angel/about
+        - link "Contact" [ref=e10] [cursor=pointer]:
+          - /url: /angel/contact
+      - link "Book Now" [ref=e11] [cursor=pointer]:
+        - /url: /angel/booking
+  - banner [ref=e12]:
+    - img "Close-up of elegant minimalist nail art on soft manicured hands" [ref=e14]
+    - generic [ref=e17]:
+      - text: Elevating Every Detail in Blenheim
+      - heading "The Art of Modern Care" [level=1] [ref=e18]:
+        - text: The Art of
+        - text: Modern Care
+      - paragraph [ref=e19]: A digital atelier where classic luxury meets modern technique. Your local sanctuary for professional nail artistry and restorative treatments.
+      - generic [ref=e20]:
+        - link "Schedule Appointment" [ref=e21] [cursor=pointer]:
+          - /url: /angel/booking
+        - link "View Menu" [ref=e22] [cursor=pointer]:
+          - /url: /angel/services
+  - generic [ref=e25]:
+    - generic [ref=e26]:
+      - heading "Our Blenheim Story" [level=2] [ref=e28]
+      - generic [ref=e30]:
+        - paragraph [ref=e31]: Established for over 5 years, Angel Nail has become a cornerstone of the Blenheim community for those seeking high-quality nail care and a moment of genuine relaxation.
+        - paragraph [ref=e32]: "Our focus has always been simple: uncompromising quality and absolute customer satisfaction. We take pride in using premium products and staying at the forefront of modern nail techniques to ensure every client leaves feeling refreshed and beautiful."
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 5+
+          - generic [ref=e36]: Years of Excellence
+        - generic [ref=e38]:
+          - generic [ref=e39]: 100%
+          - generic [ref=e40]: Satisfaction Focus
+    - generic [ref=e41]:
+      - img "Interior of Angel Nail salon in Blenheim" [ref=e43]
+      - paragraph [ref=e45]: “Your local sanctuary for beauty and precision.”
+  - generic [ref=e47]:
+    - generic [ref=e48]:
+      - heading "Signature Services" [level=2] [ref=e50]
+      - paragraph [ref=e52]: Precision, luxury, and artistry combined to create the ultimate self-care experience at competitive Blenheim pricing.
+    - generic [ref=e53]:
+      - generic [ref=e54]:
+        - img "Professional nail technician applying gel polish" [ref=e56]
+        - generic [ref=e58]:
+          - heading "Gel Manicure" [level=3] [ref=e59]
+          - paragraph [ref=e60]: Long-lasting shine and durability with our premium toxic-free gel collection.
+          - text: Standard Rate $50
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - generic [ref=e63]: rebase_edit
+          - heading "Deluxe Pedicure" [level=3] [ref=e64]
+          - paragraph [ref=e65]: A rejuvenating soak, exfoliation, and massage followed by expert polish.
+        - generic [ref=e66]:
+          - img "Soothing foot spa" [ref=e68]
+          - generic [ref=e69]:
+            - generic [ref=e70]: $60
+            - link "Book Now arrow_forward" [ref=e71] [cursor=pointer]:
+              - /url: /angel/booking
+              - text: Book Now
+              - generic [ref=e72]: arrow_forward
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - generic [ref=e75]: diamond
+          - heading "Full Set Acrylic" [level=3] [ref=e76]
+          - paragraph [ref=e77]: Sculpted perfection tailored to your desired length and shape.
+        - generic [ref=e78]:
+          - paragraph [ref=e79]: Inquire for pricing
+          - link "Explore Options" [ref=e80] [cursor=pointer]:
+            - /url: /angel/services
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - heading "Professional Touch" [level=3] [ref=e83]
+          - paragraph [ref=e84]: Specializing in intricate nail art and health-conscious applications. Visit us in Blenheim for a personalized consultation.
+          - link "Full Service Menu" [ref=e85] [cursor=pointer]:
+            - /url: /angel/services
+        - img "Sophisticated nail art" [ref=e87]
+  - generic [ref=e88]:
+    - generic [ref=e89]:
+      - heading "The Atelier Gallery" [level=2] [ref=e90]
+      - paragraph [ref=e91]: A visual journal of our favorite creations in our Blenheim studio.
+    - generic [ref=e92]:
+      - img "French Tip Manicure" [ref=e94]
+      - img "Chrome Nails" [ref=e96]
+      - img "Botanical Nail Art" [ref=e98]
+      - img "Classic Red Manicure" [ref=e100]
+      - img "Signature Gel Manicure" [ref=e102]
+      - img "Rose Petal Spa Pedicure" [ref=e104]
+  - generic [ref=e107]:
+    - generic [ref=e110]:
+      - generic [ref=e111]: format_quote
+      - paragraph [ref=e112]: “The attention to detail at Angel Nail is simply unmatched. It’s more than a service; it’s the best local spot in Blenheim for a moment of pure serenity.”
+      - generic [ref=e113]:
+        - generic [ref=e114]: SC
+        - generic [ref=e115]:
+          - paragraph [ref=e116]: Sophia C.
+          - paragraph [ref=e117]: Blenheim Local
+    - generic [ref=e118]:
+      - generic [ref=e119]:
+        - generic [ref=e120]:
+          - generic [ref=e121]: star
+          - generic [ref=e122]: star
+          - generic [ref=e123]: star
+          - generic [ref=e124]: star
+          - generic [ref=e125]: star
+        - paragraph [ref=e126]: “Best acrylic set I’ve ever had. Perfectly thin yet incredibly strong. Highly recommend!”
+      - generic [ref=e127]:
+        - generic [ref=e128]:
+          - generic [ref=e129]: star
+          - generic [ref=e130]: star
+          - generic [ref=e131]: star
+          - generic [ref=e132]: star
+          - generic [ref=e133]: star
+        - paragraph [ref=e134]: “The atmosphere is so calming. I look forward to my monthly treatments here.”
+  - generic [ref=e137]:
+    - generic [ref=e138]:
+      - generic [ref=e139]:
+        - heading "Visit Our Studio" [level=2] [ref=e140]
+        - paragraph [ref=e141]: Experience professional nail care in the heart of Blenheim. Walk-ins welcome or book ahead.
+      - generic [ref=e142]:
+        - generic [ref=e143]:
+          - generic [ref=e144]: location_on
+          - generic [ref=e145]:
+            - heading "Our Address" [level=4] [ref=e146]
+            - paragraph [ref=e147]: 1/20 High Street, Blenheim 7201, New Zealand
+        - generic [ref=e148]:
+          - generic [ref=e149]: schedule
+          - generic [ref=e150]:
+            - heading "Business Hours" [level=4] [ref=e151]
+            - list [ref=e152]:
+              - listitem [ref=e153]:
+                - generic [ref=e154]: "Mon - Fri:"
+                - generic [ref=e155]: 9:00 AM - 5:30 PM
+              - listitem [ref=e156]:
+                - generic [ref=e157]: "Saturday:"
+                - generic [ref=e158]: 9:00 AM - 4:00 PM
+              - listitem [ref=e159]:
+                - generic [ref=e160]: "Sunday:"
+                - generic [ref=e161]: Closed
+        - generic [ref=e162]:
+          - generic [ref=e163]: call
+          - generic [ref=e164]:
+            - heading "Get in Touch" [level=4] [ref=e165]
+            - paragraph [ref=e166]:
+              - text: 03 579 1166
+              - text: studio@angelnail.co.nz
+    - generic [ref=e167]:
+      - img "Map location of Angel Nails & Spa" [ref=e168]
+      - link "directions Get Directions" [ref=e171] [cursor=pointer]:
+        - /url: https://www.google.com/maps/search/?api=1&query=1%2F20%20High%20Street%2C%20Blenheim%207201%2C%20New%20Zealand
+        - generic [ref=e172]: directions
+        - text: Get Directions
+  - contentinfo [ref=e173]:
+    - generic [ref=e174]:
+      - generic [ref=e175]:
+        - link "Angel Nails & Spa" [ref=e176] [cursor=pointer]:
+          - /url: /angel
+          - img "Angel Nails & Spa" [ref=e177]
+        - paragraph [ref=e178]: Defining the future of luxury nail care in Blenheim through precision, art, and an uncompromising commitment to client experience.
+        - link "Email" [ref=e180] [cursor=pointer]:
+          - /url: mailto:studio@angelnail.co.nz
+          - generic [ref=e181]: mail
+        - generic [ref=e182]:
+          - paragraph [ref=e183]: 1/20 High Street, Blenheim 7201, New Zealand
+          - paragraph [ref=e184]:
+            - link "03 579 1166" [ref=e185] [cursor=pointer]:
+              - /url: tel:035791166
+          - paragraph [ref=e186]:
+            - link "studio@angelnail.co.nz" [ref=e187] [cursor=pointer]:
+              - /url: mailto:studio@angelnail.co.nz
+      - generic [ref=e188]:
+        - generic [ref=e189]:
+          - heading "Atelier" [level=5] [ref=e190]
+          - list [ref=e191]:
+            - listitem [ref=e192]:
+              - link "Services" [ref=e193] [cursor=pointer]:
+                - /url: /angel/services
+            - listitem [ref=e194]:
+              - link "Gift Cards" [ref=e195] [cursor=pointer]:
+                - /url: /angel/gift-cards
+            - listitem [ref=e196]:
+              - link "Our Story" [ref=e197] [cursor=pointer]:
+                - /url: /angel/about
+            - listitem [ref=e198]:
+              - link "Location" [ref=e199] [cursor=pointer]:
+                - /url: /angel#contact
+            - listitem [ref=e200]:
+              - link "Manage Booking" [ref=e201] [cursor=pointer]:
+                - /url: /angel/manage-booking
+        - generic [ref=e202]:
+          - heading "Legal" [level=5] [ref=e203]
+          - list [ref=e204]:
+            - listitem [ref=e205]:
+              - link "Privacy Policy" [ref=e206] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e207]:
+              - link "Terms of Service" [ref=e208] [cursor=pointer]:
+                - /url: "#"
+    - generic [ref=e209]:
+      - paragraph [ref=e210]: © 2026 Angel Nails & Spa. All Rights Reserved.
+      - generic [ref=e211]:
+        - generic [ref=e212]: Blenheim’s Choice
+        - generic [ref=e213]: •
+        - generic [ref=e214]: Crafted with Care
+  - button "Angel" [ref=e215]:
+    - img "Angel" [ref=e217]
+  - alert [ref=e218]

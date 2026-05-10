@@ -1,0 +1,8 @@
+[     284ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://project.vinapage.com/angel/api/admin/config:0
+[   10234ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://project.vinapage.com/angel/api/admin/settings:0
+[   10305ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://project.vinapage.com/angel/api/admin/settings:0
+[   32964ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://project.vinapage.com/angel/api/admin/salon:0
+[   33043ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://project.vinapage.com/angel/api/admin/salon/settings:0
+[   33114ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://project.vinapage.com/angel/api/admin/business:0
+[   33198ms] [ERROR] Failed to load resource: the server responded with a status of 405 () @ https://project.vinapage.com/angel/api/admin/config:0
+[   33265ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://project.vinapage.com/angel/api/admin/opening-hours:0

@@ -1,0 +1,235 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e41]
+  - generic [ref=e42]:
+    - main [ref=e43]:
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - button "Open menu" [ref=e46]: menu
+          - generic [ref=e47]: Angel Nail Admin
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - button "VI" [ref=e50]
+            - button "EN" [ref=e51]
+          - generic [ref=e52]:
+            - button "notifications 9+" [ref=e54]:
+              - text: notifications
+              - generic [ref=e55]: 9+
+            - button "Account menu" [ref=e57]: account_circle
+      - generic [ref=e58]:
+        - generic [ref=e59]:
+          - generic [ref=e60]:
+            - heading "Vật tư tiệm" [level=2] [ref=e61]
+            - paragraph [ref=e62]: Quản lý sơn và dụng cụ cao cấp.
+          - button "add Thêm sản phẩm" [ref=e63]:
+            - generic [ref=e64]: add
+            - text: Thêm sản phẩm
+        - generic [ref=e65]:
+          - generic [ref=e66]:
+            - heading "Tổng quan kho" [level=3] [ref=e67]
+            - generic [ref=e68]:
+              - generic [ref=e69]: "145"
+              - generic [ref=e70]: Tổng tồn kho
+          - generic [ref=e71]:
+            - generic [ref=e72]: priority_high
+            - heading "Cảnh báo hàng sắp hết" [level=3] [ref=e73]
+            - paragraph [ref=e74]: 1 sản phẩm cần chú ý.
+          - generic [ref=e75]:
+            - generic [ref=e76]: category
+            - heading "Danh mục" [level=3] [ref=e77]
+            - paragraph [ref=e78]: 4 danh mục sản phẩm
+        - generic [ref=e79]:
+          - button "All" [ref=e80]
+          - button "Gel Polish" [ref=e81]
+          - button "Base/Top" [ref=e82]
+          - button "Lacquer" [ref=e83]
+          - button "Tools" [ref=e84]
+        - generic [ref=e85]:
+          - generic [ref=e86]:
+            - generic [ref=e87]:
+              - img "Celestial Crimson" [ref=e88]
+              - generic [ref=e89]: Còn hàng
+              - generic [ref=e90]:
+                - button "edit" [ref=e91]:
+                  - generic [ref=e92]: edit
+                - button "delete" [ref=e93]:
+                  - generic [ref=e94]: delete
+            - generic [ref=e95]:
+              - generic [ref=e96]:
+                - paragraph [ref=e97]: Gel Polish
+                - heading "Celestial Crimson" [level=4] [ref=e98]
+              - generic [ref=e99]:
+                - generic [ref=e100]:
+                  - paragraph [ref=e101]: Có sẵn
+                  - paragraph [ref=e102]: 30 đơn vị
+                - generic [ref=e104]:
+                  - paragraph [ref=e105]: Ngưỡng tối thiểu
+                  - paragraph [ref=e106]: 20 đơn vị
+              - generic [ref=e107]:
+                - button "add_box Restock" [ref=e108]:
+                  - generic [ref=e109]: add_box
+                  - text: Restock
+                - button "history History" [ref=e110]:
+                  - generic [ref=e111]: history
+                  - text: History
+          - generic [ref=e112]:
+            - generic [ref=e113]:
+              - img "Infinite Grip Base" [ref=e114]
+              - generic [ref=e115]: Hết hàng
+              - generic [ref=e116]:
+                - button "edit" [ref=e117]:
+                  - generic [ref=e118]: edit
+                - button "delete" [ref=e119]:
+                  - generic [ref=e120]: delete
+            - generic [ref=e121]:
+              - generic [ref=e122]:
+                - paragraph [ref=e123]: Base/Top
+                - heading "Infinite Grip Base" [level=4] [ref=e124]
+              - generic [ref=e125]:
+                - generic [ref=e126]:
+                  - paragraph [ref=e127]: Có sẵn
+                  - paragraph [ref=e128]: 0 đơn vị
+                - generic [ref=e130]:
+                  - paragraph [ref=e131]: Ngưỡng tối thiểu
+                  - paragraph [ref=e132]: 25 đơn vị
+              - generic [ref=e133]:
+                - button "add_box Restock" [ref=e134]:
+                  - generic [ref=e135]: add_box
+                  - text: Restock
+                - button "history History" [ref=e136]:
+                  - generic [ref=e137]: history
+                  - text: History
+          - generic [ref=e138]:
+            - generic [ref=e139]:
+              - img "Morning Petal" [ref=e140]
+              - generic [ref=e141]: Còn hàng
+              - generic [ref=e142]:
+                - button "edit" [ref=e143]:
+                  - generic [ref=e144]: edit
+                - button "delete" [ref=e145]:
+                  - generic [ref=e146]: delete
+            - generic [ref=e147]:
+              - generic [ref=e148]:
+                - paragraph [ref=e149]: Lacquer
+                - heading "Morning Petal" [level=4] [ref=e150]
+              - generic [ref=e151]:
+                - generic [ref=e152]:
+                  - paragraph [ref=e153]: Có sẵn
+                  - paragraph [ref=e154]: 31 đơn vị
+                - generic [ref=e156]:
+                  - paragraph [ref=e157]: Ngưỡng tối thiểu
+                  - paragraph [ref=e158]: 10 đơn vị
+              - generic [ref=e159]:
+                - button "add_box Restock" [ref=e160]:
+                  - generic [ref=e161]: add_box
+                  - text: Restock
+                - button "history History" [ref=e162]:
+                  - generic [ref=e163]: history
+                  - text: History
+          - generic [ref=e164]:
+            - generic [ref=e165]:
+              - img "Precision Pusher II" [ref=e166]
+              - generic [ref=e167]: Còn hàng
+              - generic [ref=e168]:
+                - button "edit" [ref=e169]:
+                  - generic [ref=e170]: edit
+                - button "delete" [ref=e171]:
+                  - generic [ref=e172]: delete
+            - generic [ref=e173]:
+              - generic [ref=e174]:
+                - paragraph [ref=e175]: Tools
+                - heading "Precision Pusher II" [level=4] [ref=e176]
+              - generic [ref=e177]:
+                - generic [ref=e178]:
+                  - paragraph [ref=e179]: Có sẵn
+                  - paragraph [ref=e180]: 84 đơn vị
+                - generic [ref=e182]:
+                  - paragraph [ref=e183]: Ngưỡng tối thiểu
+                  - paragraph [ref=e184]: 15 đơn vị
+              - generic [ref=e185]:
+                - button "add_box Restock" [ref=e186]:
+                  - generic [ref=e187]: add_box
+                  - text: Restock
+                - button "history History" [ref=e188]:
+                  - generic [ref=e189]: history
+                  - text: History
+        - generic [ref=e190]:
+          - heading "Danh sách kho" [level=3] [ref=e192]
+          - table [ref=e194]:
+            - rowgroup [ref=e195]:
+              - row "Mã SKU Tên Danh mục Còn hàng Trạng thái Nhập hàng lần cuối Thao tác" [ref=e196]:
+                - columnheader "Mã SKU" [ref=e197]
+                - columnheader "Tên" [ref=e198]
+                - columnheader "Danh mục" [ref=e199]
+                - columnheader "Còn hàng" [ref=e200]
+                - columnheader "Trạng thái" [ref=e201]
+                - columnheader "Nhập hàng lần cuối" [ref=e202]
+                - columnheader "Thao tác" [ref=e203]
+            - rowgroup [ref=e204]:
+              - row "GP-01042 Celestial Crimson Gel Polish 30 Còn hàng 12 Oct 2023 edit delete" [ref=e205]:
+                - cell "GP-01042" [ref=e206]
+                - cell "Celestial Crimson" [ref=e207]
+                - cell "Gel Polish" [ref=e208]
+                - cell "30" [ref=e209]
+                - cell "Còn hàng" [ref=e210]
+                - cell "12 Oct 2023" [ref=e211]
+                - cell "edit delete" [ref=e212]:
+                  - generic [ref=e213]:
+                    - button "edit" [ref=e214]:
+                      - generic [ref=e215]: edit
+                    - button "delete" [ref=e216]:
+                      - generic [ref=e217]: delete
+              - row "BT-55010 Infinite Grip Base Base/Top 0 Hết hàng 15 Aug 2023 edit delete" [ref=e218]:
+                - cell "BT-55010" [ref=e219]
+                - cell "Infinite Grip Base" [ref=e220]
+                - cell "Base/Top" [ref=e221]
+                - cell "0" [ref=e222]
+                - cell "Hết hàng" [ref=e223]
+                - cell "15 Aug 2023" [ref=e224]
+                - cell "edit delete" [ref=e225]:
+                  - generic [ref=e226]:
+                    - button "edit" [ref=e227]:
+                      - generic [ref=e228]: edit
+                    - button "delete" [ref=e229]:
+                      - generic [ref=e230]: delete
+              - row "LQ-42001 Morning Petal Lacquer 31 Còn hàng 2 Nov 2023 edit delete" [ref=e231]:
+                - cell "LQ-42001" [ref=e232]
+                - cell "Morning Petal" [ref=e233]
+                - cell "Lacquer" [ref=e234]
+                - cell "31" [ref=e235]
+                - cell "Còn hàng" [ref=e236]
+                - cell "2 Nov 2023" [ref=e237]
+                - cell "edit delete" [ref=e238]:
+                  - generic [ref=e239]:
+                    - button "edit" [ref=e240]:
+                      - generic [ref=e241]: edit
+                    - button "delete" [ref=e242]:
+                      - generic [ref=e243]: delete
+              - row "TL-09331 Precision Pusher II Tools 84 Còn hàng 28 Sept 2023 edit delete" [ref=e244]:
+                - cell "TL-09331" [ref=e245]
+                - cell "Precision Pusher II" [ref=e246]
+                - cell "Tools" [ref=e247]
+                - cell "84" [ref=e248]
+                - cell "Còn hàng" [ref=e249]
+                - cell "28 Sept 2023" [ref=e250]
+                - cell "edit delete" [ref=e251]:
+                  - generic [ref=e252]:
+                    - button "edit" [ref=e253]:
+                      - generic [ref=e254]: edit
+                    - button "delete" [ref=e255]:
+                      - generic [ref=e256]: delete
+      - paragraph [ref=e259]: © 2024 Angel Nail Digital Atelier. Bảo lưu mọi quyền.
+    - navigation [ref=e260]:
+      - link "home Trang chủ" [ref=e261] [cursor=pointer]:
+        - /url: /angel/admin
+        - generic [ref=e262]: home
+        - generic [ref=e263]: Trang chủ
+      - link "calendar_month Đặt lịch" [ref=e264] [cursor=pointer]:
+        - /url: /angel/admin/appointments
+        - generic [ref=e265]: calendar_month
+        - generic [ref=e266]: Đặt lịch
+      - button "add" [ref=e269]:
+        - generic [ref=e270]: add
+      - link "person Hồ sơ" [ref=e271] [cursor=pointer]:
+        - /url: /angel/admin/settings
+        - generic [ref=e272]: person
+        - generic [ref=e273]: Hồ sơ

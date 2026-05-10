@@ -69,9 +69,9 @@ Kiểm thử toàn bộ luồng xác thực (đăng nhập, đăng xuất, phân
 | 1 | Truy cập `https://project.vinapage.com/angel/admin/login` | Trang đăng nhập hiển thị với form Email + Password |
 | 2 | Nhập Email: `elena@angelnail.co.nz` | Field nhận input |
 | 3 | Nhập Password: `admin123` | Password được ẩn bằng ký tự ● |
-| 4 | Click nút "Sign In" / "Đăng nhập" | Loading spinner hiển thị |
+| 4 | Click nút "ĐĂNG NHẬP" | Loading spinner hiển thị |
 | 5 | Chờ response từ `/api/auth/signin` | Response 200 OK, redirect tới `/angel/admin` |
-| 6 | Quan sát trang sau login | Dashboard hiển thị, sidebar có đủ 19 module, user info hiển thị role ADMIN |
+| 6 | Quan sát trang sau login | Dashboard hiển thị, sidebar có đủ **20 mục** (Tổng quan, Hôm nay, Lịch hẹn, Dịch vụ, Thư viện ảnh, Khách hàng, Nhân viên, Kho hàng, Thanh toán, Thẻ quà tặng, Lương & hoa hồng, Kết ca, Chi phí, Đơn đặt hàng, Đánh giá, Báo cáo, Nhật ký hệ thống, Tổng đài AI, **Tài liệu QA**, Cài đặt) |
 
 **Expected Result:** Đăng nhập thành công, redirect về `/angel/admin` Dashboard, session cookie được set.
 
@@ -93,17 +93,25 @@ Kiểm thử toàn bộ luồng xác thực (đăng nhập, đăng xuất, phân
 - Email: `manager@angelnail.co.nz`
 - Password: `manager123`
 
+> **⚠️ BUG-RBAC-001 [CRITICAL]:** Sidebar hiện tại KHÔNG lọc theo role — MANAGER thấy đủ 20 mục giống ADMIN. Test này phản ánh **hành vi thực tế** và đánh dấu điểm cần fix.
+
 **Test Steps:**
 
 | Step | Action | Expected Result |
 |------|--------|-----------------|
 | 1 | Truy cập `/angel/admin/login` | Form đăng nhập hiển thị |
 | 2 | Nhập email + password MANAGER | Fields nhận input |
-| 3 | Submit form | Redirect thành công |
-| 4 | Kiểm tra sidebar menu | Sidebar hiển thị các module vận hành, KHÔNG có Settings > User Management |
-| 5 | Kiểm tra user info | Hiển thị role MANAGER |
+| 3 | Submit form | Redirect thành công về `/angel/admin` |
+| 4 | Kiểm tra sidebar menu | **[ACTUAL]** Sidebar hiển thị đủ **20 mục** — giống hệt ADMIN, không có lọc theo role |
+| 5 | Kiểm tra user info (click account_circle) | Hiển thị tên "Sofia Blanco", role MANAGER |
+| 6 | Truy cập `/angel/admin/settings` | **[ACTUAL]** Trang Settings mở bình thường (không bị chặn) |
+| 7 | Truy cập `/angel/admin/audit-log` | **[ACTUAL]** Trang Audit Log mở, dữ liệu rỗng (API trả 403) |
+| 8 | Gọi `GET /api/admin/audit-log` | **[ACTUAL]** HTTP 403 — API chặn đúng |
+| 9 | Gọi `GET /api/admin/payments` | **[ACTUAL]** HTTP 403 — API chặn đúng |
 
-**Expected Result:** Đăng nhập thành công, sidebar ẩn các module ADMIN-only.
+**Expected Result (hành vi hiện tại):** MANAGER đăng nhập thành công, thấy toàn bộ sidebar, truy cập được tất cả trang UI. API block một phần (audit-log, payments, expenses).
+
+**Expected Result (sau khi fix RBAC):** Sidebar ẩn các module ADMIN-only; route `/admin/settings`, `/admin/audit-log` redirect 403.
 
 ---
 
@@ -117,17 +125,28 @@ Kiểm thử toàn bộ luồng xác thực (đăng nhập, đăng xuất, phân
 | **Type** | Functional / Positive |
 | **Preconditions** | Chưa đăng nhập |
 
+> **⚠️ BUG-RBAC-001 [CRITICAL]:** Sidebar và route không lọc theo role — STAFF thấy đủ 20 mục và truy cập được tất cả trang. Test này phản ánh **hành vi thực tế**.
+
 **Test Steps:**
 
 | Step | Action | Expected Result |
 |------|--------|-----------------|
-| 1 | Đăng nhập bằng `staff@angelnail.co.nz` / `staff123` | Đăng nhập thành công |
-| 2 | Kiểm tra menu | Chỉ thấy: My Day, Appointments (view-only), Profile |
-| 3 | Thử truy cập `/angel/admin/settings` | Redirect về 403 hoặc trang "Không có quyền" |
-| 4 | Thử truy cập `/angel/admin/audit-log` | Redirect về 403 |
-| 5 | Thử truy cập `/angel/admin/payroll` | Redirect về 403 |
+| 1 | Đăng nhập bằng `staff@angelnail.co.nz` / `staff123` | Đăng nhập thành công về `/angel/admin` |
+| 2 | Kiểm tra sidebar | **[ACTUAL]** Hiển thị đủ **20 mục** — giống ADMIN, không có lọc |
+| 3 | Kiểm tra session API | `GET /api/auth/session` → `role: "STAFF"`, name: "Maya Chen" |
+| 4 | Truy cập `/angel/admin/settings` | **[ACTUAL]** Trang mở bình thường, không bị chặn ở UI |
+| 5 | Truy cập `/angel/admin/audit-log` | **[ACTUAL]** Trang mở, nhưng dữ liệu rỗng (API → 403) |
+| 6 | Truy cập `/angel/admin/payroll` | **[ACTUAL]** Trang mở, nhưng dữ liệu rỗng (API → 404) |
+| 7 | Gọi `GET /api/admin/audit-log` | **[ACTUAL]** HTTP **403** — API chặn đúng |
+| 8 | Gọi `GET /api/admin/payments` | **[ACTUAL]** HTTP **403** — API chặn đúng |
+| 9 | Gọi `GET /api/admin/expenses` | **[ACTUAL]** HTTP **403** — API chặn đúng |
+| 10 | Gọi `GET /api/admin/bookings` | **[ACTUAL]** HTTP **200** — STAFF đọc được bookings |
+| 11 | Gọi `GET /api/admin/staff` | **[ACTUAL]** HTTP **200** — STAFF đọc được danh sách nhân viên |
+| 12 | Gọi `POST /api/admin/services` (body rỗng) | **[ACTUAL]** HTTP **400** (bad request) — KHÔNG phải 403, STAFF có thể gọi write API! |
 
-**Expected Result:** STAFF chỉ truy cập được module phạm vi cá nhân.
+**Expected Result (hành vi hiện tại):** STAFF đăng nhập, thấy 20 mục sidebar, vào được mọi trang. API chặn một phần (audit-log/payments/expenses = 403), còn lại cho phép.
+
+**Expected Result (sau khi fix RBAC):** Sidebar chỉ hiện My Day + Appointments; route STAFF-only redirect 403; toàn bộ write API trả 403 với STAFF.
 
 ---
 
@@ -190,11 +209,12 @@ Kiểm thử toàn bộ luồng xác thực (đăng nhập, đăng xuất, phân
 
 | Step | Action | Expected Result |
 |------|--------|-----------------|
-| 1 | Bỏ trống Email, bỏ trống Password, click Sign In | Validation error "Email is required" |
-| 2 | Nhập Email nhưng bỏ trống Password, click Sign In | Validation error "Password is required" |
-| 3 | Nhập Email sai định dạng (không có @), click Sign In | Validation error "Invalid email format" |
+| 1 | Bỏ trống Email, bỏ trống Password, click "ĐĂNG NHẬP" | Validation error hiển thị (VI: "Vui lòng nhập địa chỉ email" / EN: "Email is required") |
+| 2 | Nhập Email nhưng bỏ trống Password, click "ĐĂNG NHẬP" | Validation error (VI: "Vui lòng nhập mật khẩu" / EN: "Password is required") |
+| 3 | Nhập Email sai định dạng (không có @), click "ĐĂNG NHẬP" | Validation error (VI: "Địa chỉ email không hợp lệ" / EN: "Invalid email format") |
+| 4 | Chuyển sang ngôn ngữ EN (click nút "EN" góc phải) rồi lặp bước 1–3 | Error messages hiển thị bằng tiếng Anh tương ứng |
 
-**Expected Result:** Client-side validation hoạt động trước khi gọi API.
+**Expected Result:** Client-side validation hoạt động trước khi gọi API. Thông báo lỗi ngôn ngữ tương ứng với cài đặt VI/EN đang active.
 
 ---
 
@@ -272,28 +292,56 @@ Kiểm thử toàn bộ luồng xác thực (đăng nhập, đăng xuất, phân
 
 ---
 
-### TC-AUTH-010 — RBAC — STAFF không truy cập module ADMIN-only
+### TC-AUTH-010 — RBAC — Kiểm tra phân quyền API theo role
 
 | Field | Value |
 |-------|-------|
 | **Test Case ID** | TC-AUTH-010 |
-| **Title** | Role-Based Access Control — STAFF bị chặn module nhạy cảm |
+| **Title** | RBAC — Mapping trạng thái phân quyền thực tế (UI + API) |
 | **Priority** | P0 — Critical |
 | **Type** | Security / Authorization |
-| **Preconditions** | Đang đăng nhập với role STAFF |
+| **Preconditions** | Lần lượt đăng nhập từng role |
 
-**Test Steps:**
+> **Kết quả kiểm tra thực tế (2026-05-09):** Frontend KHÔNG có route guard. API chặn một phần không nhất quán. Xem chi tiết bên dưới.
 
-| Step | Action | Expected Result |
-|------|--------|-----------------|
-| 1 | Truy cập `/angel/admin/settings` | 403 Forbidden hoặc redirect |
-| 2 | Truy cập `/angel/admin/audit-log` | 403 Forbidden |
-| 3 | Truy cập `/angel/admin/payroll` | 403 Forbidden |
-| 4 | Truy cập `/angel/admin/reports` | 403 Forbidden |
-| 5 | Gọi `DELETE /api/admin/services/1` | HTTP 403 |
-| 6 | Gọi `GET /api/admin/audit-log` | HTTP 403 |
+**Trạng thái RBAC hiện tại — Route (UI):**
 
-**Expected Result:** STAFF bị chặn hoàn toàn, không có cách bypass qua URL trực tiếp.
+| Trang | ADMIN | MANAGER | STAFF | Bug? |
+|-------|:-----:|:-------:|:-----:|------|
+| Tất cả 20 trang | ✅ | ✅ | ✅ | 🔴 BUG — STAFF/MANAGER truy cập hết |
+
+**Trạng thái RBAC hiện tại — API (STAFF):**
+
+| API | Method | STAFF | Đúng? |
+|-----|--------|:-----:|-------|
+| `/api/admin/stats` | GET | 200 ✅ | ⚠️ nên review |
+| `/api/admin/bookings` | GET | 200 ✅ | ⚠️ nên review |
+| `/api/admin/staff` | GET | 200 ✅ | ⚠️ nên review |
+| `/api/admin/services` | GET | 200 ✅ | ⚠️ nên review |
+| `/api/admin/inventory` | GET | 200 ✅ | ⚠️ nên review |
+| `/api/admin/clients` | GET | 200 ✅ | ⚠️ nên review |
+| `/api/admin/audit-log` | GET | **403** 🔒 | ✅ đúng |
+| `/api/admin/payments` | GET | **403** 🔒 | ✅ đúng |
+| `/api/admin/expenses` | GET | **403** 🔒 | ✅ đúng |
+| `/api/admin/services` | POST | **400** ⚠️ | 🔴 BUG — nên là 403 |
+| `/api/admin/staff` | POST | **400** ⚠️ | 🔴 BUG — nên là 403 |
+
+**Test Steps (regression sau khi fix):**
+
+| Step | Action | Expected Result (sau fix) |
+|------|--------|--------------------------|
+| 1 | STAFF truy cập `/angel/admin/settings` | Redirect 403 hoặc "Không có quyền" |
+| 2 | STAFF truy cập `/angel/admin/audit-log` | Redirect 403 |
+| 3 | STAFF truy cập `/angel/admin/payroll` | Redirect 403 |
+| 4 | STAFF truy cập `/angel/admin/reports` | Redirect 403 |
+| 5 | STAFF gọi `POST /api/admin/services` | HTTP 403 |
+| 6 | STAFF gọi `DELETE /api/admin/services/1` | HTTP 403 |
+| 7 | STAFF gọi `GET /api/admin/audit-log` | HTTP 403 |
+| 8 | MANAGER truy cập `/angel/admin/settings` | Redirect 403 |
+| 9 | Sidebar STAFF | Chỉ hiện: Tổng quan, Hôm nay, Lịch hẹn, Hồ sơ |
+| 10 | Sidebar MANAGER | Ẩn: Cài đặt, Nhật ký hệ thống |
+
+**Expected Result (sau fix):** Frontend có route guard; STAFF bị chặn ở cả UI route lẫn API write operations.
 
 ---
 

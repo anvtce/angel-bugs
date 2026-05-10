@@ -1,0 +1,227 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "Angel Nail" [ref=e5] [cursor=pointer]:
+          - /url: /angel
+          - img "Angel Nail" [ref=e6]
+        - generic [ref=e7]:
+          - link "Services" [ref=e8] [cursor=pointer]:
+            - /url: /angel/services
+          - link "Gallery" [ref=e9] [cursor=pointer]:
+            - /url: /angel/gallery
+          - link "About" [ref=e10] [cursor=pointer]:
+            - /url: /angel/about
+          - link "Contact" [ref=e11] [cursor=pointer]:
+            - /url: /angel/contact
+        - link "Book Now" [ref=e12] [cursor=pointer]:
+          - /url: /angel/booking
+    - main [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - generic [ref=e16]: Our Menu
+          - heading "Service Collection" [level=1] [ref=e17]
+          - paragraph [ref=e18]: Discover our curated selection of premium nail care and beauty services.
+        - generic [ref=e19]:
+          - button "All Services" [ref=e20]
+          - button "Manicure" [ref=e21]
+          - button "Pedicure" [ref=e22]
+          - button "Nail Art" [ref=e23]
+          - button "Acrylics" [ref=e24]
+          - button "Removal" [ref=e25]
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - img "Signature Gel Manicure 1" [ref=e29]
+            - generic [ref=e30]:
+              - generic [ref=e31]:
+                - paragraph [ref=e32]: Manicure
+                - heading "Signature Gel Manicure 1" [level=3] [ref=e33]
+              - generic [ref=e34]:
+                - paragraph [ref=e35]: Our most requested service. Includes nail shaping, cuticle care, and a premium long-lasting gel finish with high-shine top coat. lamvh
+                - button "Read more expand_more" [ref=e36]:
+                  - text: Read more
+                  - generic [ref=e37]: expand_more
+              - generic [ref=e38]:
+                - generic [ref=e39]:
+                  - generic [ref=e40]:
+                    - generic [ref=e41]: schedule
+                    - text: 45 mins
+                  - generic [ref=e42]: $62
+                - link "Book Now" [ref=e43] [cursor=pointer]:
+                  - /url: /angel/booking
+          - generic [ref=e44]:
+            - img "Classic French Tip" [ref=e46]
+            - generic [ref=e47]:
+              - generic [ref=e48]:
+                - paragraph [ref=e49]: Manicure
+                - heading "Classic French Tip" [level=3] [ref=e50]
+              - paragraph [ref=e52]: Timeless elegance. A clean base with perfectly hand-painted white tips using premium polish.
+              - generic [ref=e53]:
+                - generic [ref=e54]:
+                  - generic [ref=e55]:
+                    - generic [ref=e56]: schedule
+                    - text: 60 mins
+                  - generic [ref=e57]: $65
+                - link "Book Now" [ref=e58] [cursor=pointer]:
+                  - /url: /angel/booking
+          - generic [ref=e59]:
+            - img "Express Polish Change" [ref=e61]
+            - generic [ref=e62]:
+              - generic [ref=e63]:
+                - paragraph [ref=e64]: Manicure
+                - heading "Express Polish Change" [level=3] [ref=e65]
+              - generic [ref=e66]:
+                - paragraph [ref=e67]: Perfect for a quick refresh. Includes removal of old polish and application of new seasonal color.
+                - button "Read more expand_more" [ref=e68]:
+                  - text: Read more
+                  - generic [ref=e69]: expand_more
+              - generic [ref=e70]:
+                - generic [ref=e71]:
+                  - generic [ref=e72]:
+                    - generic [ref=e73]: schedule
+                    - text: 20 mins
+                  - generic [ref=e74]: $30
+                - link "Book Now" [ref=e75] [cursor=pointer]:
+                  - /url: /angel/booking
+          - generic [ref=e76]:
+            - img "Rose Petal Spa Pedicure" [ref=e78]
+            - generic [ref=e79]:
+              - generic [ref=e80]:
+                - paragraph [ref=e81]: Pedicure
+                - heading "Rose Petal Spa Pedicure" [level=3] [ref=e82]
+              - generic [ref=e83]:
+                - paragraph [ref=e84]: Soothing soak with fresh rose petals, sea salt exfoliation, hydrating mask, and extended hot stone massage.
+                - button "Read more expand_more" [ref=e85]:
+                  - text: Read more
+                  - generic [ref=e86]: expand_more
+              - generic [ref=e87]:
+                - generic [ref=e88]:
+                  - generic [ref=e89]:
+                    - generic [ref=e90]: schedule
+                    - text: 60 mins
+                  - generic [ref=e91]: $75
+                - link "Book Now" [ref=e92] [cursor=pointer]:
+                  - /url: /angel/booking
+          - generic [ref=e93]:
+            - img "Tier 1 Custom Nail Art" [ref=e95]
+            - generic [ref=e96]:
+              - generic [ref=e97]:
+                - paragraph [ref=e98]: Nail Art
+                - heading "Tier 1 Custom Nail Art" [level=3] [ref=e99]
+              - paragraph [ref=e101]: Simple hand-painted designs, foils, or minimalist chrome on 2-4 accent nails.
+              - generic [ref=e102]:
+                - generic [ref=e103]:
+                  - generic [ref=e104]:
+                    - generic [ref=e105]: schedule
+                    - text: 30 mins
+                  - generic [ref=e106]: $20+
+                - link "Book Now" [ref=e107] [cursor=pointer]:
+                  - /url: /angel/booking
+          - generic [ref=e108]:
+            - img "Apres Gel-X Extensions" [ref=e110]
+            - generic [ref=e111]:
+              - generic [ref=e112]:
+                - paragraph [ref=e113]: Acrylics
+                - heading "Apres Gel-X Extensions" [level=3] [ref=e114]
+              - generic [ref=e115]:
+                - paragraph [ref=e116]: The world's first soak-off soft gel extension system. Lightweight, durable, and natural-looking length.
+                - button "Read more expand_more" [ref=e117]:
+                  - text: Read more
+                  - generic [ref=e118]: expand_more
+              - generic [ref=e119]:
+                - generic [ref=e120]:
+                  - generic [ref=e121]:
+                    - generic [ref=e122]: schedule
+                    - text: 75 mins
+                  - generic [ref=e123]: $95
+                - link "Book Now" [ref=e124] [cursor=pointer]:
+                  - /url: /angel/booking
+          - generic [ref=e125]:
+            - img "Hard Gel Strengthening Overlay" [ref=e127]
+            - generic [ref=e128]:
+              - generic [ref=e129]:
+                - paragraph [ref=e130]: Acrylics
+                - heading "Hard Gel Strengthening Overlay" [level=3] [ref=e131]
+              - generic [ref=e132]:
+                - paragraph [ref=e133]: Extra reinforcement for natural nails using high-viscosity builder gel to prevent breakage and chipping.
+                - button "Read more expand_more" [ref=e134]:
+                  - text: Read more
+                  - generic [ref=e135]: expand_more
+              - generic [ref=e136]:
+                - generic [ref=e137]:
+                  - generic [ref=e138]:
+                    - generic [ref=e139]: schedule
+                    - text: 50 mins
+                  - generic [ref=e140]: $65
+                - link "Book Now" [ref=e141] [cursor=pointer]:
+                  - /url: /angel/booking
+          - generic [ref=e142]:
+            - img "Gel / Acrylic Removal" [ref=e144]
+            - generic [ref=e145]:
+              - generic [ref=e146]:
+                - paragraph [ref=e147]: Removal
+                - heading "Gel / Acrylic Removal" [level=3] [ref=e148]
+              - paragraph [ref=e150]: Safe and gentle soak-off removal of gel or acrylic nails with cuticle oil treatment.
+              - generic [ref=e151]:
+                - generic [ref=e152]:
+                  - generic [ref=e153]:
+                    - generic [ref=e154]: schedule
+                    - text: 30 mins
+                  - generic [ref=e155]: $25
+                - link "Book Now" [ref=e156] [cursor=pointer]:
+                  - /url: /angel/booking
+    - contentinfo [ref=e157]:
+      - generic [ref=e158]:
+        - generic [ref=e159]:
+          - link "Angel Nails & Spa" [ref=e160] [cursor=pointer]:
+            - /url: /angel
+            - img "Angel Nails & Spa" [ref=e161]
+          - paragraph [ref=e162]: Defining the future of luxury nail care in Blenheim through precision, art, and an uncompromising commitment to client experience.
+          - link "Email" [ref=e164] [cursor=pointer]:
+            - /url: mailto:studio@angelnail.co.nz
+            - generic [ref=e165]: mail
+          - generic [ref=e166]:
+            - paragraph [ref=e167]: 1/20 High Street, Blenheim 7201, New Zealand
+            - paragraph [ref=e168]:
+              - link "03 579 1166" [ref=e169] [cursor=pointer]:
+                - /url: tel:035791166
+            - paragraph [ref=e170]:
+              - link "studio@angelnail.co.nz" [ref=e171] [cursor=pointer]:
+                - /url: mailto:studio@angelnail.co.nz
+        - generic [ref=e172]:
+          - generic [ref=e173]:
+            - heading "Atelier" [level=5] [ref=e174]
+            - list [ref=e175]:
+              - listitem [ref=e176]:
+                - link "Services" [ref=e177] [cursor=pointer]:
+                  - /url: /angel/services
+              - listitem [ref=e178]:
+                - link "Gift Cards" [ref=e179] [cursor=pointer]:
+                  - /url: /angel/gift-cards
+              - listitem [ref=e180]:
+                - link "Our Story" [ref=e181] [cursor=pointer]:
+                  - /url: /angel/about
+              - listitem [ref=e182]:
+                - link "Location" [ref=e183] [cursor=pointer]:
+                  - /url: /angel#contact
+              - listitem [ref=e184]:
+                - link "Manage Booking" [ref=e185] [cursor=pointer]:
+                  - /url: /angel/manage-booking
+          - generic [ref=e186]:
+            - heading "Legal" [level=5] [ref=e187]
+            - list [ref=e188]:
+              - listitem [ref=e189]:
+                - link "Privacy Policy" [ref=e190] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e191]:
+                - link "Terms of Service" [ref=e192] [cursor=pointer]:
+                  - /url: "#"
+      - generic [ref=e193]:
+        - paragraph [ref=e194]: © 2026 Angel Nails & Spa. All Rights Reserved.
+        - generic [ref=e195]:
+          - generic [ref=e196]: Blenheim’s Choice
+          - generic [ref=e197]: •
+          - generic [ref=e198]: Crafted with Care
+  - button "Angel" [ref=e199]:
+    - img "Angel" [ref=e201]
+  - alert [ref=e202]

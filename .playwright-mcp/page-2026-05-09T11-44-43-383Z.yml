@@ -1,0 +1,71 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - main [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - button "Open menu" [ref=e6]: menu
+          - generic [ref=e7]: Angel Nail Admin
+        - generic [ref=e8]:
+          - generic [ref=e9]:
+            - button "VI" [ref=e10]
+            - button "EN" [ref=e11]
+          - generic [ref=e12]:
+            - button "notifications" [ref=e14]
+            - button "Account menu" [ref=e16]: account_circle
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - generic [ref=e19]:
+            - heading "Lịch hẹn" [level=2] [ref=e20]
+            - paragraph [ref=e21]: Quản lý và lên lịch cho tiệm.
+          - button "add Tạo lịch hẹn" [ref=e22]:
+            - generic [ref=e23]: add
+            - text: Tạo lịch hẹn
+        - generic [ref=e24]:
+          - generic [ref=e25]:
+            - generic [ref=e26]:
+              - generic [ref=e27]: calendar_today
+              - generic [ref=e28]: "Lọc theo ngày:"
+            - textbox [ref=e29]: 2026-05-09
+            - button "Hôm nay" [ref=e31]
+          - generic [ref=e32]:
+            - generic [ref=e33]:
+              - generic [ref=e34]: search
+              - textbox "Search by reference, name, email, phone..." [ref=e35]
+            - combobox [ref=e36]:
+              - option "All statuses" [selected]
+              - option "Pending"
+              - option "Confirmed"
+              - option "Completed"
+              - option "Cancelled"
+              - option "No show"
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - paragraph [ref=e39]: CHỜ XỬ LÝ
+            - paragraph [ref=e40]: "0"
+          - generic [ref=e41]:
+            - paragraph [ref=e42]: XÁC NHẬN
+            - paragraph [ref=e43]: "0"
+          - generic [ref=e44]:
+            - paragraph [ref=e45]: HOÀN THÀNH
+            - paragraph [ref=e46]: "0"
+          - generic [ref=e47]:
+            - paragraph [ref=e48]: ĐÃ HUỶ
+            - paragraph [ref=e49]: "0"
+        - generic [ref=e51]: progress_activity
+      - paragraph [ref=e54]: © 2024 Angel Nail Digital Atelier. Bảo lưu mọi quyền.
+    - navigation [ref=e55]:
+      - link "home Trang chủ" [ref=e56] [cursor=pointer]:
+        - /url: /angel/admin
+        - generic [ref=e57]: home
+        - generic [ref=e58]: Trang chủ
+      - link "calendar_month Đặt lịch" [ref=e59] [cursor=pointer]:
+        - /url: /angel/admin/appointments
+        - generic [ref=e60]: calendar_month
+        - generic [ref=e61]: Đặt lịch
+      - button "add" [ref=e64]:
+        - generic [ref=e65]: add
+      - link "person Hồ sơ" [ref=e66] [cursor=pointer]:
+        - /url: /angel/admin/settings
+        - generic [ref=e67]: person
+        - generic [ref=e68]: Hồ sơ
+  - alert [ref=e69]

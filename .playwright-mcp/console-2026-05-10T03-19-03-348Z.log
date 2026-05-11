@@ -1,0 +1,4 @@
+[   36503ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://project.vinapage.com/angel/api/admin/my-day:0
+[   84334ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://project.vinapage.com/angel/api/admin/clock:0
+[   84402ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://project.vinapage.com/angel/api/admin/clock:0
+[   84476ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://project.vinapage.com/angel/api/admin/my-day/clock:0

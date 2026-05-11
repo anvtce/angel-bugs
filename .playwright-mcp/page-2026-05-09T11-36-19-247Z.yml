@@ -1,0 +1,33 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e6]:
+      - button "VI" [ref=e7]
+      - button "EN" [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - generic [ref=e12]: spa
+        - heading "Angel Nail Admin" [level=1] [ref=e13]
+        - paragraph [ref=e14]: Digital Atelier
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - heading "Chào mừng trở lại" [level=2] [ref=e17]
+          - paragraph [ref=e18]: Đăng nhập để quản lý tiệm
+        - generic [ref=e19]:
+          - generic [ref=e20]:
+            - generic [ref=e21]: Địa chỉ email
+            - generic [ref=e22]:
+              - generic [ref=e23]: mail
+              - textbox "Địa chỉ email" [ref=e24]:
+                - /placeholder: admin@angelnail.co.nz
+          - generic [ref=e25]:
+            - generic [ref=e26]: Mật khẩu
+            - generic [ref=e27]:
+              - generic [ref=e28]: lock
+              - textbox "Mật khẩu" [ref=e29]:
+                - /placeholder: Nhập mật khẩu
+          - generic [ref=e33]:
+            - generic [ref=e34]: error
+            - paragraph [ref=e35]: Invalid email or password.
+          - button "Đăng nhập" [active] [ref=e30]
+      - paragraph [ref=e31]: Angel Nail Digital Atelier
+  - alert [ref=e32]

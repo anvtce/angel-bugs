@@ -1,0 +1,111 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e4]:
+        - heading "Angel Nail Admin" [level=1] [ref=e5]
+        - paragraph [ref=e6]: Quản lý tiệm
+      - navigation [ref=e7]:
+        - link "dashboard Tổng quan" [ref=e8] [cursor=pointer]:
+          - /url: /angel/admin
+          - generic [ref=e9]: dashboard
+          - generic [ref=e10]: Tổng quan
+        - link "today Hôm nay" [ref=e11] [cursor=pointer]:
+          - /url: /angel/admin/my-day
+          - generic [ref=e12]: today
+          - generic [ref=e13]: Hôm nay
+        - link "event_note Lịch hẹn" [ref=e14] [cursor=pointer]:
+          - /url: /angel/admin/appointments
+          - generic [ref=e15]: event_note
+          - generic [ref=e16]: Lịch hẹn
+        - link "spa Dịch vụ" [ref=e17] [cursor=pointer]:
+          - /url: /angel/admin/services
+          - generic [ref=e18]: spa
+          - generic [ref=e19]: Dịch vụ
+        - link "photo_library Thư viện ảnh" [ref=e20] [cursor=pointer]:
+          - /url: /angel/admin/gallery
+          - generic [ref=e21]: photo_library
+          - generic [ref=e22]: Thư viện ảnh
+        - link "group Khách hàng" [ref=e23] [cursor=pointer]:
+          - /url: /angel/admin/clients
+          - generic [ref=e24]: group
+          - generic [ref=e25]: Khách hàng
+        - link "badge Nhân viên" [ref=e26] [cursor=pointer]:
+          - /url: /angel/admin/staff
+          - generic [ref=e27]: badge
+          - generic [ref=e28]: Nhân viên
+        - link "inventory_2 Kho hàng" [ref=e29] [cursor=pointer]:
+          - /url: /angel/admin/inventory
+          - generic [ref=e30]: inventory_2
+          - generic [ref=e31]: Kho hàng
+        - link "credit_card Thanh toán" [ref=e32] [cursor=pointer]:
+          - /url: /angel/admin/payments
+          - generic [ref=e33]: credit_card
+          - generic [ref=e34]: Thanh toán
+        - link "redeem Thẻ quà tặng" [ref=e35] [cursor=pointer]:
+          - /url: /angel/admin/gift-cards
+          - generic [ref=e36]: redeem
+          - generic [ref=e37]: Thẻ quà tặng
+        - link "payments Lương & hoa hồng" [ref=e38] [cursor=pointer]:
+          - /url: /angel/admin/payroll
+          - generic [ref=e39]: payments
+          - generic [ref=e40]: Lương & hoa hồng
+        - link "point_of_sale Kết ca" [ref=e41] [cursor=pointer]:
+          - /url: /angel/admin/closing
+          - generic [ref=e42]: point_of_sale
+          - generic [ref=e43]: Kết ca
+        - link "receipt_long Chi phí" [ref=e44] [cursor=pointer]:
+          - /url: /angel/admin/expenses
+          - generic [ref=e45]: receipt_long
+          - generic [ref=e46]: Chi phí
+        - link "shopping_cart Đơn đặt hàng" [ref=e47] [cursor=pointer]:
+          - /url: /angel/admin/purchase-orders
+          - generic [ref=e48]: shopping_cart
+          - generic [ref=e49]: Đơn đặt hàng
+        - link "star Đánh giá" [ref=e50] [cursor=pointer]:
+          - /url: /angel/admin/reviews
+          - generic [ref=e51]: star
+          - generic [ref=e52]: Đánh giá
+        - link "insights Báo cáo" [ref=e53] [cursor=pointer]:
+          - /url: /angel/admin/reports
+          - generic [ref=e54]: insights
+          - generic [ref=e55]: Báo cáo
+        - link "history Nhật ký hệ thống" [ref=e56] [cursor=pointer]:
+          - /url: /angel/admin/audit-log
+          - generic [ref=e57]: history
+          - generic [ref=e58]: Nhật ký hệ thống
+        - link "phone_in_talk Tổng đài AI" [ref=e59] [cursor=pointer]:
+          - /url: /angel/admin/voice
+          - generic [ref=e60]: phone_in_talk
+          - generic [ref=e61]: Tổng đài AI
+        - link "menu_book Tài liệu QA" [ref=e62] [cursor=pointer]:
+          - /url: /angel/admin/docs
+          - generic [ref=e63]: menu_book
+          - generic [ref=e64]: Tài liệu QA
+        - link "settings Cài đặt" [ref=e65] [cursor=pointer]:
+          - /url: /angel/admin/settings
+          - generic [ref=e66]: settings
+          - generic [ref=e67]: Cài đặt
+      - generic [ref=e69]:
+        - button "VI" [ref=e70]
+        - button "EN" [ref=e71]
+    - main [ref=e72]:
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - button "Open menu" [ref=e75]: menu
+          - generic [ref=e76]: Angel Nail Admin
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - generic [ref=e79]: search
+            - textbox "Tìm kiếm..." [ref=e80]
+          - generic [ref=e81]:
+            - button "notifications" [ref=e83]
+            - button "Account menu" [ref=e85]: account_circle
+      - generic [ref=e86]:
+        - generic [ref=e87]:
+          - generic [ref=e88]:
+            - heading "End of Day Closing" [level=2] [ref=e89]
+            - paragraph [ref=e90]: Cash reconciliation + daily summary
+          - textbox [ref=e91]: 2026-05-10
+        - paragraph [ref=e92]: Loading...
+      - paragraph [ref=e95]: © 2024 Angel Nail Digital Atelier. Bảo lưu mọi quyền.
+  - alert [ref=e96]

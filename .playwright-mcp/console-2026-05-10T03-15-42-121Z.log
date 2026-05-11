@@ -1,0 +1,10 @@
+[     165ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://project.vinapage.com/angel/admin/login:0
+[   37501ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://project.vinapage.com/angel/api/admin/reports/revenue?from=2026-05-03&to=2026-05-10:0
+[   75571ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://project.vinapage.com/angel/api/admin/payments:0
+[   75644ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://project.vinapage.com/angel/api/admin/audit-log:0
+[   75722ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://project.vinapage.com/angel/api/admin/expenses:0
+[   75792ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://project.vinapage.com/angel/api/admin/payroll:0
+[   75866ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://project.vinapage.com/angel/api/admin/reports/revenue:0
+[   98956ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://project.vinapage.com/angel/api/admin/services:0
+[   99050ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://project.vinapage.com/angel/api/admin/bookings:0
+[   99461ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://project.vinapage.com/angel/api/admin/inventory:0

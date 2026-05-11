@@ -1,0 +1,95 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e307]:
+    - generic [ref=e308]:
+      - link "Angel Nail" [ref=e309] [cursor=pointer]:
+        - /url: /angel
+        - img "Angel Nail" [ref=e310]
+      - generic [ref=e311]:
+        - link "Services" [ref=e312] [cursor=pointer]:
+          - /url: /angel/services
+        - link "Gallery" [ref=e313] [cursor=pointer]:
+          - /url: /angel/gallery
+        - link "About" [ref=e314] [cursor=pointer]:
+          - /url: /angel/about
+        - link "Contact" [ref=e315] [cursor=pointer]:
+          - /url: /angel/contact
+      - link "Book Now" [ref=e316] [cursor=pointer]:
+        - /url: /angel/booking
+  - main [ref=e317]:
+    - generic [ref=e326]: Step 4 & 5 of 6
+    - generic [ref=e327]:
+      - heading "Review & Confirm" [level=1] [ref=e328]
+      - paragraph [ref=e329]: Review your selections, choose payment method, and confirm.
+    - generic [ref=e330]:
+      - generic [ref=e331]:
+        - generic [ref=e332]:
+          - heading "Contact Details" [level=3] [ref=e333]
+          - generic [ref=e334]:
+            - generic [ref=e335]:
+              - generic [ref=e336]: First Name *
+              - textbox "First name" [ref=e337]
+            - generic [ref=e338]:
+              - generic [ref=e339]: Last Name *
+              - textbox "Last name" [ref=e340]
+            - generic [ref=e341]:
+              - generic [ref=e342]: Email Address *
+              - textbox "your@email.com" [ref=e343]
+            - generic [ref=e344]:
+              - generic [ref=e345]: Phone
+              - textbox "(555) 000-0000" [ref=e346]
+            - generic [ref=e347]:
+              - generic [ref=e348]: Special Requests
+              - textbox "Any preferences..." [ref=e349]
+        - generic [ref=e350]:
+          - heading "Payment Method" [level=3] [ref=e351]
+          - generic [ref=e352]: Online payment is temporarily unavailable. You may complete your booking by paying at the salon.
+          - generic [ref=e354] [cursor=pointer]:
+            - radio "Pay in salon Pay after your service" [checked] [ref=e355]
+            - generic [ref=e356]:
+              - paragraph [ref=e357]: Pay in salon
+              - paragraph [ref=e358]: Pay after your service
+      - generic [ref=e360]:
+        - heading "Booking Summary" [level=3] [ref=e361]
+        - generic [ref=e362]:
+          - generic [ref=e363]:
+            - generic [ref=e364]:
+              - img "Signature Gel Manicure 1" [ref=e366]
+              - generic [ref=e367]:
+                - paragraph [ref=e368]: Signature Gel Manicure 1
+                - paragraph [ref=e369]: 45 mins · $62
+            - generic [ref=e370]:
+              - generic [ref=e372]: spa
+              - generic [ref=e373]:
+                - paragraph [ref=e374]: Paraffin Wax Treatment
+                - paragraph [ref=e375]: 15 mins · $15
+          - generic [ref=e376]:
+            - generic [ref=e377]:
+              - generic [ref=e378]: Total duration
+              - generic [ref=e379]: 60 mins
+            - generic [ref=e380]:
+              - generic [ref=e381]: Artist
+              - generic [ref=e382]: No preference
+            - generic [ref=e383]:
+              - generic [ref=e384]: Date
+              - generic [ref=e385]: Mon, 11 May
+            - generic [ref=e386]:
+              - generic [ref=e387]: Time
+              - generic [ref=e388]: 10:00 am
+          - generic [ref=e389]:
+            - generic [ref=e390]:
+              - generic [ref=e391]: Service total
+              - generic [ref=e392]: $77.00
+            - generic [ref=e393]:
+              - generic [ref=e394]: Total
+              - generic [ref=e395]: $77.00
+    - generic [ref=e396]:
+      - link "arrow_back Go Back" [ref=e397] [cursor=pointer]:
+        - /url: /angel/booking/schedule
+        - generic [ref=e398]: arrow_back
+        - text: Go Back
+      - button "Confirm Booking check" [ref=e399]:
+        - text: Confirm Booking
+        - generic [ref=e400]: check
+  - button "Angel" [ref=e16]:
+    - img "Angel" [ref=e18]
+  - alert [ref=e19]

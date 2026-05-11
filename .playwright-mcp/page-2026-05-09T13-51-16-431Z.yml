@@ -1,0 +1,100 @@
+- generic [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "Angel Nail" [ref=e4] [cursor=pointer]:
+        - /url: /angel
+        - img "Angel Nail" [ref=e5]
+      - generic [ref=e6]:
+        - link "Services" [ref=e7] [cursor=pointer]:
+          - /url: /angel/services
+        - link "Gallery" [ref=e8] [cursor=pointer]:
+          - /url: /angel/gallery
+        - link "About" [ref=e9] [cursor=pointer]:
+          - /url: /angel/about
+        - link "Contact" [ref=e10] [cursor=pointer]:
+          - /url: /angel/contact
+      - link "Book Now" [ref=e11] [cursor=pointer]:
+        - /url: /angel/booking
+  - main [ref=e12]:
+    - generic [ref=e20]:
+      - heading "Select Service" [level=1] [ref=e21]
+      - generic [ref=e30]: Step 1 of 6
+      - paragraph [ref=e31]: Pick one or more services from any category. Tap again to remove.
+    - generic [ref=e95]:
+      - generic [ref=e96]:
+        - paragraph [ref=e97]: 1 service selected
+        - generic [ref=e98]: 60 mins total
+      - generic [ref=e100]:
+        - generic [ref=e101]: Signature Gel Manicure 1
+        - generic [ref=e102]: $62
+        - button "Remove Signature Gel Manicure 1" [ref=e103]:
+          - generic [ref=e104]: close
+    - generic [ref=e33]:
+      - button "Manicure 1" [ref=e105]:
+        - text: Manicure
+        - generic [ref=e106]: "1"
+      - button "Pedicure" [ref=e35]
+      - button "Nail Art" [ref=e36]
+      - button "Acrylics" [ref=e37]
+      - button "Removal" [ref=e38]
+      - button "Test Category QA" [ref=e39]
+    - generic [ref=e40]:
+      - generic [ref=e41] [cursor=pointer]:
+        - generic [ref=e42]:
+          - generic [ref=e43]:
+            - generic [ref=e44]:
+              - generic [ref=e107]: stars
+              - heading "Signature Gel Manicure 1" [level=3] [ref=e45]
+            - paragraph [ref=e46]: Our most requested service. Includes nail shaping, cuticle care, and a premium long-lasting gel finish with high-shine top coat. lamvh
+            - generic [ref=e47]:
+              - generic [ref=e48]:
+                - generic [ref=e49]: schedule
+                - text: 45 mins
+              - generic [ref=e50]:
+                - generic [ref=e51]: payments
+                - text: $62
+          - img "Signature Gel Manicure 1" [ref=e53]
+        - generic [ref=e109]: check
+      - generic [ref=e55] [cursor=pointer]:
+        - generic [ref=e56]:
+          - heading "Classic French Tip" [level=3] [ref=e58]
+          - paragraph [ref=e59]: Timeless elegance. A clean base with perfectly hand-painted white tips using premium polish.
+          - generic [ref=e60]:
+            - generic [ref=e61]:
+              - generic [ref=e62]: schedule
+              - text: 60 mins
+            - generic [ref=e63]:
+              - generic [ref=e64]: payments
+              - text: $65
+        - img "Classic French Tip" [ref=e66]
+      - generic [ref=e68] [cursor=pointer]:
+        - generic [ref=e69]:
+          - heading "Express Polish Change" [level=3] [ref=e71]
+          - paragraph [ref=e72]: Perfect for a quick refresh. Includes removal of old polish and application of new seasonal color.
+          - generic [ref=e73]:
+            - generic [ref=e74]:
+              - generic [ref=e75]: schedule
+              - text: 20 mins
+            - generic [ref=e76]:
+              - generic [ref=e77]: payments
+              - text: $30
+        - img "Express Polish Change" [ref=e79]
+    - generic [ref=e80]:
+      - generic [ref=e81]:
+        - generic [ref=e82]: Enhancement
+        - heading "Add a Paraffin Wax Treatment?" [level=4] [ref=e83]
+        - paragraph [ref=e84]: Deeply hydrate and soften your skin for just $15 extra.
+        - button "Added ✓" [active] [ref=e112]
+      - generic [ref=e87]: spa
+  - contentinfo [ref=e88]:
+    - generic [ref=e89]:
+      - generic [ref=e90]:
+        - generic [ref=e91]: Total Estimate (1 item)
+        - generic [ref=e92]: $77.00
+      - link "Next Step arrow_forward" [ref=e110] [cursor=pointer]:
+        - /url: /angel/booking/artist
+        - text: Next Step
+        - generic [ref=e111]: arrow_forward
+  - button "Angel" [ref=e16]:
+    - img "Angel" [ref=e18]
+  - alert [ref=e19]

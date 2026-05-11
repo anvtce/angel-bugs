@@ -1,0 +1,80 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e207]:
+    - generic [ref=e208]:
+      - link "Angel Nail" [ref=e209] [cursor=pointer]:
+        - /url: /angel
+        - img "Angel Nail" [ref=e210]
+      - generic [ref=e211]:
+        - link "Services" [ref=e212] [cursor=pointer]:
+          - /url: /angel/services
+        - link "Gallery" [ref=e213] [cursor=pointer]:
+          - /url: /angel/gallery
+        - link "About" [ref=e214] [cursor=pointer]:
+          - /url: /angel/about
+        - link "Contact" [ref=e215] [cursor=pointer]:
+          - /url: /angel/contact
+      - link "Book Now" [ref=e216] [cursor=pointer]:
+        - /url: /angel/booking
+  - main [ref=e217]:
+    - generic [ref=e218]:
+      - heading "Pick Date & Time" [level=1] [ref=e219]
+      - generic [ref=e228]: Step 3 of 6
+    - generic [ref=e229]:
+      - generic [ref=e230]:
+        - heading "May 2026" [level=3] [ref=e231]
+        - generic [ref=e232]:
+          - button "chevron_left" [ref=e233]:
+            - generic [ref=e234]: chevron_left
+          - button "chevron_right" [ref=e235]:
+            - generic [ref=e236]: chevron_right
+      - generic [ref=e237]:
+        - generic [ref=e238]: Mon
+        - generic [ref=e239]: Tue
+        - generic [ref=e240]: Wed
+        - generic [ref=e241]: Thu
+        - generic [ref=e242]: Fri
+        - generic [ref=e243]: Sat
+        - generic [ref=e244]: Sun
+      - generic [ref=e245]:
+        - button "1" [disabled] [ref=e250]
+        - button "2" [disabled] [ref=e251]
+        - button "3" [disabled] [ref=e252]
+        - button "4" [disabled] [ref=e253]
+        - button "5" [disabled] [ref=e254]
+        - button "6" [disabled] [ref=e255]
+        - button "7" [disabled] [ref=e256]
+        - button "8" [disabled] [ref=e257]
+        - button "9" [ref=e258]
+        - button "10" [disabled] [ref=e259]
+        - button "11" [ref=e260]
+        - button "12" [ref=e261]
+        - button "13" [ref=e262]
+        - button "14" [ref=e263]
+        - button "15" [ref=e264]
+        - button "16" [ref=e265]
+        - button "17" [disabled] [ref=e266]
+        - button "18" [ref=e267]
+        - button "19" [ref=e268]
+        - button "20" [ref=e269]
+        - button "21" [ref=e270]
+        - button "22" [ref=e271]
+        - button "23" [ref=e272]
+        - button "24" [disabled] [ref=e273]
+        - button "25" [ref=e274]
+        - button "26" [ref=e275]
+        - button "27" [ref=e276]
+        - button "28" [ref=e277]
+        - button "29" [ref=e278]
+        - button "30" [ref=e279]
+        - button "31" [disabled] [ref=e280]
+    - generic [ref=e281]:
+      - link "arrow_back Go Back" [ref=e282] [cursor=pointer]:
+        - /url: /angel/booking/artist
+        - generic [ref=e283]: arrow_back
+        - text: Go Back
+      - button "Continue to Details arrow_forward" [disabled] [ref=e284]:
+        - text: Continue to Details
+        - generic [ref=e285]: arrow_forward
+  - button "Angel" [ref=e16]:
+    - img "Angel" [ref=e18]
+  - alert [ref=e19]

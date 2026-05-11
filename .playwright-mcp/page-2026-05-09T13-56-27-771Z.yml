@@ -1,0 +1,106 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "Angel Nail" [ref=e5] [cursor=pointer]:
+          - /url: /angel
+          - img "Angel Nail" [ref=e6]
+        - generic [ref=e7]:
+          - link "Services" [ref=e8] [cursor=pointer]:
+            - /url: /angel/services
+          - link "Gallery" [ref=e9] [cursor=pointer]:
+            - /url: /angel/gallery
+          - link "About" [ref=e10] [cursor=pointer]:
+            - /url: /angel/about
+          - link "Contact" [ref=e11] [cursor=pointer]:
+            - /url: /angel/contact
+        - link "Book Now" [ref=e12] [cursor=pointer]:
+          - /url: /angel/booking
+    - main [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - generic [ref=e16]:
+            - generic [ref=e17]: verified
+            - generic [ref=e18]: Booking Management
+          - heading "Find Your Moment of Calm." [level=1] [ref=e19]
+          - paragraph [ref=e20]: Retrieve your upcoming appointments at Angel Nail Salon. Simply enter your details to view, reschedule, or manage your premium nail care journey.
+        - generic [ref=e23]:
+          - generic [ref=e24]:
+            - heading "Retrieve Booking" [level=2] [ref=e25]
+            - paragraph [ref=e26]: Enter one of the following to locate your visit.
+          - generic [ref=e27]:
+            - generic [ref=e28]:
+              - text: Email or Phone
+              - generic [ref=e29]:
+                - generic [ref=e30]: alternate_email
+                - textbox "example@angelnail.com" [ref=e31]
+            - generic [ref=e34]: OR
+            - generic [ref=e36]:
+              - text: Booking Reference
+              - generic [ref=e37]:
+                - generic [ref=e38]: confirmation_number
+                - textbox "AN-260326ABCD" [ref=e39]
+            - button "Find Booking arrow_forward" [ref=e40]:
+              - generic [ref=e41]: Find Booking
+              - generic [ref=e42]: arrow_forward
+          - link "help_outline Need assistance? Our concierge is here to help." [ref=e44] [cursor=pointer]:
+            - /url: /angel/contact
+            - generic [ref=e46]: help_outline
+            - generic [ref=e47]:
+              - paragraph [ref=e48]: Need assistance?
+              - paragraph [ref=e49]: Our concierge is here to help.
+    - contentinfo [ref=e50]:
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - link "Angel Nails & Spa" [ref=e53] [cursor=pointer]:
+            - /url: /angel
+            - img "Angel Nails & Spa" [ref=e54]
+          - paragraph [ref=e55]: Defining the future of luxury nail care in Blenheim through precision, art, and an uncompromising commitment to client experience.
+          - link "Email" [ref=e57] [cursor=pointer]:
+            - /url: mailto:studio@angelnail.co.nz
+            - generic [ref=e58]: mail
+          - generic [ref=e59]:
+            - paragraph [ref=e60]: 1/20 High Street, Blenheim 7201, New Zealand
+            - paragraph [ref=e61]:
+              - link "03 579 1166" [ref=e62] [cursor=pointer]:
+                - /url: tel:035791166
+            - paragraph [ref=e63]:
+              - link "studio@angelnail.co.nz" [ref=e64] [cursor=pointer]:
+                - /url: mailto:studio@angelnail.co.nz
+        - generic [ref=e65]:
+          - generic [ref=e66]:
+            - heading "Atelier" [level=5] [ref=e67]
+            - list [ref=e68]:
+              - listitem [ref=e69]:
+                - link "Services" [ref=e70] [cursor=pointer]:
+                  - /url: /angel/services
+              - listitem [ref=e71]:
+                - link "Gift Cards" [ref=e72] [cursor=pointer]:
+                  - /url: /angel/gift-cards
+              - listitem [ref=e73]:
+                - link "Our Story" [ref=e74] [cursor=pointer]:
+                  - /url: /angel/about
+              - listitem [ref=e75]:
+                - link "Location" [ref=e76] [cursor=pointer]:
+                  - /url: /angel#contact
+              - listitem [ref=e77]:
+                - link "Manage Booking" [ref=e78] [cursor=pointer]:
+                  - /url: /angel/manage-booking
+          - generic [ref=e79]:
+            - heading "Legal" [level=5] [ref=e80]
+            - list [ref=e81]:
+              - listitem [ref=e82]:
+                - link "Privacy Policy" [ref=e83] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e84]:
+                - link "Terms of Service" [ref=e85] [cursor=pointer]:
+                  - /url: "#"
+      - generic [ref=e86]:
+        - paragraph [ref=e87]: © 2026 Angel Nails & Spa. All Rights Reserved.
+        - generic [ref=e88]:
+          - generic [ref=e89]: Blenheim’s Choice
+          - generic [ref=e90]: •
+          - generic [ref=e91]: Crafted with Care
+  - button "Angel" [ref=e92]:
+    - img "Angel" [ref=e94]
+  - alert [ref=e95]

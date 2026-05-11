@@ -1,0 +1,45 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e19]
+  - main [ref=e402]:
+    - generic [ref=e405]:
+      - generic [ref=e408]: check_circle
+      - generic [ref=e410]:
+        - heading "Booking Confirmed!" [level=1] [ref=e411]
+        - paragraph [ref=e412]: Your beauty experience at Angel Nail is officially reserved.
+      - generic [ref=e413]:
+        - generic [ref=e415]: auto_awesome
+        - generic [ref=e416]:
+          - generic [ref=e417]:
+            - generic [ref=e418]:
+              - img "Signature Gel Manicure 1" [ref=e420]
+              - generic [ref=e421]:
+                - paragraph [ref=e422]: Signature Gel Manicure 1
+                - paragraph [ref=e423]: 45 mins · $62
+            - paragraph [ref=e424]: With any available artist
+          - generic [ref=e425]:
+            - generic [ref=e426]:
+              - paragraph [ref=e427]: Date
+              - paragraph [ref=e428]: Monday, 11 May 2026
+            - generic [ref=e429]:
+              - paragraph [ref=e430]: Time
+              - paragraph [ref=e431]: 3:00 am
+            - generic [ref=e432]:
+              - paragraph [ref=e433]: Duration
+              - paragraph [ref=e434]: 45 minutes
+            - generic [ref=e435]:
+              - paragraph [ref=e436]: Payment
+              - paragraph [ref=e437]: Pay in salon
+          - generic [ref=e438]:
+            - generic [ref=e439]:
+              - paragraph [ref=e440]: Reference
+              - paragraph [ref=e441]: AN-2605090UNE
+            - generic [ref=e442]: CONFIRMED
+          - paragraph [ref=e444]:
+            - text: A confirmation has been sent to
+            - strong [ref=e445]: john.doe.test@test.com
+            - text: . Save your reference number to manage your booking.
+      - generic [ref=e446]:
+        - link "Return to Home" [ref=e447] [cursor=pointer]:
+          - /url: /angel
+        - link "Manage Booking" [ref=e448] [cursor=pointer]:
+          - /url: /angel/manage-booking

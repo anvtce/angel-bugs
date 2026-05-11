@@ -1,0 +1,10 @@
+[     304ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://project.vinapage.com/angel/api/admin/reports/revenue?from=2026-04-09&to=2026-05-09:0
+[   22626ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://project.vinapage.com/angel/api/admin/audit-log:0
+[   22725ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://project.vinapage.com/angel/api/admin/settings:0
+[   38572ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://project.vinapage.com/angel/api/admin/payroll:0
+[   38665ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://project.vinapage.com/angel/api/admin/reports:0
+[   39247ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://project.vinapage.com/angel/api/admin/payments:0
+[   39353ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://project.vinapage.com/angel/api/admin/expenses:0
+[   39451ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://project.vinapage.com/angel/api/admin/closing:0
+[   39551ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://project.vinapage.com/angel/api/admin/services:0
+[   39647ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://project.vinapage.com/angel/api/admin/staff:0

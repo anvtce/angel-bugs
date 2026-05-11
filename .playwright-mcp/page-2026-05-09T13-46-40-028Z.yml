@@ -1,0 +1,145 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "Angel Nail" [ref=e4] [cursor=pointer]:
+        - /url: /angel
+        - img "Angel Nail" [ref=e5]
+      - generic [ref=e6]:
+        - link "Services" [ref=e7] [cursor=pointer]:
+          - /url: /angel/services
+        - link "Gallery" [ref=e8] [cursor=pointer]:
+          - /url: /angel/gallery
+        - link "About" [ref=e9] [cursor=pointer]:
+          - /url: /angel/about
+        - link "Contact" [ref=e10] [cursor=pointer]:
+          - /url: /angel/contact
+      - link "Book Now" [ref=e11] [cursor=pointer]:
+        - /url: /angel/booking
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - text: Our Philosophy
+        - heading "The Art of Intentional Beauty" [level=1] [ref=e15]:
+          - text: The Art of
+          - text: Intentional Beauty
+        - paragraph [ref=e16]: At Angel Nail, we believe beauty is a ritual of self-respect. Our practice is rooted in precision, elevated by artistry, and secured by the highest medical standards.
+      - img "Elegant manicured hands on silk fabric" [ref=e19]
+    - generic [ref=e22]:
+      - generic [ref=e24]:
+        - img "Interior of Angel Nail salon" [ref=e25]
+        - img "Nail technician applying polish with precision" [ref=e26]
+      - generic [ref=e27]:
+        - heading "A Sanctuary of Meticulous Care" [level=2] [ref=e28]:
+          - text: A Sanctuary of
+          - text: Meticulous Care
+        - generic [ref=e29]:
+          - paragraph [ref=e30]: Founded in 2019 in the heart of Blenheim, Angel Nail was born from a vision to redefine the nail salon experience. We moved away from the rushed, transactional nature of traditional salons to create a space of genuine pause.
+          - paragraph [ref=e31]:
+            - text: Our commitment to your wellbeing is uncompromising. We are one of the few ateliers in New Zealand utilizing a
+            - strong [ref=e32]: hospital-grade autoclave
+            - text: for medical-grade sterilization of all metal implements.
+          - paragraph [ref=e33]: We partner exclusively with global leaders in nail health and color—OPI, Gelish, and SNS—ensuring that every stroke of polish is as nourishing as it is beautiful.
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - text: The Angel Standard
+        - heading "Our Core Pillars" [level=2] [ref=e36]
+      - generic [ref=e37]:
+        - generic [ref=e38]:
+          - generic [ref=e40]: sanitizer
+          - heading "Medical-Grade Safety" [level=3] [ref=e41]
+          - paragraph [ref=e42]: Beyond standard disinfection, our hospital-grade autoclave ensures 100% sterile tools for every single client, every single time.
+        - generic [ref=e43]:
+          - generic [ref=e45]: verified
+          - heading "Premium Products" [level=3] [ref=e46]
+          - paragraph [ref=e47]: We refuse to compromise on quality, using only genuine OPI, Gelish, and SNS systems for lasting results and nail health.
+        - generic [ref=e48]:
+          - generic [ref=e50]: brush
+          - heading "Ethical Artistry" [level=3] [ref=e51]
+          - paragraph [ref=e52]: Our technicians are artisans. We treat nail care as a fine craft, focusing on precision, detail, and the natural beauty of your hands.
+    - generic [ref=e54]:
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - text: The Hands Behind the Art
+          - heading "The Artisans" [level=2] [ref=e57]
+        - paragraph [ref=e58]: A collective of highly trained technicians dedicated to the intersection of health and high-fashion aesthetics.
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - img "Elena Vance" [ref=e62]
+          - generic [ref=e63]:
+            - heading "Elena Vance" [level=4] [ref=e64]
+            - paragraph [ref=e65]: Founder & Creative Director
+        - generic [ref=e66]:
+          - img "Sophia Chen" [ref=e68]
+          - generic [ref=e69]:
+            - heading "Sophia Chen" [level=4] [ref=e70]
+            - paragraph [ref=e71]: Senior Technician
+        - generic [ref=e72]:
+          - img "Isabella Rossi" [ref=e74]
+          - generic [ref=e75]:
+            - heading "Isabella Rossi" [level=4] [ref=e76]
+            - paragraph [ref=e77]: Gel Specialist
+    - generic [ref=e80]:
+      - heading "Experience the Intentional" [level=2] [ref=e81]:
+        - text: Experience the
+        - text: Intentional
+      - paragraph [ref=e82]: Step into a space where time slows down and your wellbeing takes center stage.
+      - generic [ref=e83]:
+        - link "Book Now" [ref=e84] [cursor=pointer]:
+          - /url: /angel/booking
+        - link "View Menu" [ref=e85] [cursor=pointer]:
+          - /url: /angel/services
+  - contentinfo [ref=e86]:
+    - generic [ref=e87]:
+      - generic [ref=e88]:
+        - link "Angel Nails & Spa" [ref=e89] [cursor=pointer]:
+          - /url: /angel
+          - img "Angel Nails & Spa" [ref=e90]
+        - paragraph [ref=e91]: Defining the future of luxury nail care in Blenheim through precision, art, and an uncompromising commitment to client experience.
+        - link "Email" [ref=e93] [cursor=pointer]:
+          - /url: mailto:studio@angelnail.co.nz
+          - generic [ref=e94]: mail
+        - generic [ref=e95]:
+          - paragraph [ref=e96]: 1/20 High Street, Blenheim 7201, New Zealand
+          - paragraph [ref=e97]:
+            - link "03 579 1166" [ref=e98] [cursor=pointer]:
+              - /url: tel:035791166
+          - paragraph [ref=e99]:
+            - link "studio@angelnail.co.nz" [ref=e100] [cursor=pointer]:
+              - /url: mailto:studio@angelnail.co.nz
+      - generic [ref=e101]:
+        - generic [ref=e102]:
+          - heading "Atelier" [level=5] [ref=e103]
+          - list [ref=e104]:
+            - listitem [ref=e105]:
+              - link "Services" [ref=e106] [cursor=pointer]:
+                - /url: /angel/services
+            - listitem [ref=e107]:
+              - link "Gift Cards" [ref=e108] [cursor=pointer]:
+                - /url: /angel/gift-cards
+            - listitem [ref=e109]:
+              - link "Our Story" [ref=e110] [cursor=pointer]:
+                - /url: /angel/about
+            - listitem [ref=e111]:
+              - link "Location" [ref=e112] [cursor=pointer]:
+                - /url: /angel#contact
+            - listitem [ref=e113]:
+              - link "Manage Booking" [ref=e114] [cursor=pointer]:
+                - /url: /angel/manage-booking
+        - generic [ref=e115]:
+          - heading "Legal" [level=5] [ref=e116]
+          - list [ref=e117]:
+            - listitem [ref=e118]:
+              - link "Privacy Policy" [ref=e119] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e120]:
+              - link "Terms of Service" [ref=e121] [cursor=pointer]:
+                - /url: "#"
+    - generic [ref=e122]:
+      - paragraph [ref=e123]: © 2026 Angel Nails & Spa. All Rights Reserved.
+      - generic [ref=e124]:
+        - generic [ref=e125]: Blenheim’s Choice
+        - generic [ref=e126]: •
+        - generic [ref=e127]: Crafted with Care
+  - button "Angel" [ref=e128]:
+    - img "Angel" [ref=e130]
+  - alert [ref=e131]

@@ -1,0 +1,439 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - main [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - button "Open menu" [ref=e6]: menu
+          - generic [ref=e7]: Angel Nail Admin
+        - generic [ref=e8]:
+          - generic [ref=e9]:
+            - button "VI" [ref=e10]
+            - button "EN" [ref=e11]
+          - generic [ref=e12]:
+            - button "notifications 9+" [ref=e70]:
+              - text: notifications
+              - generic [ref=e71]: 9+
+            - button "Account menu" [ref=e16]: account_circle
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - generic [ref=e19]:
+            - heading "Lịch hẹn" [level=2] [ref=e20]
+            - paragraph [ref=e21]: Quản lý và lên lịch cho tiệm.
+          - button "add Tạo lịch hẹn" [active] [ref=e22]:
+            - generic [ref=e23]: add
+            - text: Tạo lịch hẹn
+        - generic [ref=e24]:
+          - generic [ref=e25]:
+            - generic [ref=e26]:
+              - generic [ref=e27]: calendar_today
+              - generic [ref=e28]: "Lọc theo ngày:"
+            - textbox [ref=e29]: 2026-03-27
+            - generic [ref=e30]:
+              - button "Hôm nay" [ref=e31]
+              - button "20 Mar" [ref=e72]
+              - button "27 Mar" [ref=e73]
+              - button "28 Mar" [ref=e74]
+              - button "30 Mar" [ref=e75]
+              - button "31 Mar" [ref=e76]
+          - generic [ref=e32]:
+            - generic [ref=e33]:
+              - generic [ref=e34]: search
+              - textbox "Search by reference, name, email, phone..." [ref=e35]
+            - combobox [ref=e36]:
+              - option "All statuses" [selected]
+              - option "Pending"
+              - option "Confirmed"
+              - option "Completed"
+              - option "Cancelled"
+              - option "No show"
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - paragraph [ref=e39]: CHỜ XỬ LÝ
+            - paragraph [ref=e40]: "1"
+          - generic [ref=e41]:
+            - paragraph [ref=e42]: XÁC NHẬN
+            - paragraph [ref=e43]: "7"
+          - generic [ref=e44]:
+            - paragraph [ref=e45]: HOÀN THÀNH
+            - paragraph [ref=e46]: "2"
+          - generic [ref=e47]:
+            - paragraph [ref=e48]: ĐÃ HUỶ
+            - paragraph [ref=e49]: "0"
+        - generic [ref=e50]:
+          - paragraph [ref=e633]:
+            - text: 10 lịch hẹn ngày
+            - strong [ref=e634]: Friday, 27 March
+          - generic [ref=e666]:
+            - generic [ref=e667]:
+              - generic [ref=e668]: TP
+              - generic [ref=e669]:
+                - generic [ref=e670]:
+                  - heading "Truong Pham" [level=3] [ref=e671]
+                  - generic [ref=e672]: HOÀN THÀNH
+                  - generic [ref=e673]: Pay in salon
+                - paragraph [ref=e674]: hi@truong.info
+                - generic [ref=e675]:
+                  - generic [ref=e676]:
+                    - generic [ref=e677]: spa
+                    - text: Gel / Acrylic Removal
+                  - generic [ref=e678]:
+                    - generic [ref=e679]: schedule
+                    - text: 04:00 pm · 30 min
+                  - generic [ref=e680]:
+                    - generic [ref=e681]: payments
+                    - text: $25.00
+                  - generic [ref=e682]:
+                    - generic [ref=e683]: person_pin
+                    - text: David Park
+                - paragraph [ref=e684]: "Ref: AN-2603-0005"
+            - generic [ref=e686]: Không có thao tác
+          - generic [ref=e688]:
+            - generic [ref=e689]:
+              - generic [ref=e690]: SL
+              - generic [ref=e691]:
+                - generic [ref=e692]:
+                  - heading "Sophia Laurent" [level=3] [ref=e693]
+                  - generic [ref=e694]: XÁC NHẬN
+                  - generic [ref=e695]: Pay in salon
+                - paragraph [ref=e696]: (555) 012-3456
+                - generic [ref=e697]:
+                  - generic [ref=e698]:
+                    - generic [ref=e699]: spa
+                    - text: Signature Gel Manicure 1
+                  - generic [ref=e700]:
+                    - generic [ref=e701]: schedule
+                    - text: 04:00 pm · 45 min
+                  - generic [ref=e702]:
+                    - generic [ref=e703]: payments
+                    - text: $65.00
+                  - generic [ref=e704]:
+                    - generic [ref=e705]: person_pin
+                    - text: Elena Rossi
+                - paragraph [ref=e706]: "Ref: AN-2603-0001"
+            - generic [ref=e707]:
+              - button "edit Edit" [ref=e708]:
+                - generic [ref=e709]: edit
+                - text: Edit
+              - button "task_alt Hoàn thành" [ref=e710]:
+                - generic [ref=e711]: task_alt
+                - text: Hoàn thành
+              - button "cancel Huỷ" [ref=e712]:
+                - generic [ref=e713]: cancel
+                - text: Huỷ
+          - generic [ref=e715]:
+            - generic [ref=e716]:
+              - generic [ref=e717]: DT
+              - generic [ref=e718]:
+                - generic [ref=e719]:
+                  - heading "David Thompson" [level=3] [ref=e720]
+                  - generic [ref=e721]: XÁC NHẬN
+                  - generic [ref=e722]: Pay in salon
+                - paragraph [ref=e723]: (555) 012-5678
+                - generic [ref=e724]:
+                  - generic [ref=e725]:
+                    - generic [ref=e726]: spa
+                    - text: Express Polish Change
+                  - generic [ref=e727]:
+                    - generic [ref=e728]: schedule
+                    - text: 04:30 pm · 20 min
+                  - generic [ref=e729]:
+                    - generic [ref=e730]: payments
+                    - text: $30.00
+                  - generic [ref=e731]:
+                    - generic [ref=e732]: person_pin
+                    - text: Maya Chen
+                - paragraph [ref=e733]: “Express touch-up”
+                - paragraph [ref=e734]: "Ref: AN-2603-0003"
+            - generic [ref=e735]:
+              - button "edit Edit" [ref=e736]:
+                - generic [ref=e737]: edit
+                - text: Edit
+              - button "task_alt Hoàn thành" [ref=e738]:
+                - generic [ref=e739]: task_alt
+                - text: Hoàn thành
+              - button "cancel Huỷ" [ref=e740]:
+                - generic [ref=e741]: cancel
+                - text: Huỷ
+          - generic [ref=e743]:
+            - generic [ref=e744]:
+              - generic [ref=e745]: IC
+              - generic [ref=e746]:
+                - generic [ref=e747]:
+                  - heading "Isabella Chen" [level=3] [ref=e748]
+                  - generic [ref=e749]: XÁC NHẬN
+                  - generic [ref=e750]: Pay in salon
+                - paragraph [ref=e751]: (555) 012-4567
+                - generic [ref=e752]:
+                  - generic [ref=e753]:
+                    - generic [ref=e754]: spa
+                    - text: Classic French Tip
+                  - generic [ref=e755]:
+                    - generic [ref=e756]: schedule
+                    - text: 05:00 pm · 60 min
+                  - generic [ref=e757]:
+                    - generic [ref=e758]: payments
+                    - text: $65.00
+                  - generic [ref=e759]:
+                    - generic [ref=e760]: person_pin
+                    - text: Elena Rossi
+                - paragraph [ref=e761]: "Ref: AN-2603-0002"
+            - generic [ref=e762]:
+              - button "edit Edit" [ref=e763]:
+                - generic [ref=e764]: edit
+                - text: Edit
+              - button "task_alt Hoàn thành" [ref=e765]:
+                - generic [ref=e766]: task_alt
+                - text: Hoàn thành
+              - button "cancel Huỷ" [ref=e767]:
+                - generic [ref=e768]: cancel
+                - text: Huỷ
+          - generic [ref=e770]:
+            - generic [ref=e771]:
+              - generic [ref=e772]: SL
+              - generic [ref=e773]:
+                - generic [ref=e774]:
+                  - heading "Sophia Laurent" [level=3] [ref=e775]
+                  - generic [ref=e776]: XÁC NHẬN
+                  - generic [ref=e777]: Pay in salon
+                - paragraph [ref=e778]: (555) 012-3456
+                - generic [ref=e779]:
+                  - generic [ref=e780]:
+                    - generic [ref=e781]: spa
+                    - text: Gel / Acrylic Removal
+                  - generic [ref=e782]:
+                    - generic [ref=e783]: schedule
+                    - text: 05:00 pm · 30 min
+                  - generic [ref=e784]:
+                    - generic [ref=e785]: payments
+                    - text: $25.00
+                  - generic [ref=e786]:
+                    - generic [ref=e787]: person_pin
+                    - text: Maya Chen
+                - paragraph [ref=e788]: "Ref: AN-2603-0009"
+            - generic [ref=e789]:
+              - button "edit Edit" [ref=e790]:
+                - generic [ref=e791]: edit
+                - text: Edit
+              - button "task_alt Hoàn thành" [ref=e792]:
+                - generic [ref=e793]: task_alt
+                - text: Hoàn thành
+              - button "cancel Huỷ" [ref=e794]:
+                - generic [ref=e795]: cancel
+                - text: Huỷ
+          - generic [ref=e797]:
+            - generic [ref=e798]:
+              - generic [ref=e799]: SL
+              - generic [ref=e800]:
+                - generic [ref=e801]:
+                  - heading "Sophia Laurent" [level=3] [ref=e802]
+                  - generic [ref=e803]: HOÀN THÀNH
+                  - generic [ref=e804]: Pay in salon
+                - paragraph [ref=e805]: (555) 012-3456
+                - generic [ref=e806]:
+                  - generic [ref=e807]:
+                    - generic [ref=e808]: spa
+                    - text: Apres Gel-X Extensions
+                  - generic [ref=e809]:
+                    - generic [ref=e810]: schedule
+                    - text: 06:00 pm · 75 min
+                  - generic [ref=e811]:
+                    - generic [ref=e812]: payments
+                    - text: $95.00
+                  - generic [ref=e813]:
+                    - generic [ref=e814]: person_pin
+                    - text: Jordan Smith
+                - paragraph [ref=e815]: "Ref: AN-2603-0004"
+            - generic [ref=e817]: Không có thao tác
+          - generic [ref=e819]:
+            - generic [ref=e820]:
+              - generic [ref=e821]: DT
+              - generic [ref=e822]:
+                - generic [ref=e823]:
+                  - heading "David Thompson" [level=3] [ref=e824]
+                  - generic [ref=e825]: XÁC NHẬN
+                  - generic [ref=e826]: Pay in salon
+                - paragraph [ref=e827]: (555) 012-5678
+                - generic [ref=e828]:
+                  - generic [ref=e829]:
+                    - generic [ref=e830]: spa
+                    - text: Signature Gel Manicure 1
+                  - generic [ref=e831]:
+                    - generic [ref=e832]: schedule
+                    - text: 07:00 pm · 45 min
+                  - generic [ref=e833]:
+                    - generic [ref=e834]: payments
+                    - text: $65.00
+                  - generic [ref=e835]:
+                    - generic [ref=e836]: person_pin
+                    - text: Jordan Smith
+                - paragraph [ref=e837]: "Ref: AN-2603-0010"
+            - generic [ref=e838]:
+              - button "edit Edit" [ref=e839]:
+                - generic [ref=e840]: edit
+                - text: Edit
+              - button "task_alt Hoàn thành" [ref=e841]:
+                - generic [ref=e842]: task_alt
+                - text: Hoàn thành
+              - button "cancel Huỷ" [ref=e843]:
+                - generic [ref=e844]: cancel
+                - text: Huỷ
+          - generic [ref=e846]:
+            - generic [ref=e847]:
+              - generic [ref=e848]: IC
+              - generic [ref=e849]:
+                - generic [ref=e850]:
+                  - heading "Isabella Chen" [level=3] [ref=e851]
+                  - generic [ref=e852]: XÁC NHẬN
+                  - generic [ref=e853]: Pay in salon
+                - paragraph [ref=e854]: (555) 012-4567
+                - generic [ref=e855]:
+                  - generic [ref=e856]:
+                    - generic [ref=e857]: spa
+                    - text: Rose Petal Spa Pedicure
+                  - generic [ref=e858]:
+                    - generic [ref=e859]: schedule
+                    - text: 08:00 pm · 60 min
+                  - generic [ref=e860]:
+                    - generic [ref=e861]: payments
+                    - text: $75.00
+                  - generic [ref=e862]:
+                    - generic [ref=e863]: person_pin
+                    - text: Sofia Blanco
+                - paragraph [ref=e864]: "Ref: AN-2603-0006"
+            - generic [ref=e865]:
+              - button "edit Edit" [ref=e866]:
+                - generic [ref=e867]: edit
+                - text: Edit
+              - button "task_alt Hoàn thành" [ref=e868]:
+                - generic [ref=e869]: task_alt
+                - text: Hoàn thành
+              - button "cancel Huỷ" [ref=e870]:
+                - generic [ref=e871]: cancel
+                - text: Huỷ
+          - generic [ref=e873]:
+            - generic [ref=e874]:
+              - generic [ref=e875]: DT
+              - generic [ref=e876]:
+                - generic [ref=e877]:
+                  - heading "David Thompson" [level=3] [ref=e878]
+                  - generic [ref=e879]: XÁC NHẬN
+                  - generic [ref=e880]: Pay in salon
+                - paragraph [ref=e881]: (555) 012-5678
+                - generic [ref=e882]:
+                  - generic [ref=e883]:
+                    - generic [ref=e884]: spa
+                    - text: Hard Gel Strengthening Overlay
+                  - generic [ref=e885]:
+                    - generic [ref=e886]: schedule
+                    - text: 08:30 pm · 50 min
+                  - generic [ref=e887]:
+                    - generic [ref=e888]: payments
+                    - text: $65.00
+                  - generic [ref=e889]:
+                    - generic [ref=e890]: person_pin
+                    - text: Elena Rossi
+                - paragraph [ref=e891]: "Ref: AN-2603-0008"
+            - generic [ref=e892]:
+              - button "edit Edit" [ref=e893]:
+                - generic [ref=e894]: edit
+                - text: Edit
+              - button "task_alt Hoàn thành" [ref=e895]:
+                - generic [ref=e896]: task_alt
+                - text: Hoàn thành
+              - button "cancel Huỷ" [ref=e897]:
+                - generic [ref=e898]: cancel
+                - text: Huỷ
+          - generic [ref=e636]:
+            - generic [ref=e637]:
+              - generic [ref=e638]: SL
+              - generic [ref=e639]:
+                - generic [ref=e640]:
+                  - heading "Sophia Laurent" [level=3] [ref=e641]
+                  - generic [ref=e642]: CHỜ XỬ LÝ
+                  - generic [ref=e643]: Pay in salon
+                - paragraph [ref=e644]: (555) 012-3456
+                - generic [ref=e645]:
+                  - generic [ref=e646]:
+                    - generic [ref=e647]: spa
+                    - text: Tier 1 Custom Nail Art
+                  - generic [ref=e648]:
+                    - generic [ref=e649]: schedule
+                    - text: 09:30 pm · 30 min
+                  - generic [ref=e650]:
+                    - generic [ref=e651]: payments
+                    - text: $20.00
+                  - generic [ref=e652]:
+                    - generic [ref=e653]: person_pin
+                    - text: Lila Vance
+                - paragraph [ref=e654]: “Floral design”
+                - paragraph [ref=e655]: "Ref: AN-2603-0007"
+            - generic [ref=e656]:
+              - button "edit Edit" [ref=e657]:
+                - generic [ref=e658]: edit
+                - text: Edit
+              - button "check_circle Xác nhận" [ref=e659]:
+                - generic [ref=e660]: check_circle
+                - text: Xác nhận
+              - button "task_alt Hoàn thành" [ref=e661]:
+                - generic [ref=e662]: task_alt
+                - text: Hoàn thành
+              - button "cancel Huỷ" [ref=e663]:
+                - generic [ref=e664]: cancel
+                - text: Huỷ
+      - generic [ref=e900]:
+        - generic [ref=e901]:
+          - heading "Tạo lịch hẹn" [level=3] [ref=e902]
+          - button "close" [ref=e903]
+        - generic [ref=e904]:
+          - generic [ref=e905]:
+            - paragraph [ref=e906]: Thông tin khách hàng
+            - generic [ref=e907]:
+              - textbox "Họ và tên *" [ref=e908]
+              - textbox "Địa chỉ email *" [ref=e909]
+              - textbox "Điện thoại" [ref=e910]
+          - generic [ref=e911]:
+            - paragraph [ref=e912]: Chi tiết đặt lịch
+            - generic [ref=e913]:
+              - combobox [ref=e914]:
+                - option "Chọn dịch vụ *" [selected]
+                - option "— ( min)"
+                - option "— ( min)"
+                - option "— ( min)"
+                - option "— ( min)"
+                - option "— ( min)"
+              - combobox [ref=e915]:
+                - option "Không chọn / Bất kỳ nhân viên" [selected]
+                - option "Elena Rossi — Senior Nail Artist"
+                - option "Maya Chen — Lash Specialist"
+                - option "Jordan Smith — Senior Nail Artist"
+                - option "David Park — Nail Technician"
+                - option "Sofia Blanco — Artistic Director"
+                - option "Lila Vance — Nail Specialist"
+              - generic [ref=e916]:
+                - generic [ref=e917]:
+                  - generic [ref=e918]: Ngày
+                  - textbox [ref=e919]: 2026-05-09
+                - generic [ref=e920]:
+                  - generic [ref=e921]: Giờ
+                  - textbox [ref=e922]: 10:00
+              - textbox "Ghi chú (tuỳ chọn)" [ref=e923]
+          - generic [ref=e924]:
+            - button "Huỷ" [ref=e925]
+            - button "Tạo lịch hẹn" [ref=e926]
+      - paragraph [ref=e54]: © 2024 Angel Nail Digital Atelier. Bảo lưu mọi quyền.
+    - navigation [ref=e55]:
+      - link "home Trang chủ" [ref=e56] [cursor=pointer]:
+        - /url: /angel/admin
+        - generic [ref=e57]: home
+        - generic [ref=e58]: Trang chủ
+      - link "calendar_month Đặt lịch" [ref=e59] [cursor=pointer]:
+        - /url: /angel/admin/appointments
+        - generic [ref=e60]: calendar_month
+        - generic [ref=e61]: Đặt lịch
+      - button "add" [ref=e64]:
+        - generic [ref=e65]: add
+      - link "person Hồ sơ" [ref=e66] [cursor=pointer]:
+        - /url: /angel/admin/settings
+        - generic [ref=e67]: person
+        - generic [ref=e68]: Hồ sơ
+  - alert [ref=e69]

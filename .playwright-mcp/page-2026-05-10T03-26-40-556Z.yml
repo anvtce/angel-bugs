@@ -1,0 +1,318 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e4]:
+        - heading "Angel Nail Admin" [level=1] [ref=e5]
+        - paragraph [ref=e6]: Quản lý tiệm
+      - navigation [ref=e7]:
+        - link "dashboard Tổng quan" [ref=e8] [cursor=pointer]:
+          - /url: /angel/admin
+          - generic [ref=e9]: dashboard
+          - generic [ref=e10]: Tổng quan
+        - link "today Hôm nay" [ref=e11] [cursor=pointer]:
+          - /url: /angel/admin/my-day
+          - generic [ref=e12]: today
+          - generic [ref=e13]: Hôm nay
+        - link "event_note Lịch hẹn" [ref=e14] [cursor=pointer]:
+          - /url: /angel/admin/appointments
+          - generic [ref=e15]: event_note
+          - generic [ref=e16]: Lịch hẹn
+        - link "spa Dịch vụ" [ref=e17] [cursor=pointer]:
+          - /url: /angel/admin/services
+          - generic [ref=e18]: spa
+          - generic [ref=e19]: Dịch vụ
+        - link "photo_library Thư viện ảnh" [ref=e20] [cursor=pointer]:
+          - /url: /angel/admin/gallery
+          - generic [ref=e21]: photo_library
+          - generic [ref=e22]: Thư viện ảnh
+        - link "group Khách hàng" [ref=e23] [cursor=pointer]:
+          - /url: /angel/admin/clients
+          - generic [ref=e24]: group
+          - generic [ref=e25]: Khách hàng
+        - link "badge Nhân viên" [ref=e26] [cursor=pointer]:
+          - /url: /angel/admin/staff
+          - generic [ref=e27]: badge
+          - generic [ref=e28]: Nhân viên
+        - link "inventory_2 Kho hàng" [ref=e29] [cursor=pointer]:
+          - /url: /angel/admin/inventory
+          - generic [ref=e30]: inventory_2
+          - generic [ref=e31]: Kho hàng
+        - link "credit_card Thanh toán" [ref=e32] [cursor=pointer]:
+          - /url: /angel/admin/payments
+          - generic [ref=e33]: credit_card
+          - generic [ref=e34]: Thanh toán
+        - link "redeem Thẻ quà tặng" [ref=e35] [cursor=pointer]:
+          - /url: /angel/admin/gift-cards
+          - generic [ref=e36]: redeem
+          - generic [ref=e37]: Thẻ quà tặng
+        - link "payments Lương & hoa hồng" [ref=e38] [cursor=pointer]:
+          - /url: /angel/admin/payroll
+          - generic [ref=e39]: payments
+          - generic [ref=e40]: Lương & hoa hồng
+        - link "point_of_sale Kết ca" [ref=e41] [cursor=pointer]:
+          - /url: /angel/admin/closing
+          - generic [ref=e42]: point_of_sale
+          - generic [ref=e43]: Kết ca
+        - link "receipt_long Chi phí" [ref=e44] [cursor=pointer]:
+          - /url: /angel/admin/expenses
+          - generic [ref=e45]: receipt_long
+          - generic [ref=e46]: Chi phí
+        - link "shopping_cart Đơn đặt hàng" [ref=e47] [cursor=pointer]:
+          - /url: /angel/admin/purchase-orders
+          - generic [ref=e48]: shopping_cart
+          - generic [ref=e49]: Đơn đặt hàng
+        - link "star Đánh giá" [ref=e50] [cursor=pointer]:
+          - /url: /angel/admin/reviews
+          - generic [ref=e51]: star
+          - generic [ref=e52]: Đánh giá
+        - link "insights Báo cáo" [ref=e53] [cursor=pointer]:
+          - /url: /angel/admin/reports
+          - generic [ref=e54]: insights
+          - generic [ref=e55]: Báo cáo
+        - link "history Nhật ký hệ thống" [ref=e56] [cursor=pointer]:
+          - /url: /angel/admin/audit-log
+          - generic [ref=e57]: history
+          - generic [ref=e58]: Nhật ký hệ thống
+        - link "phone_in_talk Tổng đài AI" [ref=e59] [cursor=pointer]:
+          - /url: /angel/admin/voice
+          - generic [ref=e60]: phone_in_talk
+          - generic [ref=e61]: Tổng đài AI
+        - link "menu_book Tài liệu QA" [ref=e62] [cursor=pointer]:
+          - /url: /angel/admin/docs
+          - generic [ref=e63]: menu_book
+          - generic [ref=e64]: Tài liệu QA
+        - link "settings Cài đặt" [ref=e65] [cursor=pointer]:
+          - /url: /angel/admin/settings
+          - generic [ref=e66]: settings
+          - generic [ref=e67]: Cài đặt
+      - generic [ref=e69]:
+        - button "VI" [ref=e70]
+        - button "EN" [ref=e71]
+    - main [ref=e72]:
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - button "Open menu" [ref=e75]: menu
+          - generic [ref=e76]: Angel Nail Admin
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - generic [ref=e79]: search
+            - textbox "Search services..." [ref=e80]
+          - generic [ref=e81]:
+            - button "notifications 9+" [ref=e100]:
+              - text: notifications
+              - generic [ref=e101]: 9+
+            - button "Account menu" [ref=e85]: account_circle
+      - generic [ref=e86]:
+        - generic [ref=e87]:
+          - generic [ref=e88]:
+            - heading "Dịch vụ" [level=2] [ref=e89]
+            - paragraph [ref=e90]: 8 dịch vụ trong 6 danh mục
+          - button "create_new_folder Thêm danh mục" [ref=e92]:
+            - generic [ref=e93]: create_new_folder
+            - text: Thêm danh mục
+        - generic [ref=e94]:
+          - generic [ref=e102]:
+            - generic [ref=e103]:
+              - generic [ref=e104]:
+                - generic [ref=e105]: category
+                - heading "Manicure" [level=3] [ref=e106]
+                - generic [ref=e107]: 3 dịch vụ trong
+              - button "add Thêm dịch vụ" [ref=e108]:
+                - generic [ref=e109]: add
+                - text: Thêm dịch vụ
+            - generic [ref=e110]:
+              - generic [ref=e111]:
+                - img "Signature Gel Manicure 1" [ref=e112]
+                - generic [ref=e113]:
+                  - generic [ref=e114]:
+                    - paragraph [ref=e115]: Signature Gel Manicure 1
+                    - generic [ref=e116]: Nổi bật
+                  - paragraph [ref=e117]: Our most requested service. Includes nail shaping, cuticle care, and a premium long-lasting gel finish with high-shine top coat. lamvh
+                - generic [ref=e118]:
+                  - paragraph [ref=e119]: $62
+                  - paragraph [ref=e120]: 45 mins
+                - generic [ref=e121]:
+                  - button "arrow_upward" [ref=e122]:
+                    - generic [ref=e123]: arrow_upward
+                  - button "arrow_downward" [ref=e124]:
+                    - generic [ref=e125]: arrow_downward
+                  - button "edit" [ref=e126]:
+                    - generic [ref=e127]: edit
+                  - button "delete" [ref=e128]:
+                    - generic [ref=e129]: delete
+              - generic [ref=e130]:
+                - img "Classic French Tip" [ref=e131]
+                - generic [ref=e132]:
+                  - paragraph [ref=e134]: Classic French Tip
+                  - paragraph [ref=e135]: Timeless elegance. A clean base with perfectly hand-painted white tips using premium polish.
+                - generic [ref=e136]:
+                  - paragraph [ref=e137]: $65
+                  - paragraph [ref=e138]: 60 mins
+                - generic [ref=e139]:
+                  - button "arrow_upward" [ref=e140]:
+                    - generic [ref=e141]: arrow_upward
+                  - button "arrow_downward" [ref=e142]:
+                    - generic [ref=e143]: arrow_downward
+                  - button "edit" [ref=e144]:
+                    - generic [ref=e145]: edit
+                  - button "delete" [ref=e146]:
+                    - generic [ref=e147]: delete
+              - generic [ref=e148]:
+                - img "Express Polish Change" [ref=e149]
+                - generic [ref=e150]:
+                  - paragraph [ref=e152]: Express Polish Change
+                  - paragraph [ref=e153]: Perfect for a quick refresh. Includes removal of old polish and application of new seasonal color.
+                - generic [ref=e154]:
+                  - paragraph [ref=e155]: $30
+                  - paragraph [ref=e156]: 20 mins
+                - generic [ref=e157]:
+                  - button "arrow_upward" [ref=e158]:
+                    - generic [ref=e159]: arrow_upward
+                  - button "arrow_downward" [ref=e160]:
+                    - generic [ref=e161]: arrow_downward
+                  - button "edit" [ref=e162]:
+                    - generic [ref=e163]: edit
+                  - button "delete" [ref=e164]:
+                    - generic [ref=e165]: delete
+          - generic [ref=e166]:
+            - generic [ref=e167]:
+              - generic [ref=e168]:
+                - generic [ref=e169]: category
+                - heading "Pedicure" [level=3] [ref=e170]
+                - generic [ref=e171]: 1 dịch vụ trong
+              - button "add Thêm dịch vụ" [ref=e172]:
+                - generic [ref=e173]: add
+                - text: Thêm dịch vụ
+            - generic [ref=e175]:
+              - img "Rose Petal Spa Pedicure" [ref=e176]
+              - generic [ref=e177]:
+                - generic [ref=e178]:
+                  - paragraph [ref=e179]: Rose Petal Spa Pedicure
+                  - generic [ref=e180]: Nổi bật
+                - paragraph [ref=e181]: Soothing soak with fresh rose petals, sea salt exfoliation, hydrating mask, and extended hot stone massage.
+              - generic [ref=e182]:
+                - paragraph [ref=e183]: $75
+                - paragraph [ref=e184]: 60 mins
+              - generic [ref=e185]:
+                - button "arrow_upward" [ref=e186]:
+                  - generic [ref=e187]: arrow_upward
+                - button "arrow_downward" [ref=e188]:
+                  - generic [ref=e189]: arrow_downward
+                - button "edit" [ref=e190]:
+                  - generic [ref=e191]: edit
+                - button "delete" [ref=e192]:
+                  - generic [ref=e193]: delete
+          - generic [ref=e194]:
+            - generic [ref=e195]:
+              - generic [ref=e196]:
+                - generic [ref=e197]: category
+                - heading "Nail Art" [level=3] [ref=e198]
+                - generic [ref=e199]: 1 dịch vụ trong
+              - button "add Thêm dịch vụ" [ref=e200]:
+                - generic [ref=e201]: add
+                - text: Thêm dịch vụ
+            - generic [ref=e203]:
+              - img "Tier 1 Custom Nail Art" [ref=e204]
+              - generic [ref=e205]:
+                - generic [ref=e206]:
+                  - paragraph [ref=e207]: Tier 1 Custom Nail Art
+                  - generic [ref=e208]: Nổi bật
+                - paragraph [ref=e209]: Simple hand-painted designs, foils, or minimalist chrome on 2-4 accent nails.
+              - generic [ref=e210]:
+                - paragraph [ref=e211]: $20+
+                - paragraph [ref=e212]: 30 mins
+              - generic [ref=e213]:
+                - button "arrow_upward" [ref=e214]:
+                  - generic [ref=e215]: arrow_upward
+                - button "arrow_downward" [ref=e216]:
+                  - generic [ref=e217]: arrow_downward
+                - button "edit" [ref=e218]:
+                  - generic [ref=e219]: edit
+                - button "delete" [ref=e220]:
+                  - generic [ref=e221]: delete
+          - generic [ref=e222]:
+            - generic [ref=e223]:
+              - generic [ref=e224]:
+                - generic [ref=e225]: category
+                - heading "Acrylics" [level=3] [ref=e226]
+                - generic [ref=e227]: 2 dịch vụ trong
+              - button "add Thêm dịch vụ" [ref=e228]:
+                - generic [ref=e229]: add
+                - text: Thêm dịch vụ
+            - generic [ref=e230]:
+              - generic [ref=e231]:
+                - img "Apres Gel-X Extensions" [ref=e232]
+                - generic [ref=e233]:
+                  - generic [ref=e234]:
+                    - paragraph [ref=e235]: Apres Gel-X Extensions
+                    - generic [ref=e236]: Nổi bật
+                  - paragraph [ref=e237]: The world's first soak-off soft gel extension system. Lightweight, durable, and natural-looking length.
+                - generic [ref=e238]:
+                  - paragraph [ref=e239]: $95
+                  - paragraph [ref=e240]: 75 mins
+                - generic [ref=e241]:
+                  - button "arrow_upward" [ref=e242]:
+                    - generic [ref=e243]: arrow_upward
+                  - button "arrow_downward" [ref=e244]:
+                    - generic [ref=e245]: arrow_downward
+                  - button "edit" [ref=e246]:
+                    - generic [ref=e247]: edit
+                  - button "delete" [ref=e248]:
+                    - generic [ref=e249]: delete
+              - generic [ref=e250]:
+                - img "Hard Gel Strengthening Overlay" [ref=e251]
+                - generic [ref=e252]:
+                  - paragraph [ref=e254]: Hard Gel Strengthening Overlay
+                  - paragraph [ref=e255]: Extra reinforcement for natural nails using high-viscosity builder gel to prevent breakage and chipping.
+                - generic [ref=e256]:
+                  - paragraph [ref=e257]: $65
+                  - paragraph [ref=e258]: 50 mins
+                - generic [ref=e259]:
+                  - button "arrow_upward" [ref=e260]:
+                    - generic [ref=e261]: arrow_upward
+                  - button "arrow_downward" [ref=e262]:
+                    - generic [ref=e263]: arrow_downward
+                  - button "edit" [ref=e264]:
+                    - generic [ref=e265]: edit
+                  - button "delete" [ref=e266]:
+                    - generic [ref=e267]: delete
+          - generic [ref=e268]:
+            - generic [ref=e269]:
+              - generic [ref=e270]:
+                - generic [ref=e271]: category
+                - heading "Removal" [level=3] [ref=e272]
+                - generic [ref=e273]: 1 dịch vụ trong
+              - button "add Thêm dịch vụ" [ref=e274]:
+                - generic [ref=e275]: add
+                - text: Thêm dịch vụ
+            - generic [ref=e277]:
+              - img "Gel / Acrylic Removal" [ref=e278]
+              - generic [ref=e279]:
+                - generic [ref=e280]:
+                  - paragraph [ref=e281]: Gel / Acrylic Removal
+                  - generic [ref=e282]: Nổi bật
+                - paragraph [ref=e283]: Safe and gentle soak-off removal of gel or acrylic nails with cuticle oil treatment.
+              - generic [ref=e284]:
+                - paragraph [ref=e285]: $25
+                - paragraph [ref=e286]: 30 mins
+              - generic [ref=e287]:
+                - button "arrow_upward" [ref=e288]:
+                  - generic [ref=e289]: arrow_upward
+                - button "arrow_downward" [ref=e290]:
+                  - generic [ref=e291]: arrow_downward
+                - button "edit" [ref=e292]:
+                  - generic [ref=e293]: edit
+                - button "delete" [ref=e294]:
+                  - generic [ref=e295]: delete
+          - generic [ref=e296]:
+            - generic [ref=e297]:
+              - generic [ref=e298]:
+                - generic [ref=e299]: category
+                - heading "Test Category QA" [level=3] [ref=e300]
+                - generic [ref=e301]: 0 dịch vụ trong
+              - button "add Thêm dịch vụ" [ref=e302]:
+                - generic [ref=e303]: add
+                - text: Thêm dịch vụ
+            - generic [ref=e304]: Danh mục này chưa có dịch vụ.
+      - paragraph [ref=e98]: © 2024 Angel Nail Digital Atelier. Bảo lưu mọi quyền.
+  - alert [ref=e99]

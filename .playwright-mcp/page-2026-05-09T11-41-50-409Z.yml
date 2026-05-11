@@ -1,0 +1,106 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e41]
+  - generic [ref=e153]:
+    - main [ref=e154]:
+      - generic [ref=e155]:
+        - generic [ref=e156]:
+          - button "Open menu" [ref=e157]: menu
+          - generic [ref=e158]: Angel Nail Admin
+        - generic [ref=e159]:
+          - generic [ref=e160]:
+            - button "VI" [ref=e161]
+            - button "EN" [ref=e162]
+          - generic [ref=e163]:
+            - button "notifications 9+" [ref=e165]:
+              - text: notifications
+              - generic [ref=e166]: 9+
+            - button "Account menu" [ref=e168]: account_circle
+      - generic [ref=e169]:
+        - generic [ref=e170]:
+          - generic [ref=e171]:
+            - heading "Lịch hẹn" [level=2] [ref=e172]
+            - paragraph [ref=e173]: Quản lý và lên lịch cho tiệm.
+          - button "add Tạo lịch hẹn" [ref=e174]:
+            - generic [ref=e175]: add
+            - text: Tạo lịch hẹn
+        - generic [ref=e176]:
+          - generic [ref=e177]:
+            - generic [ref=e178]:
+              - generic [ref=e179]: calendar_today
+              - generic [ref=e180]: "Lọc theo ngày:"
+            - textbox [ref=e181]: 2026-05-09
+            - generic [ref=e182]:
+              - button "Hôm nay" [ref=e183]
+              - button "20 Mar" [ref=e184]
+              - button "27 Mar" [ref=e185]
+              - button "28 Mar" [ref=e186]
+              - button "30 Mar" [ref=e187]
+              - button "31 Mar" [ref=e188]
+          - generic [ref=e189]:
+            - generic [ref=e190]:
+              - generic [ref=e191]: search
+              - textbox "Search by reference, name, email, phone..." [ref=e192]
+            - combobox [ref=e193]:
+              - option "All statuses" [selected]
+              - option "Pending"
+              - option "Confirmed"
+              - option "Completed"
+              - option "Cancelled"
+              - option "No show"
+        - generic [ref=e194]:
+          - generic [ref=e195]:
+            - paragraph [ref=e196]: CHỜ XỬ LÝ
+            - paragraph [ref=e197]: "0"
+          - generic [ref=e198]:
+            - paragraph [ref=e199]: XÁC NHẬN
+            - paragraph [ref=e200]: "0"
+          - generic [ref=e201]:
+            - paragraph [ref=e202]: HOÀN THÀNH
+            - paragraph [ref=e203]: "1"
+          - generic [ref=e204]:
+            - paragraph [ref=e205]: ĐÃ HUỶ
+            - paragraph [ref=e206]: "0"
+        - generic [ref=e207]:
+          - paragraph [ref=e208]:
+            - text: 1 lịch hẹn ngày
+            - strong [ref=e209]: Saturday, 9 May
+          - generic [ref=e211]:
+            - generic [ref=e212]:
+              - generic [ref=e213]: TA
+              - generic [ref=e214]:
+                - generic [ref=e215]:
+                  - heading "Thành An" [level=3] [ref=e216]
+                  - generic [ref=e217]: HOÀN THÀNH
+                  - generic [ref=e218]: Pay in salon
+                - paragraph [ref=e219]: "0379589453"
+                - generic [ref=e220]:
+                  - generic [ref=e221]:
+                    - generic [ref=e222]: spa
+                    - text: Signature Gel Manicure 1
+                  - generic [ref=e223]:
+                    - generic [ref=e224]: schedule
+                    - text: 10:00 pm · 45 min
+                  - generic [ref=e225]:
+                    - generic [ref=e226]: payments
+                    - text: $62.00
+                  - generic [ref=e227]:
+                    - generic [ref=e228]: person_pin
+                    - text: Sofia Blanco
+                - paragraph [ref=e229]: "Ref: AN-260506ABHL"
+            - generic [ref=e231]: Không có thao tác
+      - paragraph [ref=e234]: © 2024 Angel Nail Digital Atelier. Bảo lưu mọi quyền.
+    - navigation [ref=e235]:
+      - link "home Trang chủ" [ref=e236] [cursor=pointer]:
+        - /url: /angel/admin
+        - generic [ref=e237]: home
+        - generic [ref=e238]: Trang chủ
+      - link "calendar_month Đặt lịch" [ref=e239] [cursor=pointer]:
+        - /url: /angel/admin/appointments
+        - generic [ref=e240]: calendar_month
+        - generic [ref=e241]: Đặt lịch
+      - button "add" [ref=e244]:
+        - generic [ref=e245]: add
+      - link "person Hồ sơ" [ref=e246] [cursor=pointer]:
+        - /url: /angel/admin/settings
+        - generic [ref=e247]: person
+        - generic [ref=e248]: Hồ sơ

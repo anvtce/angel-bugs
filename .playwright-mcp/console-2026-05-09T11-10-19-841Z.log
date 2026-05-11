@@ -1,0 +1,2 @@
+[     171ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://project.vinapage.com/angel/admin/login:0
+[   11893ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://project.vinapage.com/angel/api/admin/reports/revenue?from=2026-05-02&to=2026-05-09:0

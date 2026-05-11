@@ -1,0 +1,40 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - main [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - button "Open menu" [ref=e6]: menu
+          - generic [ref=e7]: Angel Nail Admin
+        - generic [ref=e8]:
+          - generic [ref=e9]:
+            - button "VI" [ref=e10]
+            - button "EN" [ref=e11]
+          - generic [ref=e12]:
+            - button "notifications" [ref=e14]
+            - button "Account menu" [ref=e16]: account_circle
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - generic [ref=e19]:
+            - heading "Dịch vụ" [level=2] [ref=e20]
+            - paragraph [ref=e21]: 0 dịch vụ trong 0 danh mục
+          - button "create_new_folder Thêm danh mục" [ref=e23]:
+            - generic [ref=e24]: create_new_folder
+            - text: Thêm danh mục
+        - generic [ref=e26]: progress_activity
+      - paragraph [ref=e29]: © 2024 Angel Nail Digital Atelier. Bảo lưu mọi quyền.
+    - navigation [ref=e30]:
+      - link "home Trang chủ" [ref=e31] [cursor=pointer]:
+        - /url: /angel/admin
+        - generic [ref=e32]: home
+        - generic [ref=e33]: Trang chủ
+      - link "calendar_month Đặt lịch" [ref=e34] [cursor=pointer]:
+        - /url: /angel/admin/appointments
+        - generic [ref=e35]: calendar_month
+        - generic [ref=e36]: Đặt lịch
+      - button "add" [ref=e39]:
+        - generic [ref=e40]: add
+      - link "person Hồ sơ" [ref=e41] [cursor=pointer]:
+        - /url: /angel/admin/settings
+        - generic [ref=e42]: person
+        - generic [ref=e43]: Hồ sơ
+  - alert [ref=e44]
